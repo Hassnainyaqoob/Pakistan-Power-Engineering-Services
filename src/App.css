@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@keyframes rotateShake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animate-shake {
+    animation: rotateShake 0.5s ease-in-out infinite;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Large screens (Desktop) */
+@media (min-width: 1024px) {
+    .hero-text-content {
+        margin-left: 20% !important;
+        max-width: 500px !important;
+    }
+}
+
+/* Medium screens (Tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-text-content {
+        margin-left: 10% !important;
+        max-width: 450px !important;
+    }
+
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-subtitle,
+    .hero-description {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 767px) {
+    .hero-text-container {
+        padding: 15px !important;
+    }
+
+    .hero-text-content {
+        margin-left: 15px !important;
+        max-width: calc(100% - 30px) !important;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .hero-subtitle,
+    .hero-description {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .hero-text-content {
+        margin-left: 10px !important;
+        max-width: calc(100% - 20px) !important;
+    }
+
+    .hero-title {
+        font-size: 1.8rem !important;
+    }
+
+    .hero-subtitle,
+    .hero-description {
+        font-size: 1rem !important;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .hero-text-content {
+        margin-left: 8px !important;
+    }
+
+    .hero-title {
+        font-size: 1.6rem !important;
+    }
+
+    .hero-subtitle,
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Tailwind CSS with custom animations */
+.marquee-container {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Optional: Pause on hover */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .marquee-content img {
+        height: 16px;
+        margin-left: 1rem;
+        /* Equivalent to mx-4 in Tailwind */
+        margin-right: 1rem;
+        /* Equivalent to mx-4 in Tailwind */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        /* Equivalent to text-2xl in Tailwind */
+    }
+}
+
+.marquee-content {
+    display: inline-block;
+    /* Removed animation to allow manual scrolling */
+}
+
+.marquee-container {
+    position: relative;
+    overflow: hidden;
+    whitespace: nowrap;
+}
+
+/* Button styling */
+button {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a3a3a3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .marquee-content img {
+        min-height: 70px;
+        height: 80px;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+
+    button {
+        padding: 1px;
+        /* Smaller padding for mobile */
+        font-size: 1rem;
+        /* Adjust arrow size */
+    }
+}
+
+@media (min-width: 641px) and (max-width: 767px) {
+    .marquee-content img {
+        min-height: 35px;
+        height: 48px;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.divider-line {
+    width: 230px;
+    height: 6px;
+    background-image: repeating-linear-gradient(-45deg,
+            #C00000,
+            /* orange color */
+            #C00000 6px,
+            transparent 6px,
+            transparent 12px);
+    background-color: #1e1e4d;
+    /* dark navy background */
+}
