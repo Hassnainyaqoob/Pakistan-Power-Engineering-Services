@@ -74,12 +74,15 @@ const Navbar = () => {
             href: '/services',
             hasDropdown: true,
             dropdownItems: [
-                { name: 'Engineering Consultancy', href: '/services/engineering-consultancy', icon: '⚙️' },
-                { name: 'Project Management', href: '/services/project-management', icon: '📋' },
-                { name: 'Technical Solutions', href: '/services/technical-solutions', icon: '🔧' },
-                { name: 'Industrial Automation', href: '/services/industrial-automation', icon: '🤖' },
-                { name: 'Equipment Supply', href: '/services/equipment-supply', icon: '📦' },
-                { name: 'Maintenance Services', href: '/services/maintenance-services', icon: '🔧' }
+                { name: '11kV Transformers (Up to 11 MVA)', href: '/services/11kv-transformers', icon: '⚡' },
+                { name: 'LT & PCC/MCC Panels Manufacturing', href: '/services/lt-panels', icon: '🏭' },
+                { name: 'VCB & MV Panels Maintenance', href: '/services/vcb-mv-panels', icon: '🔌' },
+                { name: 'Power Transformer Services', href: '/services/power-transformer', icon: '🛢️' },
+                { name: 'Testing, Relays & Commissioning', href: '/services/testing-commissioning', icon: '🔧' },
+                { name: 'Power Factor Improvement (PFI/APFC)', href: '/services/power-factor-improvement', icon: '📊' },
+                { name: 'Supply of MV Electrical Equipment', href: '/services/mv-equipment-supply', icon: '📦' },
+                { name: 'Complete Substation Setup & Solutions', href: '/services/turnkey-electrical', icon: '🏗️' },
+                { name: 'Instrumentation & Automation', href: '/services/instrumentation-automation', icon: '🤖' },
             ]
         },
         { name: 'PROFILE', href: '/profile' },
@@ -106,8 +109,8 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 flex justify-end items-center space-x-8">
                     <div className="flex items-center space-x-2">
                         <PhoneIcon />
-                        <span className='text-white'><span className='font-bold'>CALL US NOW</span> <a href="tel:+923333120010" className="hover:underline">
-                            <span>+92 333 312 0010</span>
+                        <span className='text-white'><span className='font-bold'>CALL US NOW</span> <a href="tel:+923092302512" className="hover:underline">
+                            <span>+92 309 2302512</span>
                         </a></span>
                     </div>
                     <div className="flex items-center space-x-2">
@@ -124,7 +127,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             className="text-white hover:underline"
                         >
-                            <span className="font-bold">Need Support?</span>{' '}
+                            <span className="font-bold">Need Support?</span>
                             PakistanPowerEngineeringServices@outlook.com
                         </a>
                     </div>
@@ -234,8 +237,8 @@ const Navbar = () => {
                                     <div className="border-t mt-4 pt-4 space-y-2">
                                         <div className="flex items-center space-x-2 px-3 py-1 text-sm text-gray-600">
                                             <PhoneIcon />
-                                            <a href="tel:+923333120010" className="text-[#374151] hover:underline">
-                                                <span>+92 333 312 0010</span>
+                                            <a href="tel:+923092302512" className="text-[#374151] hover:underline">
+                                                <span>+92 309 2302512</span>
                                             </a>
                                         </div>
                                         <div className="flex items-center space-x-2 px-3 py-1 text-sm text-gray-600">

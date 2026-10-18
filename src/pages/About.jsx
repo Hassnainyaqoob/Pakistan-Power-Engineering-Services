@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import backgroundImage from '../assets/images/about.png';
 import Typewriter from 'typewriter-effect';
 import ConstructionOverview from '../components/ConstructionOverview';
@@ -9,67 +9,30 @@ export default function AboutPage() {
     return (
         <>
             <div
+                className="relative w-full min-h-[460px] sm:min-h-[520px] md:min-h-[580px] lg:min-h-[620px] flex flex-col justify-center text-white overflow-hidden pt-28 sm:pt-32 bg-[#001026]"
                 style={{
-                    position: 'relative',
-                    height: '490px',
-                    maxHeight: '490px',
-                    backgroundImage: `url(${backgroundImage})`,
+                    backgroundImage: `linear-gradient(to right, rgba(0, 15, 35, 0.75) 0%, rgba(0, 15, 35, 0.5) 45%, rgba(0, 15, 35, 0.25) 100%), url(${backgroundImage})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    color: 'white',
+                    backgroundPosition: 'center 40%',
                 }}
             >
-                {/* Overlay for better text readability */}
+                {/* Text Content */}
                 <div
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    }}
-                />
-
-                {/* Text Content (Responsive positioning) */}
-                <div
-                    className="hero-text-container"
-                    style={{
-                        position: 'absolute',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        padding: '20px',
-                        zIndex: 1,
-                        width: '100%',
-                    }}
+                    className="hero-text-container relative z-10 w-full px-6 sm:px-10 md:px-16 max-w-7xl mx-auto"
                 >
                     <div
-                        className="hero-text-content"
-                        style={{
-                            maxWidth: '500px',
-                            marginLeft: '20px',
-                        }}
+                        className="hero-text-content max-w-[550px]"
                     >
                         <p
-                            className="hero-subtitle"
+                            className="hero-subtitle text-lg sm:text-xl md:text-2xl font-medium tracking-wide mb-2 opacity-0 drop-shadow-lg"
                             style={{
-                                fontSize: '1.5rem',
-                                lineHeight: '1.6',
-                                opacity: 0,
                                 animation: 'fadeIn .7s ease-in-out forwards .6s',
                             }}
                         >
                             Experience To Be Trusted
                         </p>
                         <h1
-                            className="hero-title"
-                            style={{
-                                fontSize: '3rem',
-                                fontWeight: 'bold',
-                                marginBottom: '20px',
-                                textTransform: 'uppercase',
-                                lineHeight: '1.2',
-                            }}
+                            className="hero-title text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4 leading-tight tracking-tight drop-shadow-xl"
                         >
                             <Typewriter
                                 options={{
@@ -81,8 +44,7 @@ export default function AboutPage() {
                                 }}
                             />
                         </h1>
-                        <div class="divider-line"></div>
-
+                        <div className="divider-line shadow-md"></div>
                     </div>
                 </div>
             </div>
@@ -96,6 +58,5 @@ export default function AboutPage() {
                 <OurAccomplishments />
             </div>
         </>
-
-    )
+    );
 }

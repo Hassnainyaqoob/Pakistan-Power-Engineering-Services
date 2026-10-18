@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -15,6 +16,17 @@ const Contact = () => {
     const [popupMessage, setPopupMessage] = useState('');
     const [isError, setIsError] = useState(false);
 
+    // Spam Protection States
+    const recaptchaRef = useRef(null);
+    const [captchaToken, setCaptchaToken] = useState(null);
+    const [honeypot, setHoneypot] = useState('');
+
+    // Environment variables (Fallback provided for safety)
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_i4bqxg3';
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_9ln648x';
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'ESYNLyEMc72l5vNxx';
+    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LfB3fQtAAAAABrAAJWqEe0uqmMNHobWQSMW0xfW';
+
     useEffect(() => {
         setIsVisible(true);
     }, []);
@@ -27,23 +39,46 @@ const Contact = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        if (e && e.preventDefault) e.preventDefault();
+
+        // 1. Honeypot check: bot detected if hidden field is filled
+        if (honeypot) {
+            console.warn('Bot submission blocked via honeypot.');
+            return;
+        }
+
+        // 2. Google reCAPTCHA check: verify human
+        if (siteKey && !captchaToken) {
+            setPopupMessage('Please verify that you are not a robot.');
+            setIsError(true);
+            setShowPopup(true);
+            setTimeout(() => setShowPopup(false), 3500);
+            return;
+        }
+
         setIsSubmitting(true);
 
         try {
             await emailjs.send(
-                'service_aloqbfe',
-                'template_61zryhr',
+                serviceId,
+                templateId,
                 {
                     name: formData.name,
+                    from_name: formData.name,
+                    user_name: formData.name,
                     email: formData.email,
+                    from_email: formData.email,
+                    user_email: formData.email,
+                    reply_to: formData.email,
                     phone: formData.phone,
+                    contact_number: formData.phone,
                     subject: formData.subject,
                     message: formData.message,
+                    'g-recaptcha-response': captchaToken || '',
                 },
-                '-pteeQFG33zhMPn_9'
+                publicKey
             );
-            setPopupMessage('Message sent successfully to motadram123@gmail.com!');
+            setPopupMessage('Thank you! Your message has been sent successfully. Our engineering team will contact you shortly.');
             setIsError(false);
             setFormData({
                 name: '',
@@ -52,15 +87,19 @@ const Contact = () => {
                 subject: '',
                 message: ''
             });
+            recaptchaRef.current?.reset();
+            setCaptchaToken(null);
         } catch (error) {
             console.error('Error sending email:', error);
             setPopupMessage('Failed to send message. Please try again later.');
             setIsError(true);
+            recaptchaRef.current?.reset();
+            setCaptchaToken(null);
+        } finally {
+            setIsSubmitting(false);
+            setShowPopup(true);
+            setTimeout(() => setShowPopup(false), 4000);
         }
-
-        setIsSubmitting(false);
-        setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 3000); // 3 seconds ke baad popup band ho jaye
     };
 
     return (
@@ -72,7 +111,7 @@ const Contact = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-gradient-to-r from-brandRed to-blueColor rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-bounce"></div>
             </div>
 
-            <div className="relative flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div className="relative flex flex-col items-center justify-center pt-36 sm:pt-40 pb-12 px-4 sm:px-6 lg:px-8">
                 {/* Animated Header */}
                 <div className={`text-center mb-12 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
                     <h2 className="text-5xl font-bold text-brandRed ">
@@ -80,7 +119,7 @@ const Contact = () => {
                     </h2>
                     <div className="mt-4 w-24 h-1 bg-gradient-to-r from-blueColor to-brandRed mx-auto rounded-full animate-pulse"></div>
                     <p className="mt-4 text-gray-600 text-lg animate-fade-in-up animation-delay-500">
-                        Humse connect kariye aur apne sapno ko reality banayiye!
+                        Connect with our engineering specialists today for expert substation and panel solutions.
                     </p>
                 </div>
 
@@ -94,7 +133,19 @@ const Contact = () => {
                                 <h3 className="text-2xl font-bold text-gray-800">Feel Free to Contact</h3>
                             </div>
 
-                            <div className="space-y-6">
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                {/* Honeypot: invisible to human users, catches spam bots */}
+                                <input
+                                    type="text"
+                                    name="website"
+                                    value={honeypot}
+                                    onChange={(e) => setHoneypot(e.target.value)}
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    aria-hidden="true"
+                                    style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0, pointerEvents: 'none' }}
+                                />
+
                                 <div className="relative group">
                                     <input
                                         type="text"
@@ -159,11 +210,28 @@ const Contact = () => {
                                     <div className="absolute inset-0 bg-gradient-to-r from-brandRed/10 to-blueColor/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                                 </div>
 
+                                {/* Google reCAPTCHA v2 (Checkbox) */}
+                                {siteKey ? (
+                                    <div className="flex justify-center items-center overflow-hidden py-1">
+                                        <div className="transform origin-center scale-[0.88] sm:scale-100">
+                                            <ReCAPTCHA
+                                                ref={recaptchaRef}
+                                                sitekey={siteKey}
+                                                onChange={(token) => setCaptchaToken(token)}
+                                                onExpired={() => setCaptchaToken(null)}
+                                            />
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="p-3 bg-amber-50/80 border border-amber-200 text-amber-800 text-xs rounded-xl text-center leading-relaxed">
+                                        🛡️ <strong>Spam Protection:</strong> Set <code>VITE_RECAPTCHA_SITE_KEY</code> in <code>.env</code> to display Google reCAPTCHA.
+                                    </div>
+                                )}
+
                                 <button
-                                    type="button"
-                                    onClick={handleSubmit}
+                                    type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full bg-gradient-to-r from-brandRed to-blueColor text-white p-4 rounded-xl hover:from-brandRed/90 hover:to-blueColor/90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
+                                    className="w-full bg-gradient-to-r from-brandRed to-blueColor text-white p-4 rounded-xl hover:from-brandRed/90 hover:to-blueColor/90 transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
                                 >
                                     <span className="relative z-10 font-semibold text-lg flex items-center justify-center">
                                         {isSubmitting ? (
@@ -180,7 +248,7 @@ const Contact = () => {
                                     </span>
                                     <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                                 </button>
-                            </div>
+                            </form>
                         </div>
                     </div>
 
@@ -227,8 +295,8 @@ const Contact = () => {
                             </svg>
                         </div>
                         <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-brandRed transition-colors duration-300">Phone</h4>
-                        <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300">021-12345678</p>
-                        <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300">0333-1234567</p>
+                        <a href="tel:+923092202112" className="text-gray-600 hover:text-brandRed transition-colors duration-300 block">+92 309 2202112</a>
+                        <a href="tel:+923350259886" className="text-gray-600 hover:text-brandRed transition-colors duration-300 block">+92 335 0259886</a>
                     </div>
 
                     {/* Email Card */}
@@ -239,7 +307,7 @@ const Contact = () => {
                             </svg>
                         </div>
                         <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blueColor transition-colors duration-300">Email</h3>
-                        <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300 break-all">info@pakistanpowereng.com</p>
+                        <a href="mailto:PakistanPowerEngineeringServices@outlook.com" className="text-gray-600 hover:text-blueColor transition-colors duration-300 break-all block text-sm">PakistanPowerEngineeringServices@outlook.com</a>
                     </div>
 
                     {/* Address Card */}
@@ -251,24 +319,57 @@ const Contact = () => {
                             </svg>
                         </div>
                         <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-brandRed transition-colors duration-300">Address</h4>
-                        <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300">Plot No. X-123, Sector 10, Karachi</p>
+                        <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300 text-sm leading-relaxed">Plot # 236, Street D-17, Azam Town, Mahmoodabad, Karachi, Pakistan</p>
                     </div>
                 </div>
             </div>
 
-            {/* Popup for Success/Error */}
+            {/* Premium Corporate Popup for Success/Error */}
             {showPopup && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="bg-white text-black p-6 rounded-lg shadow-lg max-w-sm w-full mx-4">
-                        <h3 className={`text-lg font-bold ${isError ? 'text-red-600' : 'text-green-600'}`}>
-                            {isError ? 'Error!' : 'Success!'}
+                <div 
+                    className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all duration-300"
+                    onClick={() => setShowPopup(false)}
+                >
+                    <div 
+                        className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 sm:p-8 border border-white/40 text-center transform transition-all duration-300"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Status Icon */}
+                        <div className={`w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-inner ${
+                            isError ? 'bg-amber-100 text-brandRed' : 'bg-emerald-100 text-emerald-600'
+                        }`}>
+                            {isError ? (
+                                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                            ) : (
+                                <svg className="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                </svg>
+                            )}
+                        </div>
+
+                        {/* Title */}
+                        <h3 className={`text-2xl font-bold mb-2 ${isError ? 'text-brandRed' : 'text-gray-900'}`}>
+                            {isError ? 'Verification Required' : 'Inquiry Submitted!'}
                         </h3>
-                        <p className="mt-2">{popupMessage}</p>
+
+                        {/* Message Description */}
+                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+                            {popupMessage}
+                        </p>
+
+                        {/* Dismiss Button */}
                         <button
+                            type="button"
                             onClick={() => setShowPopup(false)}
-                            className="mt-4 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded"
+                            className={`w-full py-3.5 px-6 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] ${
+                                isError 
+                                    ? 'bg-gradient-to-r from-brandRed to-red-600' 
+                                    : 'bg-gradient-to-r from-brandRed to-blueColor'
+                            }`}
                         >
-                            Close
+                            {isError ? 'Okay, Got It' : 'Thank You'}
                         </button>
                     </div>
                 </div>

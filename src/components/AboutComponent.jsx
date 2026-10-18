@@ -14,7 +14,7 @@ const AboutSection = () => {
     <div
       style={{
         position: 'relative',
-        minHeight: '470px', // minHeight use kiya hai height ke bajaye
+        minHeight: '470px',
         backgroundImage: `linear-gradient(to left, #00000026, #6664c7ff), url(${BackImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -22,18 +22,27 @@ const AboutSection = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '40px 0', // Top aur bottom padding add kiya
+        padding: '40px 0',
       }}
-      className="responsive-about-section" // Class add kiya responsive styling ke liye
+      className="responsive-about-section"
     >
       <div className="text-center px-4 w-full max-w-6xl">
-        <h2 className="text-lg sm:text-xl font-semibold animate-text">WHO WE ARE</h2>
+        <h2 className="text-lg sm:text-xl font-semibold animate-text tracking-widest">WHO WE ARE</h2>
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brandRed mt-2 animate-text leading-tight">
           About Pakistan Power Engineering <span style={{ color: "white" }}>Services</span>
         </h1>
+        <div className="w-24 h-1 bg-gradient-to-r from-brandRed to-red-500 mx-auto mt-4 mb-4"></div>
         <p className="mt-4 sm:mt-6 text-sm sm:text-base max-w-5xl mx-auto animate-text leading-relaxed">
-          Pakistan Power Engineering Services is rolling the wheel in Power Industry since 1998 as an EPC contractor with an extraordinary team of experienced and young result-oriented professionals. In this short span of time, Pakistan Power Engineering Services has progressed gigantically and is now included in the fleet of successful contracting companies working in Pakistan. We are under committed and over delivered. We are Pakistan Power Engineering Services!
+          Pakistan Power Engineering Services is a leading engineering solutions provider, delivering high-quality electrical, instrumentation, and automation services for industrial, commercial, and utility sectors. Established since 2010, with a team of experienced engineers and technicians, we are committed to providing safe, reliable, and innovative solutions that meet international standards and exceed client expectations.
         </p>
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          {[{ num: '50+', label: 'Skilled Professionals' }, { num: '14+', label: 'Years of Experience' }, { num: '500+', label: 'Projects Completed' }, { num: '100+', label: 'Satisfied Clients' }].map((stat, i) => (
+            <div key={i} className="animate-text">
+              <div className="text-3xl font-bold text-brandRed">{stat.num}</div>
+              <div className="text-xs text-white mt-1 tracking-wide">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
       <style jsx>{`
                 @keyframes fadeInUp {

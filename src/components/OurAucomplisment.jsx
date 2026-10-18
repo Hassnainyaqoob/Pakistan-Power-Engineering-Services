@@ -7,10 +7,10 @@ export default function OurAccomplishments() {
     const ref = useRef(null);
 
     const accomplishments = [
-        { number: 50, label: 'Projects Finished', suffix: '+' },
-        { number: 150, label: 'Project Managers', suffix: '+' },
-        { number: 15, label: 'Development Tools', suffix: '+' },
-        { number: 567, label: 'Innovative Products', suffix: '+' }
+        { number: 500, label: 'Projects Completed', suffix: '+' },
+        { number: 50, label: 'Skilled Professionals', suffix: '+' },
+        { number: 10, label: 'Years of Experience', suffix: '+' },
+        { number: 100, label: 'Satisfied Clients', suffix: '+' }
     ];
 
     useEffect(() => {
@@ -73,7 +73,7 @@ export default function OurAccomplishments() {
                         <span className="text-brandRed">Our </span>
                         <span className='text-blueColor'>Accomplishments</span>
                     </h1>
-                    <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-blue-900 mx-auto"></div>
+                    <div className="w-32 h-1 bg-gradient-to-r from-brandRed to-blue-900 mx-auto"></div>
                 </div>
                 {/* Stats Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -85,7 +85,7 @@ export default function OurAccomplishments() {
                             <h3 className="text-lg font-semibold text-blue-900 mb-6">
                                 {item.label}
                             </h3>
-                            <div className="w-full h-1 bg-gradient-to-r from-orange-500 to-blue-900 rounded"></div>
+                            <div className="w-full h-1 bg-gradient-to-r from-brandRed to-blue-900 rounded"></div>
                         </div>
                     ))}
                 </div>

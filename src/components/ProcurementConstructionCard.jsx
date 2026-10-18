@@ -37,20 +37,20 @@ export const LoadAssessmentCard = ({
                         <div className="relative z-10 flex items-center space-x-8">
                             {/* Worker 1 - with safety vest */}
                             <div className="flex flex-col items-center">
-                                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-2">
-                                    <div className="w-8 h-8 bg-orange-600 rounded-full"></div>
+                                <div className="w-16 h-16 bg-brandRed rounded-full flex items-center justify-center mb-2">
+                                    <div className="w-8 h-8 bg-red-700 rounded-full"></div>
                                 </div>
-                                <div className="w-20 h-24 bg-orange-400 rounded-lg relative">
-                                    <div className="absolute top-2 left-2 right-2 h-4 bg-orange-500 rounded"></div>
+                                <div className="w-20 h-24 bg-red-500 rounded-lg relative">
+                                    <div className="absolute top-2 left-2 right-2 h-4 bg-brandRed rounded"></div>
                                     <div className="absolute bottom-2 left-2 right-2 h-16 bg-gray-800 rounded"></div>
                                 </div>
                             </div>
 
                             {/* Worker 2 - with hard hat */}
                             <div className="flex flex-col items-center">
-                                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-2 relative">
-                                    <div className="w-8 h-8 bg-orange-600 rounded-full"></div>
-                                    <div className="absolute -top-2 w-12 h-6 bg-orange-500 rounded-full"></div>
+                                <div className="w-16 h-16 bg-brandRed rounded-full flex items-center justify-center mb-2 relative">
+                                    <div className="w-8 h-8 bg-red-700 rounded-full"></div>
+                                    <div className="absolute -top-2 w-12 h-6 bg-brandRed rounded-full"></div>
                                 </div>
                                 <div className="w-20 h-24 bg-blue-600 rounded-lg relative">
                                     <div className="absolute top-2 left-1 right-1 h-4 bg-white rounded opacity-80"></div>
@@ -101,7 +101,7 @@ export const LoadAssessmentCard = ({
             </div>
 
             {/* Gradient accent bar */}
-            <div className={`hidden sm:block absolute top-0 bottom-0 w-2 bg-gradient-to-b from-orange-500 to-purple-700 ${reversecond ? 'left-0' : 'right-0'}`}></div>
+            <div className={`hidden sm:block absolute top-0 bottom-0 w-2 bg-gradient-to-b from-brandRed to-purple-700 ${reversecond ? 'left-0' : 'right-0'}`}></div>
         </div>
     );
 };

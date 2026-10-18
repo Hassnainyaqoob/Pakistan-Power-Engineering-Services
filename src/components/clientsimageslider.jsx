@@ -8,88 +8,83 @@ const ClientLogoMarquee = ({ logos }) => {
         console.log('Logos data:', logos);
     }, [logos]);
 
-    const PreviousArrow = (props) => {
-        const { className, style, onClick } = props;
-        return (
-            <div
-                className={`${className} custom-arrow absolute left-2 top-1/2 transform -translate-y-1/2`}
-                style={{ ...style, display: 'block', background: '#d1d5db', borderRadius: '50%', zIndex: 10 }}
-                onClick={onClick}
+    const CustomArrow = ({ direction, onClick }) => (
+        <button
+            onClick={onClick}
+            className={`absolute top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1)] border border-gray-100 hover:bg-blueColor hover:text-white transition-all duration-300 group focus:outline-none ${direction === 'left' ? '-left-4 lg:-left-6' : '-right-4 lg:-right-6'}`}
+            aria-label={`${direction} arrow`}
+        >
+            <svg
+                className={`w-6 h-6 text-blueColor group-hover:text-white transition-colors duration-300`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
             >
-                <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13" />
-                </svg>
-            </div>
-        );
-    };
-
-    const NextArrow = (props) => {
-        const { className, style, onClick } = props;
-        return (
-            <div
-                className={`${className} custom-arrow absolute right-2 top-1/2 transform -translate-y-1/2`}
-                style={{ ...style, display: 'block', background: '#d1d5db', borderRadius: '50%', zIndex: 10 }}
-                onClick={onClick}
-            >
-                <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
-                </svg>
-            </div>
-        );
-    };
+                {direction === 'left' ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                )}
+            </svg>
+        </button>
+    );
 
     const settings = {
         infinite: true,
-        speed: 500,
-        slidesToShow: 4,
+        speed: 800,
+        slidesToShow: 6,
         slidesToScroll: 1,
-        prevArrow: <PreviousArrow />,
-        nextArrow: <NextArrow />,
+        prevArrow: <CustomArrow direction="left" />,
+        nextArrow: <CustomArrow direction="right" />,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2500,
+        pauseOnHover: true,
+        cssEase: "ease-in-out",
         responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 5, // Adjusted to 3 for better fit
-                    slidesToScroll: 1,
+                    slidesToShow: 4,
                 },
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
+                    slidesToShow: 3,
                 },
             },
             {
-                breakpoint: 640,
+                breakpoint: 480,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    arrows: true, // Enabled arrows on mobile
+                    slidesToShow: 2,
                 },
             },
         ],
     };
 
     return (
-        <div className="w-full max-w-full bg-gradient-to-r from-gray-100 to-white py-6 relative overflow-hidden">
-            <div className="relative">
-                <Slider {...settings}>
-                    {logos.map((logo, index) => (
-                        <div key={index} className="px-1 sm:px-2">
+        <div className="w-full max-w-7xl mx-auto py-8 relative px-4 lg:px-10">
+            <Slider {...settings} className="client-slider">
+                {logos.map((logo, index) => (
+                    <div key={index} className="px-3">
+                        <div className="bg-white h-32 flex items-center justify-center border border-gray-100 rounded-xl hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:border-blueColor/30 group">
                             <img
                                 src={logo.src}
                                 alt={logo.alt || `Client Logo ${index + 1}`}
-                                className="bg-white h-28 mx-auto block transition-transform duration-300 hover:scale-110 border border-gray-200 rounded-lg p-2 shadow-sm sm:h-32 md:h-36 lg:h-40"
-                                onError={(e) => { e.target.style.display = 'none'; console.error(`Image failed to load: ${logo.src}`); }}
+                                className="max-h-20 max-w-[80%] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                                onError={(e) => { e.target.style.display = 'none'; }}
                                 loading="lazy"
                             />
                         </div>
-                    ))}
-                </Slider>
-            </div>
+                    </div>
+                ))}
+            </Slider>
         </div>
     );
 };
