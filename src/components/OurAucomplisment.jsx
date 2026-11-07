@@ -9,7 +9,7 @@ export default function OurAccomplishments() {
     const accomplishments = [
         { number: 500, label: 'Projects Completed', suffix: '+' },
         { number: 50, label: 'Skilled Professionals', suffix: '+' },
-        { number: 10, label: 'Years of Experience', suffix: '+' },
+        { number: 15, label: 'Years of Experience', suffix: '+' },
         { number: 100, label: 'Satisfied Clients', suffix: '+' }
     ];
 

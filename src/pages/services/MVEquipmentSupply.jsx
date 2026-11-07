@@ -3,7 +3,7 @@ import ServicePageTemplate from '../../components/ServicePageTemplate';
 import heroImage from '../../assets/images/mv_equipment_supply_hero.jpg';
 
 const services = [
-    { icon: '⚡', title: '11kV (11,000V) Transformers Supply', description: 'Supply of brand-new and certified reconditioned 11kV/0.4kV oil-immersed (sealed & conservator) and dry-type cast resin distribution transformers in multiple ratings.' },
+    { icon: '⚡', title: 'Power Transformers Supply (Multiple kVA Ratings)', description: 'Supply of brand-new and certified reconditioned Oil-Immersed (sealed & conservator) and Dry-Type Cast Resin Power & Distribution Transformers across all kVA and MVA capacities.' },
     { icon: '🔌', title: '11kV Vacuum Circuit Breakers (VCB)', description: 'Indoor metal-clad drawout and fixed VCBs (630A to 3150A, 25kA/31.5kA) from Siemens, Schneider, ABB, and LS Electric.' },
     { icon: '🛡️', title: 'Ring Main Units (RMU)', description: 'Compact SF6 gas-insulated and eco-friendly vacuum RMUs (non-extensible & extensible) for robust underground network distribution.' },
     { icon: '🤖', title: 'MiCOM & Numerical Protection Relays', description: 'Supply and integration of MiCOM (P12x, P14x, P63x), ABB, and Schneider microprocessor protection relays for feeder, transformer, and busbar protection.' },
@@ -24,7 +24,7 @@ const benefits = [
 ];
 
 const keyFeatures = [
-    '11kV (11,000V) Transformers: Multiple Ratings & Capacities',
+    'Power Transformers (Oil & Dry Type) in Multiple kVA & MVA Ratings',
     '11kV Vacuum Circuit Breakers (VCB) & Ring Main Units (RMU)',
     'MiCOM, Schneider, ABB & Siemens Numerical Relays',
     'Cast Resin 11kV CT / PT Metering & Protection Transformers',
@@ -78,18 +78,18 @@ export default function MVEquipmentSupplyPage() {
     return (
         <ServicePageTemplate
             heroImage={heroImage}
-            heroTitle="11kV & MV Equipment Supply"
-            heroTitleAccent="Transformers, Switchgear & Protection"
+            heroTitle="Power Transformers & MV/LV Equipment"
+            heroTitleAccent="Authorized Supply, Installation & Testing"
             heroSubtitle="Pakistan Power Engineering Services"
-            heroDescription="Authorized supply of 11kV (11,000V) distribution transformers in multiple ratings, Vacuum Circuit Breakers (VCB), Ring Main Units (RMU), MiCOM relays, cable kits, and low-tension switchgear across Pakistan."
-            overviewText="Pakistan Power Engineering Services supplies and integrates high-reliability medium-voltage and low-voltage electrical equipment for heavy industrial, commercial, and utility projects. Whether sourcing 11kV (11,000V) power transformers, 11kV VCB switchgear cubicles, compact RMUs, or precision MiCOM numerical protection relays, we partner with leading manufacturers (Schneider, Siemens, ABB, Terasaki, PEL) to deliver guaranteed quality, technical warranty, and on-site commissioning."
+            heroDescription="Authorized supply of Oil-Immersed & Dry-Type Power Transformers across multiple kVA ratings, 11kV Vacuum Circuit Breakers (VCB), Ring Main Units (RMU), MiCOM protection relays, CTs, PTs, spouts, insulators, cable kits, and LT switchgear across Pakistan."
+            overviewText="Pakistan Power Engineering Services supplies and integrates high-reliability electrical equipment for industrial, commercial, and utility projects. Whether sourcing Power & Distribution Transformers in multiple kVA/MVA capacities, 11kV HT VCB switchgear cubicles, compact RMUs, CTs/PTs, or MiCOM, ABB & Schneider numerical protection relays, we partner with leading manufacturers (Schneider, Siemens, ABB, Terasaki, PEL) to deliver guaranteed quality, certified test reports, and on-site commissioning."
             services={services}
             benefits={benefits}
             keyFeatures={keyFeatures}
             applications={applications}
             stats={stats}
             extraSection={<BrandsSection />}
-            ctaTitle="Need 11kV Equipment or Transformers Sourced?"
+            ctaTitle="Need Power Transformers or Switchgear Equipment Sourced?"
             ctaDescription="Share your project specifications or bill of quantities (BOQ). Our engineering supply team will provide competitive quotations with rapid delivery."
         />
     );

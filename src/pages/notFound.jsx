@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
     useEffect(() => {
         const planet = document.querySelector('.planet');
+        const stars = document.querySelectorAll('.star');
         let posX = 0;
         let posY = 0;
-        const stars = document.querySelectorAll('.star');
+        let frameId;
 
         const animate = () => {
+            if (!planet) return;
             posX += (Math.random() - 0.5) * 1.5;
             posY += (Math.random() - 0.5) * 1.5;
             planet.style.transform = `translate(${posX}px, ${posY}px) rotate(${posX / 2}deg)`;
@@ -19,38 +22,43 @@ const NotFoundPage = () => {
                 star.style.top = `${starY}px`;
             });
 
-            requestAnimationFrame(animate);
+            frameId = requestAnimationFrame(animate);
         };
 
-        animate();
+        frameId = requestAnimationFrame(animate);
 
-        return () => { }; // Cleanup if needed
+        return () => {
+            if (frameId) cancelAnimationFrame(frameId);
+        };
     }, []);
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-white text-gray-800">
-            <div className="text-center relative">
-                {/* Animated Stars */}
+        <div className="flex items-center justify-center min-h-screen bg-white text-gray-800 pt-24">
+            <div className="text-center relative px-6">
                 {[...Array(10)].map((_, i) => (
                     <div
                         key={i}
-                        className="star w-2 h-2 bg-yellow-400 rounded-full absolute animate-pulse"
+                        className="star w-2 h-2 bg-yellow-400 rounded-full absolute animate-pulse pointer-events-none"
                         style={{
-                            left: `${Math.random() * 100}vw`,
-                            top: `${Math.random() * 100}vh`,
-                            opacity: Math.random(),
+                            left: `${(i * 10 + 7) % 95}vw`,
+                            top: `${(i * 13 + 11) % 85}vh`,
+                            opacity: 0.6,
                         }}
-                    ></div>
+                    />
                 ))}
-                {/* Animated Planet */}
-                <div className="planet w-32 h-32 bg-brandRed rounded-full absolute animate-bounce"></div>
-                <h1 className="text-6xl font-bold mt-16 z-10">404</h1>
-                <p className="text-xl mt-4 z-10">Oops! Page Not Found.</p>
-                <p className="mt-2 z-10">
-                    <a href="/" className="text-brandRed hover:underline">
+                <div className="planet w-24 h-24 bg-brandRed/15 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-4xl">⚡</span>
+                </div>
+                <h1 className="text-6xl font-extrabold text-blueColor z-10">404</h1>
+                <p className="text-xl text-gray-600 mt-3 z-10">Page Not Found</p>
+                <div className="mt-6 z-10">
+                    <Link
+                        to="/"
+                        className="inline-block bg-brandRed hover:bg-red-700 text-white font-bold px-6 py-3 rounded-xl transition-colors"
+                    >
                         Go Back Home
-                    </a>
-                </p>
+                    </Link>
+                </div>
             </div>
         </div>
     );

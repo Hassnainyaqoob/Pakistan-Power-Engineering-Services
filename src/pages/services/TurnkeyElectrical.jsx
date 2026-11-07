@@ -3,7 +3,7 @@ import ServicePageTemplate from '../../components/ServicePageTemplate';
 import heroImage from '../../assets/images/turnkey_electrical_hero.jpg';
 
 const services = [
-    { icon: '⚡', title: 'Complete 11kV (11,000V) Substation Setup', description: 'Complete design, civil pad assessment, equipment rigging, positioning, and energized commissioning of 11kV (11,000V) substations across multiple ratings.' },
+    { icon: '⚡', title: 'Complete Substation & Power Transformer Setup', description: 'Complete design, civil pad assessment, Power Transformer rigging & positioning (all kVA/MVA ratings), HT/LT switchgear installation, and energized commissioning of 11kV substations.' },
     { icon: '🏭', title: 'In-House Panel Manufacturing & PCC/MCC', description: 'Full custom fabrication of Power Control Centers (PCC up to 6300A), Motor Control Centers (MCC), and APFC capacitor banks to IEC standards.' },
     { icon: '🔌', title: '11kV VCB Switchgear & RMU Installation', description: 'Assembly, busbar trunking coupling, interlock calibration, and wiring of Vacuum Circuit Breaker panels and Ring Main Units.' },
     { icon: '🔗', title: '11kV HT & LT Cable Laying & Termination', description: 'Trenching, cable tray installation, 11kV XLPE HT cable laying, heat-shrink terminations, and straight-through jointing with certified test reports.' },
@@ -24,7 +24,7 @@ const benefits = [
 ];
 
 const keyFeatures = [
-    'Complete 11kV (11,000V) Substations across multiple ratings',
+    'Turnkey 11kV Substations & Power Transformers (Multiple kVA & MVA Ratings)',
     'In-House LT, PCC (up to 6300A), MCC, and APFC Panel Manufacturing',
     '11kV Vacuum Circuit Breakers (VCB) & Ring Main Units (RMU)',
     'MiCOM & Numerical Relay Protection Calibration',
@@ -42,9 +42,9 @@ const applications = [
 ];
 
 const stats = [
-    { number: '11kV', label: 'Turnkey Voltage (11,000V)' },
+    { number: 'kVA / MVA', label: 'All Substation Capacities' },
     { number: '500+', label: 'Projects Handed Over' },
-    { number: '14+', label: 'Years Experience' },
+    { number: '15+', label: 'Years Experience' },
     { number: 'Nationwide', label: 'Service Across Pakistan' },
 ];
 
@@ -109,7 +109,7 @@ const CertificationsSection = () => (
                     We are committed to delivering <span className="text-brandRed font-semibold">safe, reliable and innovative</span> electrical engineering solutions that exceed client expectations and contribute to a sustainable future.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
-                    {[{ n: '100+', l: 'Satisfied Clients' }, { n: '500+', l: 'Successful Projects' }, { n: '14+', l: 'Years of Experience' }, { n: '24/7', l: 'Support & Service' }].map((s, i) => (
+                    {[{ n: '100+', l: 'Satisfied Clients' }, { n: '500+', l: 'Successful Projects' }, { n: '15+', l: 'Years of Experience' }, { n: '24/7', l: 'Support & Service' }].map((s, i) => (
                         <div key={i}>
                             <div className="text-3xl font-extrabold text-brandRed">{s.n}</div>
                             <div className="text-sm text-blue-300 mt-1">{s.l}</div>

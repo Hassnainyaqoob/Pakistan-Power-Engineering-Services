@@ -51,13 +51,13 @@ import ClientLogoMarquee from '../components/clientsimageslider';
 import SubstationDiagram from '../components/SubstationDiagram';
 
 const heroSlides = [
-    { image: backgroundImage, title: '11kV Substation & Power Architecture' },
-    { image: PowerTransImg, title: 'Power Transformers (Oil & Dry Type)' },
+    { image: backgroundImage, title: 'Substation & Power Distribution Architecture' },
+    { image: PowerTransImg, title: 'Power Transformers (Oil & Dry Type — All kVA Ratings)' },
     { image: VcbMvImg, title: 'HT & MV VCB Switchgear Panels' },
     { image: LtPanelsImg, title: 'LT & PCC/MCC Panels (Up to 6300A)' },
-    { image: ElevenKvTransImg, title: '11kV Distribution Transformers' },
+    { image: ElevenKvTransImg, title: 'Power Transformers: Supply, Repairing & Testing' },
     { image: realSiemensPanel, title: 'Siemens Breaker & Switchgear Suite' },
-    { image: realMeggerSwitchgear, title: 'KYN28-24 HT Panel Relay Testing' },
+    { image: realMeggerSwitchgear, title: 'KYN28 HT VCB Panel & Relay Testing' },
     { image: realMeggerCtPt, title: 'Megger MVCT CT & VT Ratio Testing' },
 ];
 
@@ -179,10 +179,10 @@ export default function HomePage() {
     const offerings = [
         {
             image: ElevenKvTransImg,
-            title: 'Power Transformers (Oil & Dry Type)',
-            subtitle: 'Multiple Ratings & Capacities',
-            description: 'Complete supply, high-vacuum oil dehydration & filtration, precision diagnostic testing, coil rewinding, and overhauling for oil & dry type transformers across multiple ratings.',
-            link: '/services/11kv-transformers'
+            title: 'Power Transformers',
+            subtitle: 'Supply, Repairing, Testing & Commissioning',
+            description: 'Oil-immersed & dry-type Power Transformers across multiple kVA and MVA ratings — supply, HV/LV coil rewinding, repairing, high-vacuum oil filtration, diagnostic testing, and commissioning.',
+            link: '/services/power-transformers'
         },
         {
             image: LtPanelsImg,
@@ -246,8 +246,8 @@ export default function HomePage() {
         {
             num: '02',
             icon: '📦',
-            title: 'Equipment Supply',
-            desc: 'Direct supply of 11kV (11,000V) distribution transformers in multiple ratings, VCB switchgear, Ring Main Units, and tier-1 breakers.'
+            title: 'Power Transformers & Equipment Supply',
+            desc: 'Direct supply of oil-immersed & dry-type Power Transformers in multiple kVA / MVA ratings, HT VCB switchgear, Ring Main Units, and tier-1 breakers.'
         },
         {
             num: '03',
@@ -357,7 +357,7 @@ export default function HomePage() {
                         {/* Top badge */}
                         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C00000]/25 border border-[#C00000]/50 text-white text-xs sm:text-sm font-semibold tracking-wider uppercase mb-5 backdrop-blur-md">
                             <span className="w-2 h-2 rounded-full bg-[#ff4d4d] animate-ping" />
-                            <span>11kV Power Distribution & Substation Specialists</span>
+                            <span>Power Transformers, HT/LT Switchgear & Substation Specialists</span>
                         </div>
 
                         {/* Main Title */}
@@ -371,11 +371,11 @@ export default function HomePage() {
                             <Typewriter
                                 options={{
                                     strings: [
-                                        'Power Transformers (Oil & Dry Type)',
-                                        'Power Transformer Maintenance, Testing & Repairing',
-                                        'HV, MV & LV Switchgears & Panels',
-                                        'HV, MV & LV Switchgear Trolleys: Complete Repair, Maintenance & Testing',
-                                        'HV, MV & LV Protection Relays: Testing, Commissioning & Installation',
+                                        'Power Transformers: Supply, Repairing, Testing & Commissioning',
+                                        'Oil & Dry-Type Transformers (Multiple kVA & MVA Ratings)',
+                                        'HV, MV & LV Switchgears & Panels Manufacturing',
+                                        'HV, MV & LV Breaker Trolleys: Repair, Maintenance & Testing',
+                                        'Protection Relays (MiCOM, ABB & Schneider): Testing & Commissioning',
                                         'Complete A-to-Z Substation Setup'
                                     ],
                                     autoStart: true,

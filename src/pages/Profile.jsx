@@ -8,10 +8,10 @@ const PDF_URL = '/docs/Pakistan-Power-Company-Profile.pdf';
 const pages = [
     { title: 'Cover', route: null },
     { title: 'About Company', route: null },
-    { title: 'Power Transformer Services', route: '/services/power-transformer' },
-    { title: 'VCB & MV Panels', route: '/services/vcb-mv-panels' },
+    { title: 'Power Transformers (Supply, Repair & Testing)', route: '/services/power-transformers' },
+    { title: 'HT / MV VCB & RMU Panels', route: '/services/vcb-mv-panels' },
     { title: 'Instrumentation & Automation', route: '/services/instrumentation-automation' },
-    { title: 'MV Equipment Supply', route: '/services/mv-equipment-supply' },
+    { title: 'Power Transformers & MV Equipment Supply', route: '/services/mv-equipment-supply' },
     { title: 'Power Factor Improvement', route: '/services/power-factor-improvement' },
     { title: 'Testing & Commissioning', route: '/services/testing-commissioning' },
     { title: 'Complete Substation Setup', route: '/services/turnkey-electrical' },

@@ -94,7 +94,7 @@ export const LoadAssessmentCard = ({
                             {subtitle}
                         </h3>
                     )}
-                    <p className="text-blueCobrandRedlor leading-relaxed mb-6">
+                    <p className="text-gray-600 leading-relaxed mb-6">
                         {description}
                     </p>
                 </div>

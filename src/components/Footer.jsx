@@ -13,13 +13,13 @@ const Footer = () => {
     ];
 
     const serviceLinks = [
-        { name: '11kV (11,000V) Transformers', href: '/services/11kv-transformers' },
+        { name: 'Power Transformers (Supply, Repair & Testing)', href: '/services/power-transformers' },
         { name: 'LT & PCC/MCC Panels Manufacturing', href: '/services/lt-panels' },
-        { name: 'VCB & MV Panels Maintenance', href: '/services/vcb-mv-panels' },
-        { name: 'Power Transformer Services', href: '/services/power-transformer' },
+        { name: 'HT / MV VCB & RMU Switchgear Panels', href: '/services/vcb-mv-panels' },
+        { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformer' },
         { name: 'Testing, Relays & Commissioning', href: '/services/testing-commissioning' },
-        { name: 'Power Factor Improvement (PFI)', href: '/services/power-factor-improvement' },
-        { name: 'Supply of MV Equipment', href: '/services/mv-equipment-supply' },
+        { name: 'Power Factor Improvement (PFI/APFC)', href: '/services/power-factor-improvement' },
+        { name: 'Supply of MV / LV Equipment', href: '/services/mv-equipment-supply' },
         { name: 'Complete Substation Setup', href: '/services/turnkey-electrical' },
         { name: 'Instrumentation & Automation', href: '/services/instrumentation-automation' },
     ];
@@ -148,14 +148,12 @@ const Footer = () => {
                             </h4>
                             <div className="flex space-x-3">
                                 <a
-                                    href="https://facebook.com/yourpage"
+                                    href="mailto:info@pakistanpowerengservices.com"
                                     className="w-9 h-9 rounded-full bg-gray-800 hover:bg-red-600 flex items-center justify-center text-white transition-colors"
-                                    aria-label="Facebook"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    aria-label="Email Pakistan Power Engineering Services"
                                 >
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v4.8c4.56-.93 8-4.96 8-9.8z" />
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                                     </svg>
                                 </a>
                                 <a

@@ -4,60 +4,64 @@ import { useLocation } from 'react-router-dom';
 
 const routeSeoMap = {
     '/': {
-        title: 'Pakistan Power Engineering Services | 11kV Substation, Transformer & Switchgear Specialists',
-        description: 'Leading 11kV substation engineering across Pakistan. 11kV (11,000V) transformers, in-house LT/PCC/MCC panel manufacturing, VCB switchgear & MiCOM relay testing.'
+        title: 'Pakistan Power Engineering Services | Power Transformers, Switchgear & Substation Specialists',
+        description: 'Leading industrial electrical engineering across Pakistan. Power Transformers (Supply, Repairing, Testing & Commissioning in multiple kVA ratings), in-house LT/PCC/MCC panels, HT/MV VCB switchgear & MiCOM relay testing.'
     },
     '/about': {
         title: 'About Us | Pakistan Power Engineering Services',
-        description: 'Established in 2010, Pakistan Power Engineering Services delivers end-to-end electrical distribution, panel manufacturing, and high-voltage substation solutions across Pakistan.'
+        description: 'Established in 2010 and led by CEO Ahmed Yaqoob, Pakistan Power Engineering Services delivers Power Transformers (all kVA ratings), HT/MV VCB & LT switchgear panels, and substation commissioning across Pakistan.'
     },
     '/contact': {
         title: 'Contact Us | Pakistan Power Engineering Services',
-        description: 'Get in touch with our certified power engineers for 11kV substation setup, transformer testing, LT panels, and 24/7 emergency breakdown support.'
+        description: 'Get in touch with our power engineering specialists for Power Transformer supply & repairing, HT/LT switchgear panels, relay testing, and 24/7 emergency breakdown support.'
     },
     '/profile': {
         title: 'Company Profile & Credentials | Pakistan Power Engineering Services',
-        description: 'Download our official company profile. Over 14 years of certified power engineering excellence, 500+ substation projects, and utility approvals across Pakistan.'
+        description: 'Download our official company profile. Over 15+ years of certified power engineering excellence, 500+ industrial projects, and utility approvals across Pakistan.'
     },
     '/clients': {
         title: 'Our Clients & Approvals | Pakistan Power Engineering Services',
-        description: 'Trusted by leading textile, steel, cement, pharmaceutical, and industrial manufacturing plants across Pakistan, with DISCO and K-Electric approvals.'
+        description: 'Trusted by 100+ textile, steel, cement, pharmaceutical, and industrial manufacturing plants across Pakistan, with DISCO and K-Electric compliance.'
+    },
+    '/services/power-transformers': {
+        title: 'Power Transformers — Supply, Repairing, Testing & Commissioning | Pakistan Power Engineering Services',
+        description: 'Oil-immersed & dry-type Power Transformers across multiple kVA and MVA ratings: supply, HV/LV coil rewinding, repairing, high-vacuum oil filtration, diagnostic testing, and commissioning.'
     },
     '/services/11kv-transformers': {
-        title: '11kV (11,000V) Distribution Transformers | Pakistan Power Engineering Services',
-        description: 'Comprehensive 11kV transformer supply, rewinding, vacuum oil filtration, ratio testing, and on-site maintenance across 11kV (11,000V) power networks.'
+        title: 'Power Transformers — Supply, Repairing, Testing & Commissioning | Pakistan Power Engineering Services',
+        description: 'Oil-immersed & dry-type Power Transformers across multiple kVA and MVA ratings: supply, HV/LV coil rewinding, repairing, high-vacuum oil filtration, diagnostic testing, and commissioning.'
     },
     '/services/power-transformer': {
-        title: 'Power Transformer Services & Maintenance | Pakistan Power Engineering Services',
-        description: 'Heavy power transformer rewinding, turnkey installation, high-vacuum oil dehydration, Tan-Delta, and diagnostic testing across Pakistan.'
+        title: 'Power Transformer Maintenance, Rewinding & Oil Filtration | Pakistan Power Engineering Services',
+        description: 'Specialized Power Transformer repairing, HV/LV copper coil rewinding, mobile high-vacuum oil dehydration (BDV > 60kV), tap changer servicing, and diagnostic testing across all kVA ratings.'
     },
     '/services/lt-panels': {
         title: 'Custom LT Switchgear, PCC & MCC Panel Manufacturing | Pakistan Power Engineering Services',
-        description: 'In-house manufacturing of custom Low Tension (LT) panels, Power Control Centers (PCC), Motor Control Centers (MCC) up to 6300A with CNC fabrication.'
+        description: 'In-house manufacturing of custom Low Tension (LT) panels, Power Control Centers (PCC), and Motor Control Centers (MCC) up to 6300A with CNC fabrication.'
     },
     '/services/vcb-mv-panels': {
-        title: '11kV VCB & MV Switchgear Panels | Pakistan Power Engineering Services',
-        description: '11kV Vacuum Circuit Breaker (VCB) maintenance, retrofitting, Ring Main Units (RMU), busbar flashover repair, and interlock inspection.'
+        title: 'HT / MV VCB & RMU Switchgear Panels | Pakistan Power Engineering Services',
+        description: '11kV Vacuum Circuit Breaker (VCB) panels, trolley overhauling, retrofitting, Ring Main Units (RMU), busbar repair, and protection interlock testing.'
     },
     '/services/testing-commissioning': {
         title: 'Substation Testing, Relay Calibration & Commissioning | Pakistan Power Engineering Services',
-        description: 'Secondary injection testing for MiCOM and numerical relays, CT/PT ratio verification, 10kV insulation resistance, and DISCO utility handover.'
+        description: 'Primary & secondary injection testing for MiCOM, ABB, Schneider & Siemens numerical relays, Power Transformer diagnostic testing, Megger IR, Hi-Pot, and Oil BDV testing.'
     },
     '/services/turnkey-electrical': {
-        title: 'Complete 11kV Substation Setup & Solutions | Pakistan Power Engineering Services',
-        description: 'End-to-end 11kV substation design, civil foundation, equipment supply, cable laying, HT/LT termination, and energization across Pakistan.'
+        title: 'Complete Substation Setup & Turnkey Electrical Solutions | Pakistan Power Engineering Services',
+        description: 'End-to-end substation design, Power Transformer installation, HT/LT switchgear erection, XLPE cable jointing & terminations, and utility energization across Pakistan.'
     },
     '/services/power-factor-improvement': {
-        title: 'Power Factor Improvement (PFI) Panels & Capacitor Banks | Pakistan Power Engineering Services',
-        description: 'Automatic PFI plants, detuned harmonic filter reactors, heavy-duty capacitor banks, and power factor correction to eliminate utility penalties.'
+        title: 'Power Factor Improvement (PFI / APFC) Panels & Capacitor Banks | Pakistan Power Engineering Services',
+        description: 'Automatic PFI / APFC capacitor panels across all kVAR ratings with detuned harmonic filter reactors to maintain 0.99 PF and eliminate utility surcharges.'
     },
     '/services/mv-equipment-supply': {
-        title: '11kV Medium Voltage Equipment Supply | Pakistan Power Engineering Services',
-        description: 'Genuine supply of 11kV vacuum interrupters, lightning arresters, drop-out cutouts, HT XLPE cable terminations, and instrument transformers.'
+        title: 'Power Transformers, Switchgear & MV/LV Equipment Supply | Pakistan Power Engineering Services',
+        description: 'Authorized supply of Power Transformers (multiple kVA ratings), VCB panels, RMUs, MiCOM protection relays, CTs, PTs, spouts, insulators, and cable termination kits.'
     },
     '/services/instrumentation-automation': {
         title: 'Industrial Automation, PLC & SCADA Systems | Pakistan Power Engineering Services',
-        description: 'Custom PLC programming, SCADA integration, automated energy monitoring, and remote substation telemetry for modern industrial facilities.'
+        description: 'Custom PLC programming, substation SCADA integration, AMF/ATS automation, energy monitoring, and process instrumentation for industrial facilities.'
     }
 };
 
@@ -67,25 +71,22 @@ const useDocumentTitle = () => {
     useEffect(() => {
         const path = location.pathname;
         const seoData = routeSeoMap[path] || {
-            title: 'Pakistan Power Engineering Services | 11kV Substation & Panel Specialists',
-            description: 'Leading electrical engineering solutions for industrial and commercial sectors across Pakistan.'
+            title: 'Pakistan Power Engineering Services | Power Transformers, Switchgear & Substation Specialists',
+            description: 'Leading industrial electrical engineering solutions across Pakistan.'
         };
 
-        // Update document title
         document.title = seoData.title;
 
-        // Update meta description tag dynamically
-        let metaDesc = document.querySelector('meta[name="description"]');
+        const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
             metaDesc.setAttribute('content', seoData.description);
         }
 
-        // Update og:title and og:description if present
-        let ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogTitle = document.querySelector('meta[property="og:title"]');
         if (ogTitle) {
             ogTitle.setAttribute('content', seoData.title);
         }
-        let ogDesc = document.querySelector('meta[property="og:description"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
         if (ogDesc) {
             ogDesc.setAttribute('content', seoData.description);
         }

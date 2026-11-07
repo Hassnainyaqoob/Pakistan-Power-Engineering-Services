@@ -7,7 +7,7 @@ const services = [
     { icon: '🔊', title: 'Detuned Harmonic Filter Banks (7% / 14%)', description: 'Heavy-duty iron-core detuned reactors engineered to prevent harmonic resonance, suppress 5th and 7th harmonics, and protect capacitors from overheating in VFD/furnace environments.' },
     { icon: '🔌', title: 'Heavy-Duty Industrial Capacitor Banks', description: 'Self-healing, gas-filled and dry-type polypropylene capacitors equipped with internal overpressure tear-off disconnector and discharge resistors.' },
     { icon: '📐', title: 'Power Quality Audit & Harmonic Analysis', description: 'On-site power quality logging with class-A analyzers to measure THD-V, THD-I, active/reactive kVAR profiles, and determine precise sizing requirements.' },
-    { icon: '🏭', title: 'Capacitor Duty Switching & Protection', description: 'Specialized capacitor switching contactors with pre-charge damping damping resistors, high-breaking capacity MCCBs, and thermal overload protection.' },
+    { icon: '🏭', title: 'Capacitor Duty Switching & Protection', description: 'Specialized capacitor switching contactors with pre-charge damping resistors, high-breaking capacity MCCBs, and thermal overload protection across all kVAR ratings.' },
     { icon: '📞', title: 'Capacitor Testing, Revamping & Maintenance', description: 'Routine capacitance measurement, thermographic hotspot scanning, blown fuse replacement, contactor maintenance, and controller recalibration across Pakistan.' },
 ];
 

@@ -5,114 +5,114 @@ import heroImage from '../../assets/images/eleven_kv_transformers_hero.jpg';
 const services = [
     {
         icon: '⚡',
-        title: '11kV (11,000V) Transformer Supply & Installation',
-        description: 'Supply of brand new and refurbished 11kV/0.4kV distribution and power transformers in multiple ratings complying with IEC 60076, WAPDA, and K-Electric standards.'
+        title: 'Power Transformers Supply (Multiple kVA Ratings)',
+        description: 'Supply of brand-new and certified refurbished Power & Distribution Transformers across multiple kVA and MVA capacities (50 kVA, 100 kVA, 200 kVA, 250 kVA, 400 kVA, 500 kVA, 630 kVA, 1000 kVA, 1500 kVA, 2000 kVA, 2500 kVA & custom multi-MVA ratings) complying with IEC 60076, WAPDA, and K-Electric standards.'
+    },
+    {
+        icon: '🔧',
+        title: 'Complete Transformer Repairing & Coil Rewinding',
+        description: 'Full workshop repairing and HV/LV coil rewinding using 99.9% pure electrolytic copper, Nomex/Kraft Class-F & Class-H insulation, CRGO silicon steel core restacking, tank leak repair, and controlled oven baking.'
+    },
+    {
+        icon: '🔬',
+        title: 'Diagnostic Testing & Energized Commissioning',
+        description: 'End-to-end pre-commissioning and diagnostic testing: Turns Ratio (TTR), Winding Resistance, Insulation Resistance (Megger IR & PI), Vector Group, Magnetic Balance, Short-Circuit Impedance, Oil BDV testing, and energized substation handover.'
     },
     {
         icon: '🛢️',
-        title: 'Oil-Immersed Distribution Transformers',
-        description: 'Conservator and hermetically sealed non-breathing distribution transformers with high-efficiency CRGO silicon steel cores, Dyn11 vector configuration, and low loss ratings.'
+        title: 'Oil-Immersed Power & Distribution Transformers',
+        description: 'Conservator-type and hermetically sealed oil-immersed transformers engineered with low no-load/load losses, Dyn11 vector group configuration, heavy-duty radiators, and enclosed cable boxes or outdoor bushings.'
     },
     {
         icon: '🛡️',
-        title: 'Dry-Type Cast Resin Transformers',
-        description: 'Flame-retardant, self-extinguishing Class-F and Class-H cast resin & vacuum pressure impregnated (VPI) dry-type transformers engineered for indoor substations, malls, and hospitals.'
+        title: 'Dry-Type Cast Resin & VPI Transformers',
+        description: 'Flame-retardant, self-extinguishing Class-F and Class-H epoxy cast-resin and Vacuum Pressure Impregnated (VPI) dry-type power transformers ideal for indoor industrial substations, hospitals, high-rise towers, and malls.'
     },
     {
         icon: '💧',
         title: 'High-Vacuum Oil Filtration & Dehydration',
-        description: 'Mobile two-stage high-vacuum oil purification plants for on-site moisture removal, degassing, particle filtration, and restoration of transformer oil dielectric breakdown voltage (BDV).'
-    },
-    {
-        icon: '🔬',
-        title: 'Comprehensive Diagnostic & Relay Testing',
-        description: 'On-site Megger (Insulation Resistance), PI, Turns Ratio (TTR), Winding Resistance, Oil BDV testing, Buchholz relay functional checks, and temperature calibration.'
-    },
-    {
-        icon: '🔧',
-        title: 'Complete Rewinding & Workshop Repair',
-        description: 'Full high-voltage (HV) and low-voltage (LV) coil rewinding using high-grade electrolytic copper, core unstacking/restacking, insulation replacement, and oven baking.'
+        description: 'On-site mobile two-stage high-vacuum oil purification plants for dissolved moisture extraction, degassing, sub-micron particulate filtration, and restoring oil dielectric breakdown voltage (BDV > 60kV–70kV).'
     },
     {
         icon: '🔩',
-        title: 'Gasket Replacement & Leakage Arresting',
-        description: 'Complete overhaul of transformer tanks, replacement of aging cork/nitrile gaskets, radiator refurbishment, silica gel breather servicing, and pressure testing.'
+        title: 'Tap Changer (OLTC / OCTC), Gasket & Accessory Overhaul',
+        description: 'Overhauling of On-Load (OLTC) and Off-Circuit (OCTC) tap changers, complete cork/nitrile gasket replacement, oil leakage arresting, silica gel breather renewal, and Buchholz / OTI / WTI / PRV protection calibration.'
     },
     {
         icon: '🚚',
-        title: 'Complete Substation Erection & Handover',
-        description: 'Site civil pad assessment, rigging, transformer positioning, HT cable termination, earthing grid connection, utility inspection assistance, and energized commissioning.'
+        title: 'On-Site Rigging, Installation & Utility Handover',
+        description: 'Civil foundation assessment, crane rigging, transformer bay positioning, enclosed HT/LT cable box terminations, neutral & body earthing grid bonding, K-Electric / DISCO compliance, and 24/7 emergency breakdown support.'
     }
 ];
 
 const benefits = [
     {
         icon: '⚡',
-        title: '11kV (11,000V) Voltage Level Handling',
-        description: 'Deep technical capability and test equipment to handle heavy industrial substations, captive power plants, and utility distribution transformers.'
+        title: 'All Standard & Custom kVA / MVA Ratings',
+        description: 'Complete capability across all industrial kVA and MVA transformer capacities — tailored to your exact plant load, voltage ratio, and impedance requirements.'
     },
     {
         icon: '🏆',
-        title: 'Certified Oil Quality & Test Reports',
-        description: 'Every serviced and supplied transformer is backed by comprehensive electrical test reports and oil dielectric strength (BDV > 60kV) certification.'
+        title: 'Certified Test Reports & IEC 60076 Compliance',
+        description: 'Every supplied, repaired, or commissioned power transformer is backed by formal diagnostic test certificates (TTR, IR, Winding Resistance & Oil BDV > 60kV).'
     },
     {
         icon: '🛠️',
-        title: 'Emergency On-Site Repair Crews',
-        description: 'Rapid-deployment technical teams equipped with diagnostic gear for emergency breakdown analysis and fast transformer turnaround.'
+        title: 'In-House Rewinding Bay & Mobile Field Crews',
+        description: 'Dedicated workshop winding facilities paired with rapid-response field engineering teams for urgent on-site fault diagnostics and breakdown repairing.'
     },
     {
         icon: '🇵🇰',
-        title: 'Serving All Provinces of Pakistan',
-        description: 'Trusted by over 100+ industrial clients across Sindh, Punjab, KPK, Balochistan, and Islamabad Capital Territory.'
+        title: 'Nationwide Industrial Coverage Across Pakistan',
+        description: 'Trusted by 100+ textile, steel, cement, pharmaceutical, food processing, and commercial facilities across Sindh, Punjab, KPK, Balochistan, and Islamabad.'
     }
 ];
 
 const keyFeatures = [
-    'Ratings across all standard distribution capacities for 11kV (11,000V) networks',
-    'Dual technology coverage: Oil-Immersed (Conservator / Sealed) & Dry Type (Cast Resin)',
-    'Dyn11 standard vector group (other configurations available on request)',
-    'High dielectric strength insulation oil certified to IEC 60296 standards',
-    'Off-circuit tap changers (OCTC) and On-Load tap changers (OLTC) overhauling',
-    'Complete protection integration: Buchholz relay, PRV, OTI, WTI, and neutral CTs',
-    'Rewinding with class-H insulation and 99.9% pure electrolytic copper conductor',
-    'Full utility compliance assistance for DISCOs (LESCO, IESCO, FESCO, MEPCO, GEPCO, PESCO, HESCO, SEPCO, QESCO) and K-Electric'
+    'Multiple capacities in kVA & MVA (50 kVA up to 5000+ kVA / Multi-MVA Power Transformers)',
+    'Oil-Immersed (Conservator & Hermetically Sealed) and Cast-Resin Dry-Type technologies',
+    'Standard Dyn11 vector group & custom primary/secondary voltage ratios (HV/LV)',
+    'Complete HV & LV coil rewinding with 99.9% electrolytic grade copper conductor',
+    'On-site two-stage high-vacuum oil dehydration & dielectric BDV testing (> 60kV)',
+    'Precision TTR, Winding Resistance, Megger (IR/PI), Magnetic Balance & Tan Delta testing',
+    'On-Load (OLTC) & Off-Circuit (OCTC) tap changer servicing & Buchholz/WTI/OTI calibration',
+    'Full utility inspection & commissioning compliance for K-Electric and all DISCOs (LESCO, IESCO, FESCO, MEPCO, GEPCO, PESCO, HESCO)'
 ];
 
 const applications = [
     'Heavy Industrial & Manufacturing Plants',
-    'Textile & Yarn Spinning Complexes',
-    'Steel Mills & Induction Furnace Units',
-    'Commercial High-Rise Plazas & Towers',
-    'Hospital & Healthcare Emergency Grids',
-    'Cement, Mining & Chemical Factories',
-    'Captive Power Generation Facilities',
-    'Housing Societies & Commercial Substations'
+    'Textile Spinning, Weaving & Processing Mills',
+    'Steel Re-Rolling & Induction Furnace Units',
+    'Cement, Chemical & Pharmaceutical Complexes',
+    'Commercial High-Rise Plazas & Shopping Malls',
+    'Hospital & Healthcare Critical Power Grids',
+    'Captive Power Plants & Co-Generation Units',
+    'Utility & Housing Society Distribution Substations'
 ];
 
 const stats = [
-    { number: '11kV', label: 'Voltage System (11,000V)' },
+    { number: 'kVA / MVA', label: 'All Multiple Power Ratings' },
     { number: '500+', label: 'Transformers Serviced' },
     { number: '60kV+', label: 'Oil BDV Standard' },
-    { number: '24/7', label: 'Emergency Support' }
+    { number: '24/7', label: 'Breakdown Support' }
 ];
 
 export default function ElevenKVTransformersPage() {
     return (
         <ServicePageTemplate
             heroImage={heroImage}
-            heroTitle="11kV Transformers"
-            heroTitleAccent="Supply, Repair & Testing"
+            heroTitle="Power Transformers"
+            heroTitleAccent="Supply, Repairing, Testing & Commissioning"
             heroSubtitle="Pakistan Power Engineering Services"
-            heroDescription="Complete technical lifecycle solutions for 11kV (11,000V) Power & Distribution Transformers in multiple ratings. Supply of Oil-Immersed & Dry Type Cast Resin transformers, high-vacuum oil dehydration, precision diagnostic testing, full coil rewinding, and complete substation installation across Pakistan."
-            overviewText="Pakistan Power Engineering Services provides end-to-end engineering excellence for medium-voltage 11kV (11,000V) distribution transformers. Whether you need a brand-new energy-efficient 11kV transformer for an expanding manufacturing facility, an urgent on-site high-vacuum oil filtration to restore dielectric strength, or complete workshop coil rewinding and overhauling of a tripped unit, our seasoned power engineers deliver guaranteed reliability. We service both indoor cast resin dry-type transformers and outdoor oil-immersed units at 11kV (11,000V), adhering strictly to IEC 60076 standards, NEPRA regulations, and local utility requirements."
+            heroDescription="Complete lifecycle engineering solutions for Oil-Immersed & Dry-Type Power Transformers across multiple kVA and MVA ratings. From brand-new & refurbished transformer supply to complete HV/LV coil rewinding, on-site high-vacuum oil filtration, precision diagnostic testing, and energized commissioning across Pakistan."
+            overviewText="Pakistan Power Engineering Services delivers end-to-end engineering excellence for industrial Power and Distribution Transformers across all kVA and MVA capacities. Whether your facility requires supplying a new energy-efficient oil-immersed or cast-resin dry-type transformer, urgent workshop repairing and copper coil rewinding of a damaged unit, on-site high-vacuum oil dehydration, or certified pre-commissioning diagnostic testing (TTR, Winding Resistance, Megger IR & Oil BDV), our experienced power engineers ensure maximum efficiency, safety, and compliance with IEC 60076 and local utility standards."
             services={services}
             benefits={benefits}
             keyFeatures={keyFeatures}
             applications={applications}
             stats={stats}
-            ctaTitle="Need 11kV Transformer Supply, Testing or Urgent Repair?"
-            ctaDescription="Get in touch with our substation engineering team today for immediate site diagnostic assessment, oil filtration, or supply quotation."
+            ctaTitle="Need Power Transformer Supply, Repairing, Testing or Commissioning?"
+            ctaDescription="Contact our power transformer engineering specialists today for kVA capacity sizing, supply quotation, on-site diagnostic testing, or emergency breakdown repair."
         />
     );
 }

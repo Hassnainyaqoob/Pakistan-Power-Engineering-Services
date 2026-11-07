@@ -42,8 +42,8 @@ const applications = [
 
 const stats = [
     { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Automation Experts' },
-    { number: '10+', label: 'Years Experience' },
+    { number: '50+', label: 'Engineering Specialists' },
+    { number: '15+', label: 'Years Experience' },
     { number: '100+', label: 'Satisfied Clients' },
 ];
 

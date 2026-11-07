@@ -184,10 +184,6 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #a3a3a3;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 640px) {
     .marquee-content img {

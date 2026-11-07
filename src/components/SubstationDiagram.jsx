@@ -13,12 +13,12 @@ const coreServices = [
     },
     {
         step: '02',
-        title: 'Power Transformers (Dry & Oil Type)',
-        subtitle: 'Testing, Commissioning, Installation & Repairing',
-        desc: 'Specialized services for oil-immersed & dry type power transformers — supply, installation, oil filtration, diagnostic testing, coil rewinding, commissioning and emergency repairing.',
+        title: 'Power Transformers (Oil & Dry Type)',
+        subtitle: 'Supply, Repairing, Testing & Commissioning',
+        desc: 'Complete solutions across multiple kVA & MVA ratings — supply, installation, HV/LV coil rewinding, repairing, high-vacuum oil filtration, diagnostic testing, and commissioning.',
         icon: '🛢️',
-        badge: 'Transformers',
-        link: '/services/11kv-transformers',
+        badge: 'Multiple kVA Ratings',
+        link: '/services/power-transformers',
     },
     {
         step: '03',
@@ -153,8 +153,8 @@ export const SubstationDiagram = () => {
                 {/* Nationwide and Capacity Footer Bar */}
                 <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     <div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">11kV</div>
-                        <div className="text-xs sm:text-sm text-gray-300 mt-1">Medium Voltage (11,000V)</div>
+                        <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">kVA / MVA</div>
+                        <div className="text-xs sm:text-sm text-gray-300 mt-1">Multiple Transformer Ratings</div>
                     </div>
                     <div>
                         <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">6300A</div>

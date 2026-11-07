@@ -254,31 +254,39 @@ const Contact = () => {
 
                     {/* Map Section - Right Side */}
                     <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} animation-delay-500`}>
-                        <div className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] h-full">
-                            <div className="text-center h-full flex flex-col justify-center">
-                                <div className="mb-6">
-                                    <h3 className="text-2xl font-bold text-gray-800 mb-4">Pakistan Power Engineering Services</h3>
-                                    <div className="flex items-center justify-center mb-4">
+                        <div className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 h-full">
+                            <div className="text-center h-full flex flex-col justify-between">
+                                <div className="mb-5">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-3">Pakistan Power Engineering Services</h3>
+                                    <div className="flex items-center justify-center mb-3">
                                         <span className="text-blueColor mr-2 text-xl font-bold">5.0</span>
-                                        <div className="flex text-blueColor">
+                                        <div className="flex text-amber-400">
                                             {[...Array(5)].map((_, i) => (
-                                                <svg key={i} className="w-6 h-6 fill-current animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} viewBox="0 0 20 20">
+                                                <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
                                                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                                                 </svg>
                                             ))}
                                         </div>
-                                        <span className="text-gray-500 ml-2">1 review</span>
+                                        <span className="text-gray-500 ml-2 text-sm">100+ Industrial Clients</span>
                                     </div>
-                                    <p className="text-blueColor underline cursor-pointer hover:text-brandRed transition-colors duration-300 hover:scale-105 transform inline-block">
-                                        View larger map
-                                    </p>
+                                    <a
+                                        href="https://www.google.com/maps/search/?api=1&query=Phase+1+Defence+Housing+Authority+Karachi+Pakistan"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blueColor underline cursor-pointer hover:text-brandRed transition-colors duration-300 inline-block font-semibold text-sm"
+                                    >
+                                        Open Location in Google Maps ↗
+                                    </a>
                                 </div>
-                                <div className="bg-gradient-to-br from-gray-100 to-gray-200 h-64 w-full rounded-2xl flex items-center justify-center text-gray-500 relative overflow-hidden group">
-                                    <svg className="w-20 h-20 text-gray-400 group-hover:text-brandRed transition-colors duration-500 group-hover:scale-110 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                    <div className="absolute inset-0 bg-gradient-to-r from-brandRed/10 to-blueColor/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="w-full flex-grow min-h-[320px] sm:min-h-[370px] rounded-2xl overflow-hidden border-2 border-gray-200 shadow-inner relative bg-gray-100">
+                                    <iframe
+                                        title="Pakistan Power Engineering Services - Defence Phase 1 Karachi Location"
+                                        src="https://maps.google.com/maps?q=Phase%201%20Defence%20Housing%20Authority,%20Karachi,%20Pakistan&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+                                        className="w-full h-full min-h-[320px] sm:min-h-[370px] border-0"
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -295,7 +303,7 @@ const Contact = () => {
                             </svg>
                         </div>
                         <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-brandRed transition-colors duration-300">Phone</h4>
-                        <a href="tel:+923092202112" className="text-gray-600 hover:text-brandRed transition-colors duration-300 block">+92 309 2202112</a>
+                        <a href="tel:+923092302512" className="text-gray-600 hover:text-brandRed transition-colors duration-300 block font-medium">+92 309 2302512</a>
                         <a href="tel:+923350259886" className="text-gray-600 hover:text-brandRed transition-colors duration-300 block">+92 335 0259886</a>
                     </div>
 
@@ -336,18 +344,17 @@ const Contact = () => {
 
             {/* Premium Corporate Popup for Success/Error */}
             {showPopup && (
-                <div 
+                <div
                     className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all duration-300"
                     onClick={() => setShowPopup(false)}
                 >
-                    <div 
+                    <div
                         className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 sm:p-8 border border-white/40 text-center transform transition-all duration-300"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Status Icon */}
-                        <div className={`w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-inner ${
-                            isError ? 'bg-amber-100 text-brandRed' : 'bg-emerald-100 text-emerald-600'
-                        }`}>
+                        <div className={`w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-inner ${isError ? 'bg-amber-100 text-brandRed' : 'bg-emerald-100 text-emerald-600'
+                            }`}>
                             {isError ? (
                                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -373,11 +380,10 @@ const Contact = () => {
                         <button
                             type="button"
                             onClick={() => setShowPopup(false)}
-                            className={`w-full py-3.5 px-6 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] ${
-                                isError 
-                                    ? 'bg-gradient-to-r from-brandRed to-red-600' 
+                            className={`w-full py-3.5 px-6 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] ${isError
+                                    ? 'bg-gradient-to-r from-brandRed to-red-600'
                                     : 'bg-gradient-to-r from-brandRed to-blueColor'
-                            }`}
+                                }`}
                         >
                             {isError ? 'Okay, Got It' : 'Thank You'}
                         </button>
@@ -385,7 +391,7 @@ const Contact = () => {
                 </div>
             )}
 
-            <style jsx>{`
+            <style>{`
                 .animation-delay-200 {
                     animation-delay: 0.2s;
                 }

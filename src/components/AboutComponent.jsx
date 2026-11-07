@@ -33,10 +33,10 @@ const AboutSection = () => {
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-brandRed to-red-500 mx-auto mt-4 mb-4"></div>
         <p className="mt-4 sm:mt-6 text-sm sm:text-base max-w-5xl mx-auto animate-text leading-relaxed">
-          Pakistan Power Engineering Services is a leading engineering solutions provider, delivering high-quality electrical, instrumentation, and automation services for industrial, commercial, and utility sectors. Established since 2010, with a team of experienced engineers and technicians, we are committed to providing safe, reliable, and innovative solutions that meet international standards and exceed client expectations.
+          Established in 2010, Pakistan Power Engineering Services is a trusted industrial electrical engineering partner across Pakistan — specializing in Power Transformers across multiple kVA &amp; MVA ratings (Supply, Repairing, Coil Rewinding, Oil Filtration, Testing &amp; Commissioning), in-house LT/PCC/MCC/PFI panel manufacturing, HT/MV VCB switchgear &amp; breaker trolleys, and numerical protection relay testing (MiCOM, ABB, Schneider &amp; Siemens).
         </p>
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
-          {[{ num: '50+', label: 'Skilled Professionals' }, { num: '14+', label: 'Years of Experience' }, { num: '500+', label: 'Projects Completed' }, { num: '100+', label: 'Satisfied Clients' }].map((stat, i) => (
+          {[{ num: '50+', label: 'Skilled Professionals' }, { num: '15+', label: 'Years of Experience' }, { num: '500+', label: 'Projects Completed' }, { num: '100+', label: 'Satisfied Clients' }].map((stat, i) => (
             <div key={i} className="animate-text">
               <div className="text-3xl font-bold text-brandRed">{stat.num}</div>
               <div className="text-xs text-white mt-1 tracking-wide">{stat.label}</div>
@@ -44,7 +44,7 @@ const AboutSection = () => {
           ))}
         </div>
       </div>
-      <style jsx>{`
+      <style>{`
                 @keyframes fadeInUp {
                     from {
                         opacity: 0;

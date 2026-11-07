@@ -39,7 +39,7 @@ const Navbar = () => {
                 setMobileDropdownOpen(!mobileDropdownOpen);
                 return;
             } else {
-                navigate('/services/11kv-transformers');
+                navigate('/services/power-transformers');
                 return;
             }
         }
@@ -83,13 +83,13 @@ const Navbar = () => {
             href: '/services',
             hasDropdown: true,
             dropdownItems: [
-                { name: '11kV (11,000V) Transformers', href: '/services/11kv-transformers', icon: '⚡' },
+                { name: 'Power Transformers (Supply, Repair & Testing)', href: '/services/power-transformers', icon: '⚡' },
                 { name: 'LT & PCC/MCC Panels Manufacturing', href: '/services/lt-panels', icon: '🏭' },
-                { name: 'VCB & MV Panels Maintenance', href: '/services/vcb-mv-panels', icon: '🔌' },
-                { name: 'Power Transformer Services', href: '/services/power-transformer', icon: '🛢️' },
+                { name: 'HT / MV VCB & RMU Switchgear Panels', href: '/services/vcb-mv-panels', icon: '🔌' },
+                { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformer', icon: '🛢️' },
                 { name: 'Testing, Relays & Commissioning', href: '/services/testing-commissioning', icon: '🔧' },
                 { name: 'Power Factor Improvement (PFI/APFC)', href: '/services/power-factor-improvement', icon: '📊' },
-                { name: 'Supply of MV Electrical Equipment', href: '/services/mv-equipment-supply', icon: '📦' },
+                { name: 'Supply of MV / LV Electrical Equipment', href: '/services/mv-equipment-supply', icon: '📦' },
                 { name: 'Complete Substation Setup & Solutions', href: '/services/turnkey-electrical', icon: '🏗️' },
                 { name: 'Instrumentation & Automation', href: '/services/instrumentation-automation', icon: '🤖' },
             ]
