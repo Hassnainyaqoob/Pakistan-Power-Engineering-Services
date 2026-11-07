@@ -5,7 +5,7 @@ import heroImage from '../../assets/images/testing_commissioning_hero.jpg';
 const services = [
     { icon: '🛡️', title: 'MiCOM & Numerical Relay Testing', description: 'Comprehensive testing, secondary injection, parameter configuration, and curve calibration for all MiCOM (P12x, P14x, P63x), ABB, Schneider, and Siemens protection relays.' },
     { icon: '⚡', title: 'Primary & Secondary Current Injection', description: 'High-current primary injection testing of CTs, protection loops, and circuit breakers, combined with precision 3-phase secondary injection verification.' },
-    { icon: '🛢️', title: '11,000 kVA Transformer Diagnostic Testing', description: 'Turns Ratio (TTR), Winding Resistance, Magnetic Balance, Vector Group verification, and on-site Oil Dielectric Breakdown Voltage (BDV) testing.' },
+    { icon: '🛢️', title: '11kV (11,000V) Transformer Diagnostic Testing', description: 'Turns Ratio (TTR), Winding Resistance, Magnetic Balance, Vector Group verification, and on-site Oil Dielectric Breakdown Voltage (BDV) testing.' },
     { icon: '🔬', title: 'Insulation Resistance (Megger) & Hi-Pot', description: '5kV / 10kV Megger insulation testing, Polarization Index (PI), and High Voltage AC/DC Hi-Pot testing for 11kV switchgear, busbars, and power cables.' },
     { icon: '⚙️', title: 'Circuit Breaker Timing & Contact Resistance (CRM)', description: 'Micro-ohm contact resistance measurement (Ductor testing) and breaker open/close timing analysis on VCBs and ACBs to prevent thermal hotspots.' },
     { icon: '🔍', title: 'Pre-Commissioning & Substation Energization', description: 'Full cold and hot pre-commissioning protocols, phase sequence verification, trip test with interlocks, and utility compliance (K-Electric / DISCOs).' },
@@ -26,7 +26,7 @@ const benefits = [
 const keyFeatures = [
     'MiCOM Relays (P122, P123, P141, P142, P632) & Numerical Protection',
     'Primary & Secondary Current Injection Test Sets',
-    '11,000 kVA Transformer Diagnostic Testing (TTR, Winding, BDV)',
+    '11kV (11,000V) Transformer Diagnostic Testing (TTR, Winding, BDV)',
     '11kV Vacuum Circuit Breaker (VCB) Contact Resistance & Timing',
     'Insulation Resistance Testers (Megger up to 10kV)',
     'Transformer Oil Dielectric Strength (BDV) Lab',
@@ -35,14 +35,14 @@ const keyFeatures = [
 ];
 
 const applications = [
-    '11kV Substation Switchgear', '11,000 kVA Transformers', 'Power Control Centers (PCC)',
+    '11kV Substation Switchgear', '11kV (11,000V) Transformers', 'Power Control Centers (PCC)',
     'Motor Control Centers (MCC)', 'Industrial Captive Power', '11kV HT XLPE Cables',
     'Ring Main Units (RMU)', 'Utility Incomer Feeders',
 ];
 
 const stats = [
     { number: '1000+', label: 'Substations Tested' },
-    { number: '11 MVA', label: 'Max Transformer Tested' },
+    { number: '11kV', label: 'Voltage System (11,000V)' },
     { number: '100%', label: 'Relay Types Supported' },
     { number: '24/7', label: 'Emergency Support' },
 ];
@@ -78,8 +78,8 @@ export default function TestingCommissioningPage() {
             heroTitle="Testing, Commissioning"
             heroTitleAccent="& Relay Protection Solutions"
             heroSubtitle="Pakistan Power Engineering Services"
-            heroDescription="Comprehensive electrical testing and commissioning for 11kV substations, power transformers up to 11,000 kVA, VCB panels, and all types of MiCOM & numerical protection relays across Pakistan."
-            overviewText="Pakistan Power Engineering Services is Pakistan's premier technical testing and commissioning authority for industrial electrical systems and high-voltage substations. From secondary injection calibration of all MiCOM and numerical protection relays (overcurrent, earth fault, differential) to full pre-commissioning of 11,000 kVA transformers, VCB switchgear, and earthing grids, our certified engineers ensure flawless reliability, safety, and swift utility approval."
+            heroDescription="Comprehensive electrical testing and commissioning for 11kV substations, power transformers at 11kV (11,000V), VCB panels, and all types of MiCOM & numerical protection relays across Pakistan."
+            overviewText="Pakistan Power Engineering Services is Pakistan's premier technical testing and commissioning authority for industrial electrical systems and high-voltage substations. From secondary injection calibration of all MiCOM and numerical protection relays (overcurrent, earth fault, differential) to full pre-commissioning of 11kV (11,000V) power transformers, VCB switchgear, and earthing grids, our certified engineers ensure flawless reliability, safety, and swift utility approval."
             services={services}
             benefits={benefits}
             keyFeatures={keyFeatures}

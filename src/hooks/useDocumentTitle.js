@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 const routeSeoMap = {
     '/': {
         title: 'Pakistan Power Engineering Services | 11kV Substation, Transformer & Switchgear Specialists',
-        description: 'Leading 11kV substation engineering across Pakistan. Transformers up to 11,000 kVA, in-house LT/PCC/MCC panel manufacturing, VCB switchgear & MiCOM relay testing.'
+        description: 'Leading 11kV substation engineering across Pakistan. 11kV (11,000V) transformers, in-house LT/PCC/MCC panel manufacturing, VCB switchgear & MiCOM relay testing.'
     },
     '/about': {
         title: 'About Us | Pakistan Power Engineering Services',
@@ -24,8 +24,8 @@ const routeSeoMap = {
         description: 'Trusted by leading textile, steel, cement, pharmaceutical, and industrial manufacturing plants across Pakistan, with DISCO and K-Electric approvals.'
     },
     '/services/11kv-transformers': {
-        title: '11kV Distribution Transformers (Up to 11,000 kVA) | Pakistan Power Engineering Services',
-        description: 'Comprehensive 11kV transformer supply, rewinding, vacuum oil filtration, ratio testing, and on-site maintenance up to 11,000 kVA / 11 MVA.'
+        title: '11kV (11,000V) Distribution Transformers | Pakistan Power Engineering Services',
+        description: 'Comprehensive 11kV transformer supply, rewinding, vacuum oil filtration, ratio testing, and on-site maintenance across 11kV (11,000V) power networks.'
     },
     '/services/power-transformer': {
         title: 'Power Transformer Services & Maintenance | Pakistan Power Engineering Services',

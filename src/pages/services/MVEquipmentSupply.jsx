@@ -3,7 +3,7 @@ import ServicePageTemplate from '../../components/ServicePageTemplate';
 import heroImage from '../../assets/images/mv_equipment_supply_hero.jpg';
 
 const services = [
-    { icon: '⚡', title: '11kV Transformers Supply (Up to 11,000 kVA)', description: 'Supply of brand-new and certified reconditioned 11kV/0.4kV oil-immersed (sealed & conservator) and dry-type cast resin distribution transformers.' },
+    { icon: '⚡', title: '11kV (11,000V) Transformers Supply', description: 'Supply of brand-new and certified reconditioned 11kV/0.4kV oil-immersed (sealed & conservator) and dry-type cast resin distribution transformers in multiple ratings.' },
     { icon: '🔌', title: '11kV Vacuum Circuit Breakers (VCB)', description: 'Indoor metal-clad drawout and fixed VCBs (630A to 3150A, 25kA/31.5kA) from Siemens, Schneider, ABB, and LS Electric.' },
     { icon: '🛡️', title: 'Ring Main Units (RMU)', description: 'Compact SF6 gas-insulated and eco-friendly vacuum RMUs (non-extensible & extensible) for robust underground network distribution.' },
     { icon: '🤖', title: 'MiCOM & Numerical Protection Relays', description: 'Supply and integration of MiCOM (P12x, P14x, P63x), ABB, and Schneider microprocessor protection relays for feeder, transformer, and busbar protection.' },
@@ -16,7 +16,7 @@ const services = [
 
 const benefits = [
     { icon: '🏆', title: 'Authorized Genuine Sourcing', description: 'Direct supply chain access to genuine components from Schneider Electric, Siemens, ABB, Terasaki, and PEL.' },
-    { icon: '⚡', title: 'Up to 11,000 kVA Capacity', description: 'Complete equipment package for heavy industrial substations, captive power plants, and utility connections.' },
+    { icon: '⚡', title: '11kV (11,000V) System Rating', description: 'Complete equipment package for heavy industrial substations, captive power plants, and utility connections.' },
     { icon: '👷', title: 'Complete Supply + Erection', description: 'We not only supply equipment but also install, terminate, test, and commission it at your site.' },
     { icon: '⏰', title: 'Ex-Stock & Fast Delivery', description: 'Ready stock of critical spare parts, CTs, PTs, relays, cable kits, and standard rating distribution transformers.' },
     { icon: '🇵🇰', title: 'Delivering Across Pakistan', description: 'Reliable logistics and technical handover teams serving all provinces and industrial estates.' },
@@ -24,7 +24,7 @@ const benefits = [
 ];
 
 const keyFeatures = [
-    '11kV Transformers: 50 kVA up to 11,000 kVA (11 MVA)',
+    '11kV (11,000V) Transformers: Multiple Ratings & Capacities',
     '11kV Vacuum Circuit Breakers (VCB) & Ring Main Units (RMU)',
     'MiCOM, Schneider, ABB & Siemens Numerical Relays',
     'Cast Resin 11kV CT / PT Metering & Protection Transformers',
@@ -41,7 +41,7 @@ const applications = [
 ];
 
 const stats = [
-    { number: '11 MVA', label: 'Max Transformer Rating' },
+    { number: '11kV', label: 'Medium Voltage (11,000V)' },
     { number: '1000+', label: 'Equipment Supplied' },
     { number: '10+', label: 'Leading Brands' },
     { number: '24/7', label: 'Technical Assistance' },
@@ -81,8 +81,8 @@ export default function MVEquipmentSupplyPage() {
             heroTitle="11kV & MV Equipment Supply"
             heroTitleAccent="Transformers, Switchgear & Protection"
             heroSubtitle="Pakistan Power Engineering Services"
-            heroDescription="Authorized supply of 11kV distribution transformers up to 11,000 kVA, Vacuum Circuit Breakers (VCB), Ring Main Units (RMU), MiCOM relays, cable kits, and low-tension switchgear across Pakistan."
-            overviewText="Pakistan Power Engineering Services supplies and integrates high-reliability medium-voltage and low-voltage electrical equipment for heavy industrial, commercial, and utility projects. Whether sourcing 11,000 kVA power transformers, 11kV VCB switchgear cubicles, compact RMUs, or precision MiCOM numerical protection relays, we partner with leading manufacturers (Schneider, Siemens, ABB, Terasaki, PEL) to deliver guaranteed quality, technical warranty, and on-site commissioning."
+            heroDescription="Authorized supply of 11kV (11,000V) distribution transformers in multiple ratings, Vacuum Circuit Breakers (VCB), Ring Main Units (RMU), MiCOM relays, cable kits, and low-tension switchgear across Pakistan."
+            overviewText="Pakistan Power Engineering Services supplies and integrates high-reliability medium-voltage and low-voltage electrical equipment for heavy industrial, commercial, and utility projects. Whether sourcing 11kV (11,000V) power transformers, 11kV VCB switchgear cubicles, compact RMUs, or precision MiCOM numerical protection relays, we partner with leading manufacturers (Schneider, Siemens, ABB, Terasaki, PEL) to deliver guaranteed quality, technical warranty, and on-site commissioning."
             services={services}
             benefits={benefits}
             keyFeatures={keyFeatures}

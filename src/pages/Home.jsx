@@ -4,6 +4,9 @@ import Typewriter from 'typewriter-effect';
 
 // Hero & Service Images
 import backgroundImage from '../assets/images/home_hero_bg.jpg';
+import realMeggerSwitchgear from '../assets/images/real_site_megger_switchgear.jpg';
+import realSiemensPanel from '../assets/images/real_site_siemens_panel.png';
+import realMeggerCtPt from '../assets/images/real_site_megger_ct_pt.jpg';
 import ElevenKvTransImg from '../assets/images/eleven_kv_transformers_hero.jpg';
 import LtPanelsImg from '../assets/images/lt_panels_hero.jpg';
 import VcbMvImg from '../assets/images/vcb_mv_panels_hero.jpg';
@@ -20,12 +23,6 @@ import Step3 from '../assets/images/step3_new.jpg';
 import Step4 from '../assets/images/step4_new.jpg';
 import Step5 from '../assets/images/step5_new.jpg';
 import Step6 from '../assets/images/vcb_mv_panels_hero.jpg';
-
-import TransfromerImage from '../assets/images/power_transformer_hero.jpg';
-import Helmet from '../assets/images/step1_new.jpg';
-import WiredImg from '../assets/images/step4_new.jpg';
-import PaneImg from '../assets/images/instrumentation_automation_hero.jpg';
-import GovesImg from '../assets/images/step5_new.jpg';
 
 // Client Logos
 import Cl1 from '../assets/images/Cl1.png';
@@ -50,20 +47,141 @@ import Cl20 from '../assets/images/Cl20.png';
 // Components
 import { OfferingsCard } from '../components/OfferingCard';
 import AboutSection from '../components/AboutComponent';
-import { LoadAssessmentCard } from '../components/ProcurementConstructionCard';
 import ClientLogoMarquee from '../components/clientsimageslider';
 import SubstationDiagram from '../components/SubstationDiagram';
 
+const heroSlides = [
+    { image: backgroundImage, title: '11kV Substation & Power Architecture' },
+    { image: PowerTransImg, title: 'Power Transformers (Oil & Dry Type)' },
+    { image: VcbMvImg, title: 'HT & MV VCB Switchgear Panels' },
+    { image: LtPanelsImg, title: 'LT & PCC/MCC Panels (Up to 6300A)' },
+    { image: ElevenKvTransImg, title: '11kV Distribution Transformers' },
+    { image: realSiemensPanel, title: 'Siemens Breaker & Switchgear Suite' },
+    { image: realMeggerSwitchgear, title: 'KYN28-24 HT Panel Relay Testing' },
+    { image: realMeggerCtPt, title: 'Megger MVCT CT & VT Ratio Testing' },
+];
+
+// Standardized 6-step project execution process
+const executionSteps = [
+    {
+        num: '01',
+        icon: '📋',
+        phase: 'Assessment',
+        title: 'Site Survey & Electrical Load Assessment',
+        desc: 'Comprehensive engineering evaluation of industrial power requirements, single-line diagrams (SLD), fault level calculations, and utility infeed compliance (K-Electric / DISCOs).',
+        tags: ['Load Study', 'SLD Review', 'Fault Level Calculation', 'K-Electric / DISCO'],
+        image: Step1,
+    },
+    {
+        num: '02',
+        icon: '📐',
+        phase: 'Engineering',
+        title: 'Custom Design & Switchgear Engineering',
+        desc: 'Detailed AutoCAD design of HV, MV & LV switchgears and panels (PCC, MCC, VCB), busbar sizing, protection coordination studies, and bill of quantities (BOQ).',
+        tags: ['AutoCAD Layouts', 'Busbar Sizing', 'Protection Coordination', 'BOQ'],
+        image: Step2,
+    },
+    {
+        num: '03',
+        icon: '🏭',
+        phase: 'Manufacturing',
+        title: 'In-House Panel Fabrication & Assembly',
+        desc: 'Precision CNC punching, bending, powder coating, copper busbar fabrication, and integration of tier-1 breakers (Schneider, Siemens, ABB, Terasaki) with factory acceptance testing.',
+        tags: ['CNC Punching', 'Powder Coating', 'Copper Busbars', 'Factory Acceptance Test'],
+        image: Step3,
+    },
+    {
+        num: '04',
+        icon: '🏗️',
+        phase: 'Installation',
+        title: 'On-Site Erection, Cable Jointing & Termination',
+        desc: 'Transformer positioning, switchgear alignment, 11kV HT & LT cable laying, cable jointing & terminations, CT / PT and insulator installation, and earthing grid bonding.',
+        tags: ['Transformer Positioning', 'HT / LT Cable Laying', 'Jointing & Terminations', 'Earthing Grid'],
+        image: Step4,
+    },
+    {
+        num: '05',
+        icon: '🔬',
+        phase: 'Testing & Commissioning',
+        title: 'Testing, Relay Calibration & Commissioning',
+        desc: 'Primary & secondary injection testing, MiCOM / ABB / Schneider numerical relay configuration, CT / PT ratio testing, Megger (IR), Hi-Pot, oil BDV testing, and energized commissioning.',
+        tags: ['Primary / Secondary Injection', 'Megger (IR)', 'Hi-Pot', 'Oil BDV'],
+        image: Step5,
+    },
+    {
+        num: '06',
+        icon: '🛡️',
+        phase: 'Maintenance & Support',
+        title: 'Preventive Maintenance & 24/7 Support',
+        desc: 'Scheduled preventive maintenance with service & testing, switchgear trolley overhauling, transformer oil filtration & repairing, and 24/7 emergency breakdown support across Pakistan.',
+        tags: ['Preventive Maintenance', 'Trolley Overhauling', 'Oil Filtration', '24/7 Breakdown'],
+        image: Step6,
+    },
+];
+
 export default function HomePage() {
     const navigate = useNavigate();
+    const [currentSlide, setCurrentSlide] = React.useState(0);
+    const [videoLoaded, setVideoLoaded] = React.useState(false);
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+        }, 4500);
+        return () => clearInterval(timer);
+    }, []);
+
+    // Scroll-driven timeline progress for the Execution Process section
+    const timelineRef = React.useRef(null);
+    const nodeRefs = React.useRef([]);
+    const [timelineProgress, setTimelineProgress] = React.useState(0);
+    const [activeSteps, setActiveSteps] = React.useState(0);
+
+    React.useEffect(() => {
+        let ticking = false;
+
+        const update = () => {
+            ticking = false;
+            const el = timelineRef.current;
+            if (!el) return;
+
+            // Trigger line sits at 60% of the viewport height
+            const trigger = window.innerHeight * 0.6;
+            const rect = el.getBoundingClientRect();
+            const progress = Math.min(Math.max((trigger - rect.top) / rect.height, 0), 1);
+            setTimelineProgress(progress);
+
+            const reached = nodeRefs.current.filter((node) => {
+                if (!node) return false;
+                const r = node.getBoundingClientRect();
+                return r.top + r.height / 2 <= trigger;
+            }).length;
+            setActiveSteps(reached);
+        };
+
+        const onScroll = () => {
+            if (!ticking) {
+                ticking = true;
+                window.requestAnimationFrame(update);
+            }
+        };
+
+        update();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('resize', onScroll);
+        };
+    }, []);
 
     // 8 Core Clickable Offerings
     const offerings = [
         {
             image: ElevenKvTransImg,
-            title: '11kV Power Transformers',
-            subtitle: 'Up to 11,000 kVA (11 MVA)',
-            description: 'Supply, high-vacuum oil dehydration & filtration, precision diagnostic testing, full coil rewinding, and overhauling for oil & dry type transformers.',
+            title: 'Power Transformers (Oil & Dry Type)',
+            subtitle: 'Multiple Ratings & Capacities',
+            description: 'Complete supply, high-vacuum oil dehydration & filtration, precision diagnostic testing, coil rewinding, and overhauling for oil & dry type transformers across multiple ratings.',
             link: '/services/11kv-transformers'
         },
         {
@@ -129,7 +247,7 @@ export default function HomePage() {
             num: '02',
             icon: '📦',
             title: 'Equipment Supply',
-            desc: 'Direct supply of 11kV distribution transformers (up to 11 MVA), VCB switchgear, Ring Main Units, and tier-1 breakers.'
+            desc: 'Direct supply of 11kV (11,000V) distribution transformers in multiple ratings, VCB switchgear, Ring Main Units, and tier-1 breakers.'
         },
         {
             num: '03',
@@ -193,16 +311,45 @@ export default function HomePage() {
     return (
         <div className="bg-white text-gray-800">
             {/* ─── HERO SECTION ─── */}
-            <div
-                className="relative min-h-[800px] lg:min-h-[860px] flex flex-col justify-start text-white overflow-hidden pt-36 sm:pt-40 lg:pt-44 pb-24"
-                style={{
-                    backgroundImage: `linear-gradient(to right, rgba(0,23,48,0.96) 0%, rgba(0,31,63,0.88) 55%, rgba(0,31,63,0.65) 100%), url(${backgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}
-            >
-                {/* Visual grid pattern overlay */}
-                <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
+            <div className="relative min-h-[800px] lg:min-h-[860px] flex flex-col justify-start text-white overflow-hidden pt-36 sm:pt-40 lg:pt-44 pb-24">
+                {/* 1. Real MP4 Video Background (Active when hero_video.mp4 exists in public/videos) */}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    onPlay={() => setVideoLoaded(true)}
+                    onLoadedData={() => setVideoLoaded(true)}
+                    className={`absolute inset-0 w-full h-full object-cover object-center z-0 transition-opacity duration-1000 ${
+                        videoLoaded ? 'opacity-100' : 'opacity-0'
+                    }`}
+                >
+                    <source src="/videos/hero_video.mp4" type="video/mp4" />
+                </video>
+
+                {/* 2. Cinematic Live Video-Style Animated Slideshow (Ken Burns Camera Motion with Real Site Photos) */}
+                <div className={`absolute inset-0 z-0 overflow-hidden pointer-events-none transition-opacity duration-1000 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}>
+                    {heroSlides.map((slide, idx) => (
+                        <div
+                            key={idx}
+                            className={`absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-out ${
+                                idx === currentSlide ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+                            }`}
+                            style={{
+                                backgroundImage: `url(${slide.image})`,
+                            }}
+                        />
+                    ))}
+                </div>
+
+                {/* Ambient dark gradient overlay to ensure 100% readability of text & CTAs */}
+                <div 
+                    className="absolute inset-0 z-0 pointer-events-none"
+                    style={{
+                        background: 'linear-gradient(to right, rgba(0,23,48,0.95) 0%, rgba(0,31,63,0.88) 55%, rgba(0,23,48,0.72) 100%)'
+                    }}
+                />
+                <div className="absolute inset-0 bg-black/40 backdrop-blur-[0.5px] z-0 pointer-events-none" />
 
                 {/* Hero Content */}
                 <div className="relative z-10 max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16">
@@ -224,10 +371,11 @@ export default function HomePage() {
                             <Typewriter
                                 options={{
                                     strings: [
-                                        '11kV Transformers up to 11,000 kVA',
-                                        'LT & PCC/MCC Panel Manufacturing',
-                                        '11kV VCB Switchgear & RMU Solutions',
-                                        'MiCOM & Numerical Relay Testing',
+                                        'Power Transformers (Oil & Dry Type)',
+                                        'Power Transformer Maintenance, Testing & Repairing',
+                                        'HV, MV & LV Switchgears & Panels',
+                                        'HV, MV & LV Switchgear Trolleys: Complete Repair, Maintenance & Testing',
+                                        'HV, MV & LV Protection Relays: Testing, Commissioning & Installation',
                                         'Complete A-to-Z Substation Setup'
                                     ],
                                     autoStart: true,
@@ -241,7 +389,7 @@ export default function HomePage() {
 
                         {/* Description */}
                         <p className="mt-5 text-gray-200 text-base sm:text-lg max-w-3xl leading-relaxed">
-                            Complete engineering lifecycle solutions across Pakistan: in-house panel manufacturing (PCC/MCC/APFC up to 6300A), 11kV distribution transformers up to 11 MVA, high-vacuum oil filtration, precision relay testing, and emergency breakdown repair.
+                            Complete engineering lifecycle solutions across Pakistan: HV, MV & LV switchgears, panels & breaker trolleys (manufacturing, testing, commissioning & repair), power transformers (oil & dry type) with high-vacuum oil filtration & BDV testing, advanced numerical protection relay calibration (MiCOM, ABB & Schneider with primary/secondary injection), Megger (IR) & Hi-Pot field testing, and complete A-to-Z substation setup.
                         </p>
 
                         {/* Hero CTAs */}
@@ -268,6 +416,14 @@ export default function HomePage() {
                                 <span>+92 309 2302512</span>
                             </a>
                         </div>
+
+                        {/* Live Equipment Showcase Pill */}
+                        <div className="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/45 border border-white/15 backdrop-blur-md text-xs text-gray-300">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                            <span className="text-gray-400 font-medium">Live Showcase:</span>
+                            <span className="text-white font-semibold">{heroSlides[currentSlide]?.title}</span>
+                            <span className="text-[#ff8080] font-mono text-[11px] ml-1">({currentSlide + 1}/{heroSlides.length})</span>
+                        </div>
                     </div>
                 </div>
 
@@ -276,12 +432,12 @@ export default function HomePage() {
                     <div className="max-w-[1480px] mx-auto px-6 flex justify-between items-center text-xs lg:text-sm font-semibold text-gray-300">
                         <div className="flex items-center gap-2">
                             <span className="text-[#ff6b6b]">⚡</span>
-                            <span>11,000 kVA Transformers</span>
+                            <span>Oil & Dry Power Transformers</span>
                         </div>
                         <div className="w-1 h-1 rounded-full bg-gray-500" />
                         <div className="flex items-center gap-2">
                             <span className="text-[#ff6b6b]">🏭</span>
-                            <span>6300A LT & PCC/MCC Panels</span>
+                            <span>HV, MV & LV Panels</span>
                         </div>
                         <div className="w-1 h-1 rounded-full bg-gray-500" />
                         <div className="flex items-center gap-2">
@@ -291,7 +447,7 @@ export default function HomePage() {
                         <div className="w-1 h-1 rounded-full bg-gray-500" />
                         <div className="flex items-center gap-2">
                             <span className="text-[#ff6b6b]">🔬</span>
-                            <span>MiCOM Relay Testing</span>
+                            <span>Protection Relay Testing & Commissioning</span>
                         </div>
                         <div className="w-1 h-1 rounded-full bg-gray-500" />
                         <div className="flex items-center gap-2">
@@ -399,98 +555,92 @@ export default function HomePage() {
                     </p>
                 </div>
 
-                <div className="max-w-[1480px] mx-auto px-6 space-y-12">
-                    {/* Step 1 */}
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="flex-1" data-aos="fade-right">
-                            <LoadAssessmentCard
-                                stepNumber="STEP 1"
-                                title="Site Survey & Electrical Load Assessment"
-                                description="Comprehensive engineering evaluation of industrial power requirements, single-line diagrams (SLD), fault level calculations, and utility infeed compliance (K-Electric / DISCOs)."
-                                imageUrl={Step1}
-                            />
-                        </div>
-                        <div className="hidden md:flex flex-1 items-center justify-center">
-                            <img src={TransfromerImage} alt="Transformer Step" loading="lazy" className="float-slow max-w-sm rounded-xl shadow-md" />
-                        </div>
+                <div ref={timelineRef} className="relative max-w-6xl mx-auto px-4 sm:px-6">
+                    {/* Timeline track (desktop only) */}
+                    <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 rounded-full bg-gray-200" />
+
+                    {/* Scroll-driven progress fill */}
+                    <div
+                        className="hidden lg:block absolute left-1/2 top-0 w-1 -translate-x-1/2 rounded-full bg-gradient-to-b from-[#C00000] via-[#e02424] to-blueColor shadow-[0_0_12px_rgba(192,0,0,0.55)] transition-[height] duration-150 ease-out"
+                        style={{ height: `${timelineProgress * 100}%` }}
+                    >
+                        {/* Glowing tip that travels with the scroll */}
+                        {timelineProgress > 0 && timelineProgress < 1 && (
+                            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex h-4 w-4">
+                                <span className="absolute inline-flex h-full w-full rounded-full bg-[#C00000] opacity-60 animate-ping" />
+                                <span className="relative inline-flex h-4 w-4 rounded-full bg-[#C00000] border-2 border-white shadow-md" />
+                            </span>
+                        )}
                     </div>
 
-                    {/* Step 2 */}
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="hidden md:flex flex-1 items-center justify-center">
-                            <img src={Helmet} alt="Design & Engineering" loading="lazy" className="float-slow max-w-sm rounded-xl shadow-md" />
-                        </div>
-                        <div className="flex-1" data-aos="fade-left">
-                            <LoadAssessmentCard
-                                reversecond={true}
-                                stepNumber="STEP 2"
-                                title="Custom Design & Switchgear Engineering"
-                                description="Detailed AutoCAD design of LT panels, PCC, MCC, VCB switchgear layout, busbar sizing, protection coordination studies, and bill of quantities (BOQ)."
-                                imageUrl={Step2}
-                            />
-                        </div>
-                    </div>
+                    <div className="space-y-14 lg:space-y-20">
+                        {executionSteps.map((step, idx) => {
+                            const imageRight = idx % 2 === 1;
+                            const isActive = idx < activeSteps;
+                            return (
+                                <div key={step.num} className="relative grid lg:grid-cols-2 gap-6 lg:gap-20 items-center">
+                                    {/* Timeline node — lights up when the progress line reaches it */}
+                                    <div
+                                        ref={(node) => (nodeRefs.current[idx] = node)}
+                                        className={`hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full border-4 items-center justify-center transition-all duration-500 ${
+                                            isActive
+                                                ? 'bg-[#C00000] border-[#C00000] scale-110 shadow-[0_0_0_6px_rgba(192,0,0,0.15),0_8px_20px_rgba(192,0,0,0.35)]'
+                                                : 'bg-white border-gray-300 shadow-md'
+                                        }`}
+                                    >
+                                        <span className={`font-extrabold text-base transition-colors duration-500 ${isActive ? 'text-white' : 'text-gray-400'}`}>
+                                            {step.num}
+                                        </span>
+                                    </div>
 
-                    {/* Step 3 */}
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="flex-1" data-aos="fade-right">
-                            <LoadAssessmentCard
-                                stepNumber="STEP 3"
-                                title="In-House Panel Fabrication & Assembly"
-                                description="Precision CNC punching, bending, powder coating, copper busbar fabrication, and integration of tier-1 breakers (Schneider, Siemens, ABB, Terasaki) with factory acceptance testing."
-                                imageUrl={Step3}
-                            />
-                        </div>
-                        <div className="hidden md:flex flex-1 items-center justify-center">
-                            <img src={PaneImg} alt="Equipment Procurement" loading="lazy" className="float-slow max-w-sm rounded-xl shadow-md" />
-                        </div>
-                    </div>
+                                    {/* Image */}
+                                    <div className={imageRight ? 'lg:order-2' : ''} data-aos={imageRight ? 'fade-left' : 'fade-right'}>
+                                        <div className="group relative rounded-2xl overflow-hidden shadow-xl aspect-[16/10] bg-gray-200">
+                                            <img
+                                                src={step.image}
+                                                alt={step.title}
+                                                loading="lazy"
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-[#001730]/70 via-transparent to-transparent" />
+                                            <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C00000] text-white text-xs font-bold tracking-wider uppercase shadow-lg">
+                                                <span>{step.icon}</span>
+                                                <span>Step {step.num}</span>
+                                            </span>
+                                        </div>
+                                    </div>
 
-                    {/* Step 4 */}
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="hidden md:flex flex-1 items-center justify-center">
-                            <img src={WiredImg} alt="Installation & Erection" loading="lazy" className="float-slow max-w-sm rounded-xl shadow-md" />
-                        </div>
-                        <div className="flex-1" data-aos="fade-left">
-                            <LoadAssessmentCard
-                                reversecond={true}
-                                stepNumber="STEP 4"
-                                title="On-Site Erection & Cable Termination"
-                                description="Civil pad preparation, transformer positioning, switchboard alignment, 11kV HT & LT cable laying, glanding, earthing grid bonding, and busbar connections."
-                                imageUrl={Step4}
-                            />
-                        </div>
-                    </div>
-
-                    {/* Step 5 */}
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="flex-1" data-aos="fade-right">
-                            <LoadAssessmentCard
-                                stepNumber="STEP 5"
-                                title="Testing, Relay Calibration & Commissioning"
-                                description="Rigorous primary/secondary injection testing, MiCOM & numerical relay configuration, oil BDV breakdown testing, insulation resistance (megger), and energized commissioning."
-                                imageUrl={Step5}
-                            />
-                        </div>
-                        <div className="hidden md:flex flex-1 items-center justify-center">
-                            <img src={GovesImg} alt="Testing & Handover" loading="lazy" className="float-slow max-w-sm rounded-xl shadow-md" />
-                        </div>
-                    </div>
-
-                    {/* Step 6 */}
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="hidden md:flex flex-1 items-center justify-center">
-                            <img src={PaneImg} alt="After Sales Maintenance" loading="lazy" className="float-slow max-w-sm rounded-xl shadow-md" />
-                        </div>
-                        <div className="flex-1" data-aos="fade-left">
-                            <LoadAssessmentCard
-                                reversecond={true}
-                                stepNumber="STEP 6"
-                                title="24/7 Technical Support & Lifecycle Maintenance"
-                                description="Scheduled preventive maintenance, mobile oil filtration, emergency breakdown repair, transformer rewinding, and spare parts support across Pakistan."
-                                imageUrl={Step6}
-                            />
-                        </div>
+                                    {/* Content */}
+                                    <div className={imageRight ? 'lg:order-1' : ''} data-aos={imageRight ? 'fade-right' : 'fade-left'}>
+                                        <div
+                                            className={`bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 border-t-4 border-t-[#C00000] lg:border-t lg:border-t-gray-100 hover:shadow-2xl transition-shadow duration-300 ${
+                                                imageRight ? 'lg:border-r-4 lg:border-r-[#C00000]' : 'lg:border-l-4 lg:border-l-[#C00000]'
+                                            }`}
+                                        >
+                                            <span className="text-xs font-bold tracking-widest uppercase text-[#C00000]">
+                                                Step {step.num} — {step.phase}
+                                            </span>
+                                            <h3 className="mt-2 text-2xl sm:text-[26px] font-extrabold text-blueColor leading-snug">
+                                                {step.title}
+                                            </h3>
+                                            <p className="mt-3 text-gray-600 text-sm sm:text-base leading-relaxed">
+                                                {step.desc}
+                                            </p>
+                                            <div className="mt-5 flex flex-wrap gap-2">
+                                                {step.tags.map((tag) => (
+                                                    <span
+                                                        key={tag}
+                                                        className="text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 text-blueColor border border-blue-100"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

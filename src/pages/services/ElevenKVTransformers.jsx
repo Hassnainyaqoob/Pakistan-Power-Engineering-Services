@@ -5,8 +5,8 @@ import heroImage from '../../assets/images/eleven_kv_transformers_hero.jpg';
 const services = [
     {
         icon: '⚡',
-        title: '11kV Transformer Supply (Up to 11,000 kVA)',
-        description: 'Supply of brand new and refurbished 11kV/0.4kV distribution and power transformers from 50 kVA up to 11,000 kVA (11 MVA) complying with IEC 60076, WAPDA, and K-Electric standards.'
+        title: '11kV (11,000V) Transformer Supply & Installation',
+        description: 'Supply of brand new and refurbished 11kV/0.4kV distribution and power transformers in multiple ratings complying with IEC 60076, WAPDA, and K-Electric standards.'
     },
     {
         icon: '🛢️',
@@ -48,7 +48,7 @@ const services = [
 const benefits = [
     {
         icon: '⚡',
-        title: 'Capacity Up To 11,000 kVA (11 MVA)',
+        title: '11kV (11,000V) Voltage Level Handling',
         description: 'Deep technical capability and test equipment to handle heavy industrial substations, captive power plants, and utility distribution transformers.'
     },
     {
@@ -69,7 +69,7 @@ const benefits = [
 ];
 
 const keyFeatures = [
-    'Ratings from 50 kVA, 100 kVA, 250 kVA, 500 kVA, 1000 kVA up to 11,000 kVA (11 MVA)',
+    'Ratings across all standard distribution capacities for 11kV (11,000V) networks',
     'Dual technology coverage: Oil-Immersed (Conservator / Sealed) & Dry Type (Cast Resin)',
     'Dyn11 standard vector group (other configurations available on request)',
     'High dielectric strength insulation oil certified to IEC 60296 standards',
@@ -91,7 +91,7 @@ const applications = [
 ];
 
 const stats = [
-    { number: '11 MVA', label: 'Max Handling Capacity' },
+    { number: '11kV', label: 'Voltage System (11,000V)' },
     { number: '500+', label: 'Transformers Serviced' },
     { number: '60kV+', label: 'Oil BDV Standard' },
     { number: '24/7', label: 'Emergency Support' }
@@ -104,8 +104,8 @@ export default function ElevenKVTransformersPage() {
             heroTitle="11kV Transformers"
             heroTitleAccent="Supply, Repair & Testing"
             heroSubtitle="Pakistan Power Engineering Services"
-            heroDescription="Complete technical lifecycle solutions for 11kV Power & Distribution Transformers up to 11,000 kVA (11 MVA). Supply of Oil-Immersed & Dry Type Cast Resin transformers, high-vacuum oil dehydration, precision diagnostic testing, full coil rewinding, and complete substation installation across Pakistan."
-            overviewText="Pakistan Power Engineering Services provides end-to-end engineering excellence for medium-voltage 11kV distribution transformers. Whether you need a brand-new energy-efficient 11kV transformer for an expanding manufacturing facility, an urgent on-site high-vacuum oil filtration to restore dielectric strength, or complete workshop coil rewinding and overhauling of a tripped unit, our seasoned power engineers deliver guaranteed reliability. We service both indoor cast resin dry-type transformers and outdoor oil-immersed units up to 11,000 kVA, adhering strictly to IEC 60076 standards, NEPRA regulations, and local utility requirements."
+            heroDescription="Complete technical lifecycle solutions for 11kV (11,000V) Power & Distribution Transformers in multiple ratings. Supply of Oil-Immersed & Dry Type Cast Resin transformers, high-vacuum oil dehydration, precision diagnostic testing, full coil rewinding, and complete substation installation across Pakistan."
+            overviewText="Pakistan Power Engineering Services provides end-to-end engineering excellence for medium-voltage 11kV (11,000V) distribution transformers. Whether you need a brand-new energy-efficient 11kV transformer for an expanding manufacturing facility, an urgent on-site high-vacuum oil filtration to restore dielectric strength, or complete workshop coil rewinding and overhauling of a tripped unit, our seasoned power engineers deliver guaranteed reliability. We service both indoor cast resin dry-type transformers and outdoor oil-immersed units at 11kV (11,000V), adhering strictly to IEC 60076 standards, NEPRA regulations, and local utility requirements."
             services={services}
             benefits={benefits}
             keyFeatures={keyFeatures}

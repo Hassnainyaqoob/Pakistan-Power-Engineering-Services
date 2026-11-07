@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import NotFoundPage from '../pages/notFound';
@@ -46,6 +46,7 @@ const RouterConfig = () => {
                     <Route path="/clients" element={<Clients />} />
 
                     {/* Service Pages */}
+                    <Route path="/services" element={<Navigate to="/services/11kv-transformers" replace />} />
                     <Route path="/services/lt-panels" element={<LTPanelsPage />} />
                     <Route path="/services/11kv-transformers" element={<ElevenKVTransformersPage />} />
                     <Route path="/services/power-transformer" element={<PowerTransformerPage />} />

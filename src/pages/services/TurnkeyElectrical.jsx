@@ -3,7 +3,7 @@ import ServicePageTemplate from '../../components/ServicePageTemplate';
 import heroImage from '../../assets/images/turnkey_electrical_hero.jpg';
 
 const services = [
-    { icon: '⚡', title: 'Complete 11kV Substation Setup', description: 'Complete design, civil pad assessment, equipment rigging, positioning, and energized commissioning of 11kV substations up to 11,000 kVA (11 MVA).' },
+    { icon: '⚡', title: 'Complete 11kV (11,000V) Substation Setup', description: 'Complete design, civil pad assessment, equipment rigging, positioning, and energized commissioning of 11kV (11,000V) substations across multiple ratings.' },
     { icon: '🏭', title: 'In-House Panel Manufacturing & PCC/MCC', description: 'Full custom fabrication of Power Control Centers (PCC up to 6300A), Motor Control Centers (MCC), and APFC capacitor banks to IEC standards.' },
     { icon: '🔌', title: '11kV VCB Switchgear & RMU Installation', description: 'Assembly, busbar trunking coupling, interlock calibration, and wiring of Vacuum Circuit Breaker panels and Ring Main Units.' },
     { icon: '🔗', title: '11kV HT & LT Cable Laying & Termination', description: 'Trenching, cable tray installation, 11kV XLPE HT cable laying, heat-shrink terminations, and straight-through jointing with certified test reports.' },
@@ -16,7 +16,7 @@ const services = [
 
 const benefits = [
     { icon: '🏆', title: 'Single-Point Accountability', description: 'From initial single-line diagram to final utility switch-on, one trusted team handles design, panels, equipment, and testing.' },
-    { icon: '⚡', title: 'Up to 11,000 kVA Handling', description: 'Extensive track record delivering massive substations for textile mills, steel furnaces, cement complexes, and commercial towers.' },
+    { icon: '⚡', title: '11kV (11,000V) Turnkey Substation Setup', description: 'Extensive track record delivering massive substations for textile mills, steel furnaces, cement complexes, and commercial towers.' },
     { icon: '📏', title: 'Strict International Standards', description: 'Adherence to IEC 60076, IEC 62271, ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018.' },
     { icon: '👷', title: 'PEC Registered Engineering Team', description: 'Professional Engineers (PE) registered with Pakistan Engineering Council ensuring technical integrity and safety.' },
     { icon: '🇵🇰', title: 'Nationwide Footprint', description: 'Proven project delivery across Sindh, Punjab, Khyber Pakhtunkhwa, Balochistan, and Islamabad Capital Territory.' },
@@ -24,7 +24,7 @@ const benefits = [
 ];
 
 const keyFeatures = [
-    'Complete 11kV Substations from 50 kVA up to 11,000 kVA (11 MVA)',
+    'Complete 11kV (11,000V) Substations across multiple ratings',
     'In-House LT, PCC (up to 6300A), MCC, and APFC Panel Manufacturing',
     '11kV Vacuum Circuit Breakers (VCB) & Ring Main Units (RMU)',
     'MiCOM & Numerical Relay Protection Calibration',
@@ -42,7 +42,7 @@ const applications = [
 ];
 
 const stats = [
-    { number: '11 MVA', label: 'Max Substation Capacity' },
+    { number: '11kV', label: 'Turnkey Voltage (11,000V)' },
     { number: '500+', label: 'Projects Handed Over' },
     { number: '14+', label: 'Years Experience' },
     { number: 'Nationwide', label: 'Service Across Pakistan' },

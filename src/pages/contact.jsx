@@ -307,7 +307,17 @@ const Contact = () => {
                             </svg>
                         </div>
                         <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blueColor transition-colors duration-300">Email</h3>
-                        <a href="mailto:PakistanPowerEngineeringServices@outlook.com" className="text-gray-600 hover:text-blueColor transition-colors duration-300 break-all block text-sm">PakistanPowerEngineeringServices@outlook.com</a>
+                        <div className="space-y-1.5 text-sm">
+                            <a href="mailto:info@pakistanpowerengservices.com" className="text-gray-600 hover:text-blueColor transition-colors duration-300 break-all block font-medium">
+                                info@pakistanpowerengservices.com
+                            </a>
+                            <a href="mailto:ahmed.yaqoob@pakistanpowerengservices.com" className="text-brandRed hover:underline transition-colors duration-300 break-all block text-xs font-semibold">
+                                ahmed.yaqoob@pakistanpowerengservices.com <span className="text-gray-500 font-normal">(CEO Direct)</span>
+                            </a>
+                            <a href="mailto:sales@pakistanpowerengservices.com" className="text-gray-500 hover:text-blueColor transition-colors duration-300 break-all block text-xs">
+                                sales@pakistanpowerengservices.com
+                            </a>
+                        </div>
                     </div>
 
                     {/* Address Card */}

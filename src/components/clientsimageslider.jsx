@@ -72,12 +72,12 @@ const ClientLogoMarquee = ({ logos }) => {
         <div className="w-full max-w-7xl mx-auto py-8 relative px-4 lg:px-10">
             <Slider {...settings} className="client-slider">
                 {logos.map((logo, index) => (
-                    <div key={index} className="px-3">
-                        <div className="bg-white h-32 flex items-center justify-center border border-gray-100 rounded-xl hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:border-blueColor/30 group">
+                    <div key={index} className="px-3 py-3">
+                        <div className="bg-white h-32 flex items-center justify-center border border-gray-200 rounded-xl hover:border-brandRed hover:shadow-[0_12px_28px_rgba(192,0,0,0.15)] hover:-translate-y-1.5 transition-all duration-300 group cursor-pointer">
                             <img
                                 src={logo.src}
                                 alt={logo.alt || `Client Logo ${index + 1}`}
-                                className="max-h-20 max-w-[80%] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                                className="max-h-20 max-w-[80%] object-contain transition-all duration-300 group-hover:scale-110"
                                 onError={(e) => { e.target.style.display = 'none'; }}
                                 loading="lazy"
                             />

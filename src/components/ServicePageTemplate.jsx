@@ -214,7 +214,7 @@ const ServicePageTemplate = ({
                             Contact Us Now
                         </button>
                         <a
-                            href="mailto:PakistanPowerEngineeringServices@outlook.com"
+                            href="mailto:info@pakistanpowerengservices.com"
                             className="border-2 border-white text-white hover:bg-white/20 font-bold px-10 py-4 rounded-xl transition-all duration-300 text-lg"
                         >
                             Send Email
@@ -223,7 +223,7 @@ const ServicePageTemplate = ({
                     <div className="mt-8 flex justify-center gap-8 text-white/80 text-sm">
                         <span>📞 +92 309 2302512</span>
                         <span>📞 +92 335 0259886</span>
-                        <span>🌐 www.pakistanpower.com.pk</span>
+                        <span>🌐 www.pakistanpowerengservices.com</span>
                     </div>
                 </div>
             </div>

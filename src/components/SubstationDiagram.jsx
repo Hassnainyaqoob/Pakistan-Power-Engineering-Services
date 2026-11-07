@@ -1,69 +1,60 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const flowSteps = [
+const coreServices = [
     {
         step: '01',
-        title: '11kV Grid Incomer',
-        voltage: '11,000V (11kV)',
-        desc: 'Utility infeed from DISCOs / K-Electric, 11kV underground XLPE cables & overhead lines.',
+        title: 'HV, MV & LV Switchgears & Panels',
+        subtitle: 'Testing, Commissioning, Installation & Repairing',
+        desc: 'Complete lifecycle services for High Voltage, Medium Voltage & Low Voltage switchgears and panels — from design, manufacturing & installation to testing, commissioning and breakdown repairing.',
         icon: '⚡',
-        badge: 'Medium Voltage',
-        link: '/services/turnkey-electrical',
-    },
-    {
-        step: '02',
-        title: '11kV Switchgear & RMU',
-        voltage: '11kV VCB / SF6',
-        desc: 'Vacuum Circuit Breakers, Ring Main Units, MiCOM & numerical protection relays, CT/PT metering.',
-        icon: '🔌',
-        badge: 'Protection & Isolation',
+        badge: 'Switchgears & Panels',
         link: '/services/vcb-mv-panels',
     },
     {
-        step: '03',
-        title: '11kV Transformers',
-        voltage: '11kV → 400V / 230V',
-        desc: 'Oil-immersed & dry cast resin transformers up to 11,000 kVA (11 MVA). Supply, rewinding & oil BDV filtration.',
+        step: '02',
+        title: 'Power Transformers (Dry & Oil Type)',
+        subtitle: 'Testing, Commissioning, Installation & Repairing',
+        desc: 'Specialized services for oil-immersed & dry type power transformers — supply, installation, oil filtration, diagnostic testing, coil rewinding, commissioning and emergency repairing.',
         icon: '🛢️',
-        badge: 'Up to 11,000 kVA',
+        badge: 'Transformers',
         link: '/services/11kv-transformers',
     },
     {
+        step: '03',
+        title: 'Protection Relays',
+        subtitle: 'Testing, Commissioning & Supplies',
+        desc: 'MiCOM, ABB & Schneider numerical protection relays — primary & secondary injection testing, calibration, commissioning, and authorized supply of all relay types.',
+        icon: '🔬',
+        badge: 'Relays & Protection',
+        link: '/services/testing-commissioning',
+    },
+    {
         step: '04',
-        title: 'Main LT / PCC Panel',
-        voltage: '400V Low Tension',
-        desc: 'Power Control Centers up to 6300A with drawout ACBs, copper busbars & digital monitoring.',
-        icon: '🏭',
-        badge: 'Custom Manufactured',
-        link: '/services/lt-panels',
+        title: 'CT, PT, Spouts & Insulators',
+        subtitle: 'Supplies, Installation & Testing',
+        desc: 'Supply and installation of Current Transformers (CT), Potential Transformers (PT), HV spouts, and porcelain/polymeric insulators with precision ratio and polarity testing.',
+        icon: '🔧',
+        badge: 'CT / PT & Accessories',
+        link: '/services/mv-equipment-supply',
     },
     {
         step: '05',
-        title: 'MCC & Motor Starters',
-        voltage: '400V / 230V',
-        desc: 'Motor Control Centers with VFDs, soft starters, Star-Delta controls for industrial machinery.',
-        icon: '⚙️',
-        badge: 'Motor Automation',
-        link: '/services/lt-panels',
+        title: 'Cable Testing & Jointing',
+        subtitle: 'Terminations & Testing',
+        desc: 'HV & LV cable jointing, heat-shrink & cold-shrink terminations, HV cable fault location, insulation resistance testing, and VLF / Hi-Pot cable testing services.',
+        icon: '🔌',
+        badge: 'Cables & Terminations',
+        link: '/services/turnkey-electrical',
     },
     {
         step: '06',
-        title: 'APFC / PFI Plant',
-        voltage: 'Power Factor 0.99',
-        desc: 'Automatic Power Factor Correction capacitor banks with detuned reactors to eliminate utility penalties.',
-        icon: '📊',
-        badge: 'Efficiency & Savings',
-        link: '/services/power-factor-improvement',
-    },
-    {
-        step: '07',
-        title: 'Industrial Loads',
-        voltage: 'End Distribution',
-        desc: 'Textile looms, induction furnaces, pumps, chillers, commercial towers, and complete production plants.',
-        icon: '🏢',
-        badge: 'Complete Handover',
-        link: '/services/turnkey-electrical',
+        title: 'Preventive Maintenance',
+        subtitle: 'Service & Testing',
+        desc: 'Scheduled preventive maintenance contracts with comprehensive service & testing — thermography, oil analysis, contact resistance, relay verification, and complete substation health checks.',
+        icon: '🛡️',
+        badge: 'Maintenance & Service',
+        link: '/services/power-transformer',
     },
 ];
 
@@ -114,39 +105,39 @@ export const SubstationDiagram = () => {
                     </button>
                 </div>
 
-                {/* Flow Diagram Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
-                    {flowSteps.map((step, index) => (
+                {/* Core Services Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {coreServices.map((service) => (
                         <div
-                            key={step.step}
-                            onClick={() => navigate(step.link)}
-                            className="group relative bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#C00000]/60 rounded-xl p-5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#C00000]/20 cursor-pointer flex flex-col justify-between"
+                            key={service.step}
+                            onClick={() => navigate(service.link)}
+                            className="group relative bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#C00000]/60 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#C00000]/20 cursor-pointer flex flex-col justify-between"
                         >
                             {/* Step number and Icon */}
                             <div>
                                 <div className="flex items-center justify-between mb-3">
                                     <span className="text-xs font-mono font-bold text-gray-400 group-hover:text-[#ff6b6b] transition-colors">
-                                        STAGE {step.step}
+                                        SERVICE {service.step}
                                     </span>
                                     <span className="text-2xl group-hover:scale-125 transition-transform duration-300">
-                                        {step.icon}
+                                        {service.icon}
                                     </span>
                                 </div>
 
                                 <span className="inline-block text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-400/20 mb-2">
-                                    {step.badge}
+                                    {service.badge}
                                 </span>
 
-                                <h3 className="text-base font-bold text-white group-hover:text-[#ff6b6b] transition-colors leading-snug mb-1">
-                                    {step.title}
+                                <h3 className="text-lg font-bold text-white group-hover:text-[#ff6b6b] transition-colors leading-snug mb-1">
+                                    {service.title}
                                 </h3>
 
                                 <p className="text-xs font-semibold text-[#ff8080] mb-2">
-                                    {step.voltage}
+                                    {service.subtitle}
                                 </p>
 
-                                <p className="text-xs text-gray-300 leading-relaxed">
-                                    {step.desc}
+                                <p className="text-sm text-gray-300 leading-relaxed">
+                                    {service.desc}
                                 </p>
                             </div>
 
@@ -162,8 +153,8 @@ export const SubstationDiagram = () => {
                 {/* Nationwide and Capacity Footer Bar */}
                 <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     <div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">11,000 kVA</div>
-                        <div className="text-xs sm:text-sm text-gray-300 mt-1">Max Transformer Capacity</div>
+                        <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">11kV</div>
+                        <div className="text-xs sm:text-sm text-gray-300 mt-1">Medium Voltage (11,000V)</div>
                     </div>
                     <div>
                         <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">6300A</div>

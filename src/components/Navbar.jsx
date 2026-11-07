@@ -14,10 +14,14 @@ const Navbar = () => {
     // Update activeLink based on current URL
     useEffect(() => {
         const path = location.pathname;
+        if (path === '/contact') {
+            setActiveLink('CONTACT');
+            return;
+        }
         const currentLink = navItems.find(item =>
             item.href === path ||
             (item.hasDropdown && item.dropdownItems.some(dropdown => dropdown.href === path))
-        )?.name || 'HOME';
+        )?.name || (path === '/' ? 'HOME' : '');
         setActiveLink(currentLink);
     }, [location]);
 
@@ -30,13 +34,18 @@ const Navbar = () => {
 
     const handleLinkClick = (linkName, href) => {
         setActiveLink(linkName);
-        if (linkName === 'SERVICES & PRODUCTS' && !href.includes('/services/')) {
-            setMobileDropdownOpen(!mobileDropdownOpen);
-        } else {
-            setIsMobileMenuOpen(false);
-            setMobileDropdownOpen(false);
-            navigate(href);
+        if (linkName === 'SERVICES & PRODUCTS' && (!href || href === '/services')) {
+            if (window.innerWidth < 1024) {
+                setMobileDropdownOpen(!mobileDropdownOpen);
+                return;
+            } else {
+                navigate('/services/11kv-transformers');
+                return;
+            }
         }
+        setIsMobileMenuOpen(false);
+        setMobileDropdownOpen(false);
+        navigate(href);
     };
 
     const PhoneIcon = () => (
@@ -74,7 +83,7 @@ const Navbar = () => {
             href: '/services',
             hasDropdown: true,
             dropdownItems: [
-                { name: '11kV Transformers (Up to 11 MVA)', href: '/services/11kv-transformers', icon: '⚡' },
+                { name: '11kV (11,000V) Transformers', href: '/services/11kv-transformers', icon: '⚡' },
                 { name: 'LT & PCC/MCC Panels Manufacturing', href: '/services/lt-panels', icon: '🏭' },
                 { name: 'VCB & MV Panels Maintenance', href: '/services/vcb-mv-panels', icon: '🔌' },
                 { name: 'Power Transformer Services', href: '/services/power-transformer', icon: '🛢️' },
@@ -115,20 +124,20 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center space-x-2">
                         <a
-                            href={`mailto:PakistanPowerEngineeringServices@outlook.com?subject=Support%20Inquiry&body=Hello,%20I%20need%20assistance%20with...`}
+                            href={`mailto:info@pakistanpowerengservices.com?subject=Support%20Inquiry&body=Hello,%20I%20need%20assistance%20with...`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <EmailIcon className="hover:text-gray-300 transition-colors" />
                         </a>
                         <a
-                            href={`mailto:PakistanPowerEngineeringServices@outlook.com?subject=Support%20Inquiry&body=Hello,%20I%20need%20assistance%20with...`}
+                            href={`mailto:info@pakistanpowerengservices.com?subject=Support%20Inquiry&body=Hello,%20I%20need%20assistance%20with...`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white hover:underline"
                         >
-                            <span className="font-bold">Need Support?</span>
-                            PakistanPowerEngineeringServices@outlook.com
+                            <span className="font-bold">Need Support? </span>
+                            info@pakistanpowerengservices.com
                         </a>
                     </div>
                     <button
@@ -243,13 +252,13 @@ const Navbar = () => {
                                         </div>
                                         <div className="flex items-center space-x-2 px-3 py-1 text-sm text-gray-600">
                                             <a
-                                                href={`mailto:PakistanPowerEngineeringServices@outlook.com?subject=Support%20Inquiry&body=Hello,%20I%20need%20assistance%20with...`}
+                                                href={`mailto:info@pakistanpowerengservices.com?subject=Support%20Inquiry&body=Hello,%20I%20need%20assistance%20with...`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className='flex items-center space-x-2'
                                             >
                                                 <EmailIcon />
-                                                <span>PakistanPowerEngineeringServices@outlook.com</span>
+                                                <span>info@pakistanpowerengservices.com</span>
                                             </a>
                                         </div>
                                         <button

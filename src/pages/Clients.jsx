@@ -62,12 +62,12 @@ export default function Clients() {
                         {clients.map((logo, i) => (
                             <div
                                 key={i}
-                                className="group bg-white h-28 sm:h-32 flex items-center justify-center border border-gray-200 rounded-xl hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] hover:border-blueColor/30 transition-all duration-300 p-3"
+                                className="group bg-white h-28 sm:h-32 flex items-center justify-center border border-gray-200 rounded-xl hover:border-brandRed hover:shadow-[0_12px_28px_rgba(192,0,0,0.15)] hover:-translate-y-1.5 transition-all duration-300 p-3 cursor-pointer"
                             >
                                 <img
                                     src={logo}
                                     alt={`Client ${i + 1}`}
-                                    className="max-h-16 sm:max-h-20 max-w-[85%] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                                    className="max-h-16 sm:max-h-20 max-w-[85%] object-contain transition-all duration-300 group-hover:scale-110"
                                 />
                             </div>
                         ))}
