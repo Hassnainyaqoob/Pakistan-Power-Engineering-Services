@@ -57,32 +57,114 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ElectricalContractor",
-    "name": "Pakistan Power Engineering Services",
-    "alternateName": "PPES",
-    "url": "https://www.pakistanpowerengservices.com/",
-    "logo": "https://pakistan-power-engineering-services.vercel.app/faviconicon.png",
-    "image": "https://pakistan-power-engineering-services.vercel.app/og-banner-v3.jpg",
-    "description": "Industrial electrical engineering across Pakistan: Power Transformers in multiple kVA & MVA ratings (Supply, Repairing, Rewinding, Testing & Commissioning), in-house LT/PCC/MCC switchgear manufacturing, HT/MV VCB panels, and substation commissioning.",
-    "telephone": "+92-309-2302512",
-    "email": "info@pakistanpowerengservices.com",
-    "founder": {
-      "@type": "Person",
-      "name": "Ahmed Yaqoob",
-      "jobTitle": "CEO & Founder",
-      "email": "ahmed.yaqoob@pakistanpowerengservices.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Plot # 236, Street D-17, Azam Town, Mahmoodabad",
-      "addressLocality": "Karachi",
-      "addressRegion": "Sindh",
-      "addressCountry": "PK"
-    },
-    "areaServed": [
-      { "@type": "Country", "name": "Pakistan" }
-    ],
-    "priceRange": "$$"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.pakistanpowerengservices.com/#organization",
+        "name": "Pakistan Power Engineering Services",
+        "alternateName": "PPES",
+        "url": "https://www.pakistanpowerengservices.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pakistan-power-engineering-services.vercel.app/faviconicon.png"
+        },
+        "image": "https://pakistan-power-engineering-services.vercel.app/og-banner-v3.jpg",
+        "description": "Industrial electrical engineering across Pakistan: Power Transformers in multiple kVA & MVA ratings (Supply, Repairing, Rewinding, Testing & Commissioning), in-house LT/PCC/MCC switchgear manufacturing, HT/MV VCB panels, and substation commissioning.",
+        "telephone": "+92-309-2302512",
+        "email": "info@pakistanpowerengservices.com",
+        "founder": {
+          "@type": "Person",
+          "name": "Ahmed Yaqoob",
+          "jobTitle": "CEO & Founder",
+          "email": "ahmed.yaqoob@pakistanpowerengservices.com"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Plot # 236, Street D-17, Azam Town, Mahmoodabad",
+          "addressLocality": "Karachi",
+          "addressRegion": "Sindh",
+          "postalCode": "75460",
+          "addressCountry": "PK"
+        },
+        "sameAs": [
+          "https://linkedin.com/company/pakistan-power-engineering-services"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.pakistanpowerengservices.com/#localbusiness",
+        "name": "Pakistan Power Engineering Services",
+        "image": [
+          "https://pakistan-power-engineering-services.vercel.app/og-banner-v3.jpg"
+        ],
+        "url": "https://www.pakistanpowerengservices.com/",
+        "telephone": "+92-309-2302512",
+        "email": "info@pakistanpowerengservices.com",
+        "priceRange": "PKR",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Plot # 236, Street D-17, Azam Town, Mahmoodabad",
+          "addressLocality": "Karachi",
+          "addressRegion": "Sindh",
+          "postalCode": "75460",
+          "addressCountry": "PK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.8415,
+          "longitude": 67.0657
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.pakistanpowerengservices.com/#website",
+        "url": "https://www.pakistanpowerengservices.com/",
+        "name": "Pakistan Power Engineering Services",
+        "alternateName": "PPES",
+        "publisher": {
+          "@id": "https://www.pakistanpowerengservices.com/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.pakistanpowerengservices.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.pakistanpowerengservices.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Power Transformers",
+            "item": "https://www.pakistanpowerengservices.com/services/power-transformers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "LT & PCC/MCC Panels",
+            "item": "https://www.pakistanpowerengservices.com/services/lt-panels"
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
