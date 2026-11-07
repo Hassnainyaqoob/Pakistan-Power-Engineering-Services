@@ -148,18 +148,20 @@ const Footer = () => {
                             </h4>
                             <div className="flex space-x-3">
                                 <a
-                                    href="mailto:info@pakistanpowerengservices.com"
-                                    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-red-600 flex items-center justify-center text-white transition-colors"
-                                    aria-label="Email Pakistan Power Engineering Services"
+                                    href="https://www.facebook.com/p/Pakistan-Power-Engineering-Services-100063939617412/"
+                                    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#1877F2] flex items-center justify-center text-white transition-colors"
+                                    aria-label="Pakistan Power Engineering Services on Facebook"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                        <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.597 1.323-1.326V1.326C24 .597 23.403 0 22.675 0z" />
                                     </svg>
                                 </a>
                                 <a
                                     href="https://linkedin.com/company/pakistan-power-engineering-services"
-                                    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-red-600 flex items-center justify-center text-white transition-colors"
-                                    aria-label="LinkedIn"
+                                    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#0A66C2] flex items-center justify-center text-white transition-colors"
+                                    aria-label="Pakistan Power Engineering Services on LinkedIn"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -169,13 +171,22 @@ const Footer = () => {
                                 </a>
                                 <a
                                     href="https://wa.me/923092302512"
-                                    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center text-white transition-colors"
+                                    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#25D366] flex items-center justify-center text-white transition-colors"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label="WhatsApp"
+                                    aria-label="Chat on WhatsApp"
+                                >
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 448 512">
+                                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                                    </svg>
+                                </a>
+                                <a
+                                    href="mailto:info@pakistanpowerengservices.com"
+                                    className="w-9 h-9 rounded-full bg-gray-800 hover:bg-red-600 flex items-center justify-center text-white transition-colors"
+                                    aria-label="Email Pakistan Power Engineering Services"
                                 >
                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20 2h-16c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-16c0-1.103-.897-2-2-2zm-7 2c1.656 0 3 1.344 3 3s-1.344 3-3 3-3-1.344-3-3 1.344-3 3-3zm8 14h-14v-1.869c0-2.513 4.795-3.131 6.32-3.131.955 0 1.622.077 2.163.211.365.09.614.348.614.643v2.146h2.381v-2.146c0-.689-.305-1.313-1-1.729v-.055c.551-.163 1.431-.265 2.209-.265 4.795 0 6-2.833 6-5.685v-1.897h-2.381v1.897c0 1.465-1.185 2.146-2.381 2.146-.676 0-1.226-.238-1.604-.659-.378-.421-.586-.991-.586-1.598v-1.897h-2.381v1.897c0 .689.305 1.313 1 1.729v.055c-.551.163-1.431.265-2.209.265-1.895 0-3.235.298-4.119.994-.882.696-1.381 1.697-1.381 2.831v1.869h2.381v-1.869c0-.551.468-.994 1-1.094.531-.1 1.397-.162 2.619-.162 1.172 0 2.163.055 2.619.162.532.1 1 .543 1 1.094v1.869z" />
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                                     </svg>
                                 </a>
                             </div>
