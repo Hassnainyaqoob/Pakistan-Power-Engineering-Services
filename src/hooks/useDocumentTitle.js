@@ -2,6 +2,10 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+const SITE_URL = 'https://www.pakistanpowerengservices.com';
+
+const DEFAULT_ROBOTS = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+
 const routeSeoMap = {
     '/': {
         title: 'Pakistan Power Engineering Services | Power Transformers, Switchgear & Substation Specialists',
@@ -65,31 +69,51 @@ const routeSeoMap = {
     }
 };
 
+const CANONICAL_ALIASES = {
+    '/services': '/services/power-transformers',
+    '/services/11kv-transformers': '/services/power-transformers'
+};
+
 const useDocumentTitle = () => {
     const location = useLocation();
 
     useEffect(() => {
-        const path = location.pathname;
-        const seoData = routeSeoMap[path] || {
-            title: 'Pakistan Power Engineering Services | Power Transformers, Switchgear & Substation Specialists',
-            description: 'Leading industrial electrical engineering solutions across Pakistan.'
+        const rawPath = location.pathname || '/';
+        const normalizedPath = rawPath.length > 1 ? rawPath.replace(/\/+$/, '') : '/';
+        const canonicalPath = CANONICAL_ALIASES[normalizedPath] || normalizedPath;
+        const matchedSeo = routeSeoMap[canonicalPath];
+        const isKnownRoute = Boolean(matchedSeo);
+
+        const seoData = matchedSeo || {
+            title: 'Page Not Found | Pakistan Power Engineering Services',
+            description: 'The requested page could not be found on Pakistan Power Engineering Services.'
         };
+        const canonicalUrl = `${SITE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
 
         document.title = seoData.title;
 
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) {
-            metaDesc.setAttribute('content', seoData.description);
-        }
+        const updateMeta = (selector, attrName, content) => {
+            const el = document.querySelector(selector);
+            if (el) {
+                el.setAttribute(attrName, content);
+            }
+        };
 
-        const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) {
-            ogTitle.setAttribute('content', seoData.title);
+        updateMeta('meta[name="description"]', 'content', seoData.description);
+        updateMeta('meta[name="robots"]', 'content', isKnownRoute ? DEFAULT_ROBOTS : 'noindex, follow');
+        updateMeta('meta[property="og:title"]', 'content', seoData.title);
+        updateMeta('meta[property="og:description"]', 'content', seoData.description);
+        updateMeta('meta[property="og:url"]', 'content', canonicalUrl);
+        updateMeta('meta[name="twitter:title"]', 'content', seoData.title);
+        updateMeta('meta[name="twitter:description"]', 'content', seoData.description);
+
+        let canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (!canonicalLink) {
+            canonicalLink = document.createElement('link');
+            canonicalLink.setAttribute('rel', 'canonical');
+            document.head.appendChild(canonicalLink);
         }
-        const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) {
-            ogDesc.setAttribute('content', seoData.description);
-        }
+        canonicalLink.setAttribute('href', canonicalUrl);
     }, [location.pathname]);
 };
 
