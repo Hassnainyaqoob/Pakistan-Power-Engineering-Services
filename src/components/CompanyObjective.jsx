@@ -12,12 +12,11 @@ export default function CompanyObjectives() {
         { label: 'Customer Satisfaction', percentage: 97 }
     ];
 
-    const certifications = [
-        { code: 'ISO 9001:2015', label: 'Quality Management' },
-        { code: 'ISO 14001:2015', label: 'Environmental Management' },
-        { code: 'ISO 45001:2018', label: 'Occupational Health & Safety' },
-        { code: 'PEC', label: 'Pakistan Engineering Council' },
-        { code: 'PSQCA', label: 'Standards & Quality Control' },
+    const corePrinciples = [
+        { title: 'Quality', desc: 'Precision Engineering' },
+        { title: 'Safety', desc: 'Zero Compromise' },
+        { title: 'Reliability', desc: '15+ Years Trust' },
+        { title: 'Support', desc: '24/7 Field Support' },
     ];
 
     const whyChooseUs = [
@@ -90,14 +89,14 @@ export default function CompanyObjectives() {
                         <p className="text-gray-600 leading-relaxed text-lg mb-6">
                             We deliver reliable, efficient and cost-effective engineering solutions through innovation, quality and commitment. Our goal is to be the most trusted electrical engineering partner in Pakistan.
                         </p>
-                        {/* Certifications */}
+                        {/* Core Principles */}
                         <div className="mt-6">
-                            <h3 className="text-lg font-bold text-blueColor mb-3">Our Certifications</h3>
+                            <h3 className="text-lg font-bold text-blueColor mb-3">Our Core Principles</h3>
                             <div className="flex flex-wrap gap-2">
-                                {certifications.map((cert, i) => (
+                                {corePrinciples.map((item, i) => (
                                     <div key={i} className="flex flex-col items-center bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-center min-w-[90px]">
-                                        <span className="text-xs font-bold text-blueColor">{cert.code}</span>
-                                        <span className="text-[10px] text-gray-500 mt-1">{cert.label}</span>
+                                        <span className="text-xs font-bold text-blueColor">{item.title}</span>
+                                        <span className="text-[10px] text-gray-500 mt-1">{item.desc}</span>
                                     </div>
                                 ))}
                             </div>

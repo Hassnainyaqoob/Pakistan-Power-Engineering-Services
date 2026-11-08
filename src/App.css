@@ -175,7 +175,7 @@
 .marquee-container {
     position: relative;
     overflow: hidden;
-    whitespace: nowrap;
+    white-space: nowrap;
 }
 
 /* Button styling */

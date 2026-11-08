@@ -16,8 +16,8 @@ const routeSeoMap = {
         description: 'Get in touch with our power engineering specialists for Power Transformer supply & repairing, HT/LT switchgear panels, relay testing, and 24/7 emergency breakdown support.'
     },
     '/profile': {
-        title: 'Company Profile & Credentials | Pakistan Power Engineering Services',
-        description: 'Download our official company profile. Over 15+ years of certified power engineering excellence, 500+ industrial projects, and utility approvals across Pakistan.'
+        title: 'Company Profile & Brochure | Pakistan Power Engineering Services',
+        description: 'Download our official company profile. Over 15+ years of power engineering excellence, 500+ industrial projects, and utility approvals across Pakistan.'
     },
     '/clients': {
         title: 'Our Clients & Approvals | Pakistan Power Engineering Services',

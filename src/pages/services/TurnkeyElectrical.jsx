@@ -17,8 +17,8 @@ const services = [
 const benefits = [
     { icon: '🏆', title: 'Single-Point Accountability', description: 'From initial single-line diagram to final utility switch-on, one trusted team handles design, panels, equipment, and testing.' },
     { icon: '⚡', title: '11kV (11,000V) Turnkey Substation Setup', description: 'Extensive track record delivering massive substations for textile mills, steel furnaces, cement complexes, and commercial towers.' },
-    { icon: '📏', title: 'Strict International Standards', description: 'Adherence to IEC 60076, IEC 62271, ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018.' },
-    { icon: '👷', title: 'PEC Registered Engineering Team', description: 'Professional Engineers (PE) registered with Pakistan Engineering Council ensuring technical integrity and safety.' },
+    { icon: '📏', title: 'Strict International Standards', description: 'Adherence to IEC 60076, IEC 62271, and global engineering safety practices.' },
+    { icon: '👷', title: 'Experienced Power Engineering Team', description: 'Seasoned electrical power engineers ensuring technical integrity and plant safety.' },
     { icon: '🇵🇰', title: 'Nationwide Footprint', description: 'Proven project delivery across Sindh, Punjab, Khyber Pakhtunkhwa, Balochistan, and Islamabad Capital Territory.' },
     { icon: '💰', title: 'Optimized Capital Investment', description: 'In-house panel fabrication and direct equipment supply eliminate expensive middleman markups.' },
 ];
@@ -48,38 +48,13 @@ const stats = [
     { number: 'Nationwide', label: 'Service Across Pakistan' },
 ];
 
-const CertificationsSection = () => (
+const ProcessAndCommitmentSection = () => (
     <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-12">
-                <p className="text-brandRed font-semibold tracking-widest uppercase text-sm mb-2">Our Credentials</p>
-                <h2 className="text-3xl font-extrabold text-blueColor">Our Certifications</h2>
-                <div className="w-20 h-1 bg-brandRed mx-auto mt-4" />
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-                {[
-                    { code: 'ISO 9001:2015', label: 'Quality Management' },
-                    { code: 'ISO 14001:2015', label: 'Environmental Management' },
-                    { code: 'ISO 45001:2018', label: 'Occupational Health & Safety' },
-                    { code: 'PEC', label: 'Pakistan Engineering Council' },
-                    { code: 'PSQCA', label: 'Standards & Quality Control Authority' },
-                ].map((cert, i) => (
-                    <div
-                        key={i}
-                        data-aos="zoom-in"
-                        data-aos-delay={i * 100}
-                        className="bg-gradient-to-br from-blueColor to-blue-900 text-white rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300 shadow-lg"
-                    >
-                        <div className="text-3xl mb-3">🏅</div>
-                        <div className="font-extrabold text-brandRed text-lg mb-1">{cert.code}</div>
-                        <div className="text-xs text-blue-200">{cert.label}</div>
-                    </div>
-                ))}
-            </div>
-
             {/* Execution Process */}
-            <div className="mt-16">
+            <div>
                 <div className="text-center mb-10">
+                    <p className="text-brandRed font-semibold tracking-widest uppercase text-sm mb-2">Our Methodology</p>
                     <h2 className="text-3xl font-extrabold text-blueColor">Our Complete Execution Process</h2>
                     <div className="w-20 h-1 bg-brandRed mx-auto mt-4" />
                 </div>
@@ -128,14 +103,14 @@ export default function TurnkeyElectricalPage() {
             heroTitle="Complete Substation & Electrical"
             heroTitleAccent="End-to-End A-to-Z Solutions"
             heroSubtitle="Pakistan Power Engineering Services"
-            heroDescription="From initial concept to final commissioning, we deliver complete A-to-Z electrical solutions tailored to meet your project requirements with precision, efficiency and reliability. ISO Certified. PEC Registered. Since 2010."
+            heroDescription="From initial concept to final commissioning, we deliver complete A-to-Z electrical solutions tailored to meet your project requirements with precision, efficiency and reliability. Since 2010."
             overviewText="Pakistan Power Engineering Services delivers comprehensive, complete electrical engineering solutions for the power, oil & gas, manufacturing, water & wastewater and commercial sectors. Our end-to-end service covers consultation and planning, detailed electrical system design, equipment procurement from top international brands, professional installation, rigorous testing and commissioning, followed by ongoing after-sales support — all under one roof."
             services={services}
             benefits={benefits}
             keyFeatures={keyFeatures}
             applications={applications}
             stats={stats}
-            extraSection={<CertificationsSection />}
+            extraSection={<ProcessAndCommitmentSection />}
             ctaTitle="Start Your Electrical Project Today"
             ctaDescription="Our expert team will handle your electrical project from concept to final commissioning. Contact us for a comprehensive proposal."
         />

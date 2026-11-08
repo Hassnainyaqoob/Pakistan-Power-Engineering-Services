@@ -20,7 +20,7 @@ export default function ConstructionOverview() {
         {
             number: 3,
             title: 'QUALITY POLICY',
-            description: `Pakistan Power Engineering Services is dedicated to providing an extensive range of electrical engineering services and products in accordance with customers' specified requirements, international standards (ISO 9001:2015, ISO 14001:2015, ISO 45001:2018), and to meet timescales that contribute significantly to the success of every client.`,
+            description: `Pakistan Power Engineering Services is dedicated to providing an extensive range of electrical engineering services and products in accordance with customers' specified requirements, international engineering standards, and to meet timescales that contribute significantly to the success of every client.`,
             icon: '🏆',
             marginTop: 'mt-[115px]'
         }

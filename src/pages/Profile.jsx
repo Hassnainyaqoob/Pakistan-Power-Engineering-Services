@@ -22,16 +22,8 @@ const pages = [
 const highlights = [
     { icon: '📅', title: 'Since 2010', text: 'Powering progress, delivering excellence' },
     { icon: '⚙️', title: 'Complete Services', text: 'From transformers to complete substation setups' },
-    { icon: '🏅', title: 'Certified Standards', text: 'ISO 9001, 14001, 45001 · PEC · PSQCA' },
+    { icon: '⚡', title: 'Proven Reliability', text: '500+ successful industrial installations' },
     { icon: '🛡️', title: 'Safety First', text: 'Strict adherence to safety protocols' },
-];
-
-const certifications = [
-    { code: 'ISO 9001:2015', label: 'Quality Management' },
-    { code: 'ISO 14001:2015', label: 'Environmental Management' },
-    { code: 'ISO 45001:2018', label: 'Health & Safety' },
-    { code: 'PEC', label: 'Pakistan Engineering Council' },
-    { code: 'PSQCA', label: 'Standards & Quality Control' },
 ];
 
 export default function Profile() {
@@ -276,20 +268,6 @@ export default function Profile() {
                 </div>
             </section>
 
-            {/* Certifications */}
-            <section className="bg-gray-100 py-14 px-4">
-                <div className="max-w-5xl mx-auto text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold text-blueColor mb-8">Certifications & Compliance</h2>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {certifications.map((c) => (
-                            <div key={c.code} className="bg-white border border-blue-200 rounded-lg px-5 py-3 min-w-[150px] shadow-sm hover:shadow-md transition-shadow">
-                                <div className="font-bold text-blueColor">{c.code}</div>
-                                <div className="text-xs text-gray-500 mt-1">{c.label}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Services inside profile */}
             <section className="py-14 px-4 bg-white">
