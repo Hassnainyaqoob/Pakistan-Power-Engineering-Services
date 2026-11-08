@@ -25,7 +25,7 @@ const Contact = () => {
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_i4bqxg3';
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_9ln648x';
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'ESYNLyEMc72l5vNxx';
-    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LfB3fQtAAAAABrAAJWqEe0uqmMNHobWQSMW0xfW';
+    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6Lf5dxYuAAAAAMcinYyoAb_XK_-TKUzkhCj-FLfb';
 
     useEffect(() => {
         setIsVisible(true);
