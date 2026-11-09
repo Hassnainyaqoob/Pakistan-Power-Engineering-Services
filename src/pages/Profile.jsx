@@ -6,16 +6,17 @@ import heroImage from '../assets/images/home_hero_bg.jpg';
 
 const pages = [
     { title: 'Cover', route: null },
-    { title: 'About Company', route: null },
+    { title: 'About Company', route: '/about' },
     { title: 'Power Transformers (Supply, Repair & Testing)', route: '/services/power-transformers' },
-    { title: 'HT / MV VCB & RMU Panels', route: '/services/vcb-mv-panels' },
-    { title: 'Instrumentation & Automation', route: '/services/instrumentation-automation' },
-    { title: 'Power Transformers & MV Equipment Supply', route: '/services/mv-equipment-supply' },
-    { title: 'Power Factor Improvement', route: '/services/power-factor-improvement' },
-    { title: 'Testing & Commissioning', route: '/services/testing-commissioning' },
+    { title: '11kV HT / MV VCB & RMU Panels', route: '/services/vcb-mv-panels' },
+    { title: 'LT & Switchgear Panels (PCC / MCC)', route: '/services/lt-panels' },
+    { title: 'Testing, Relays & Commissioning', route: '/services/testing-commissioning' },
+    { title: 'Power Factor Improvement (PFI)', route: '/services/power-factor-improvement' },
+    { title: 'MV Equipment Supply (CT / PT / Relays)', route: '/services/mv-equipment-supply' },
     { title: 'Complete Substation Setup', route: '/services/turnkey-electrical' },
-    { title: 'Values & Projects', route: null },
-    { title: 'Contact', route: null },
+    { title: 'Instrumentation & Automation', route: '/services/instrumentation-automation' },
+    { title: 'Clients, Industries & Brands', route: '/clients' },
+    { title: 'Contact & Support', route: '/contact' },
 ];
 
 const highlights = [
