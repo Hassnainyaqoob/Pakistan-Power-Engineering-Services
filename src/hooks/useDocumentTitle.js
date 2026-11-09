@@ -21,7 +21,7 @@ const routeSeoMap = {
     },
     '/profile': {
         title: 'Company Profile & Brochure | Pakistan Power Engineering Services',
-        description: 'Download our official company profile. Over 15+ years of power engineering excellence, 500+ industrial projects, and utility approvals across Pakistan.'
+        description: 'Browse our official company profile online. Over 16+ years of power engineering excellence, 500+ industrial projects, and utility approvals across Pakistan.'
     },
     '/clients': {
         title: 'Our Clients & Approvals | Pakistan Power Engineering Services',

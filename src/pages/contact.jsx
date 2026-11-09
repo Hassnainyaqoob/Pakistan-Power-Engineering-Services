@@ -270,7 +270,7 @@ const Contact = () => {
                                         <span className="text-gray-500 ml-2 text-sm">100+ Industrial Clients</span>
                                     </div>
                                     <a
-                                        href="https://www.google.com/maps/search/?api=1&query=Phase+1+Defence+Housing+Authority+Karachi+Pakistan"
+                                        href="https://www.google.com/maps/search/?api=1&query=Mehmoodabad+Karachi+Pakistan"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-blueColor underline cursor-pointer hover:text-brandRed transition-colors duration-300 inline-block font-semibold text-sm"
@@ -280,8 +280,8 @@ const Contact = () => {
                                 </div>
                                 <div className="w-full flex-grow min-h-[320px] sm:min-h-[370px] rounded-2xl overflow-hidden border-2 border-gray-200 shadow-inner relative bg-gray-100">
                                     <iframe
-                                        title="Pakistan Power Engineering Services - Defence Phase 1 Karachi Location"
-                                        src="https://maps.google.com/maps?q=Phase%201%20Defence%20Housing%20Authority,%20Karachi,%20Pakistan&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+                                        title="Pakistan Power Engineering Services - Mehmoodabad, Karachi Location"
+                                        src="https://maps.google.com/maps?q=Mehmoodabad,%20Karachi,%20Pakistan&t=&z=15&ie=UTF8&iwloc=B&output=embed"
                                         className="w-full h-full min-h-[320px] sm:min-h-[370px] border-0"
                                         allowFullScreen
                                         loading="lazy"

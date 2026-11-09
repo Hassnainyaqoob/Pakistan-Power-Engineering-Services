@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import heroImage from '../assets/images/home_hero_bg.jpg';
 
-const PDF_URL = '/docs/Pakistan-Power-Company-Profile.pdf';
 
 const pages = [
     { title: 'Cover', route: null },
