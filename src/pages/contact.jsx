@@ -337,7 +337,7 @@ const Contact = () => {
                             </svg>
                         </div>
                         <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-brandRed transition-colors duration-300">Address</h4>
-                        <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300 text-sm leading-relaxed">Plot # 236, Street D-17, Azam Town, Mahmoodabad, Karachi, Pakistan</p>
+                        <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300 text-sm leading-relaxed">Mehmoodabad, Karachi - Pakistan</p>
                     </div>
                 </div>
             </div>

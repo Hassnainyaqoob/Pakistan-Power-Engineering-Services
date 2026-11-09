@@ -401,14 +401,6 @@ export default function HomePage() {
                                 Request a Free Quote
                             </button>
                             <a
-                                href="/docs/Pakistan-Power-Company-Profile.pdf"
-                                download="Pakistan-Power-Engineering-Services-Profile.pdf"
-                                className="bg-white/10 hover:bg-white hover:text-blueColor text-white font-bold px-6 py-3.5 rounded-xl border border-white/30 backdrop-blur-md transition-all duration-300 flex items-center gap-2 hover:scale-105"
-                            >
-                                <span>📄</span>
-                                <span>Download Profile</span>
-                            </a>
-                            <a
                                 href="tel:+923092302512"
                                 className="text-white hover:text-[#ff8080] font-semibold text-sm flex items-center gap-2 px-3 py-2 transition-colors"
                             >

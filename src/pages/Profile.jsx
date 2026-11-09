@@ -98,27 +98,22 @@ export default function Profile() {
         <>
             <PageHero image={heroImage} eyebrow="Know Who We Are" title="Company Profile">
                 <p className="max-w-xl text-gray-200 text-sm sm:text-base leading-relaxed mb-6">
-                    Browse our complete company profile online, or download the PDF to share with your
-                    team, tender committee or vendor registration desk.
+                    Explore our complete company profile online to review our engineering capabilities, heavy switchgear manufacturing, transformer services, and turnkey industrial projects.
                 </p>
                 <div className="flex flex-wrap gap-3">
                     <a
-                        id="profile-download-hero"
-                        href={PDF_URL}
-                        download="Pakistan-Power-Company-Profile.pdf"
-                        className="inline-flex items-center gap-2 bg-brandRed hover:bg-[#4A1D1A] text-white font-bold px-6 py-3 rounded transition-colors duration-300"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
-                        </svg>
-                        Download PDF
-                    </a>
-                    <a
                         href="#profile-viewer"
+                        className="inline-flex items-center gap-2 bg-brandRed hover:bg-[#4A1D1A] text-white font-bold px-7 py-3 rounded transition-colors duration-300"
+                    >
+                        <span>📖</span>
+                        <span>View Profile Online</span>
+                    </a>
+                    <button
+                        onClick={() => navigate('/contact')}
                         className="inline-flex items-center gap-2 border border-white/60 hover:bg-white hover:text-blueColor text-white font-semibold px-6 py-3 rounded transition-colors duration-300"
                     >
-                        View Online
-                    </a>
+                        Request a Quote
+                    </button>
                 </div>
             </PageHero>
 
@@ -254,15 +249,12 @@ export default function Profile() {
                                     </li>
                                 ))}
                             </ul>
-                            <a
-                                id="profile-download-side"
-                                href={PDF_URL}
-                                download="Pakistan-Power-Company-Profile.pdf"
-                                className="block text-center bg-brandRed hover:bg-[#4A1D1A] text-white font-bold py-3 rounded transition-colors text-sm sm:text-base shadow"
+                            <button
+                                onClick={() => navigate('/contact')}
+                                className="block w-full text-center bg-brandRed hover:bg-[#4A1D1A] text-white font-bold py-3 rounded transition-colors text-sm sm:text-base shadow"
                             >
-                                ⬇ Download Full PDF
-                            </a>
-                            <p className="text-xs text-white/70 text-center mt-2 font-light">PDF · 11 pages · ~5 MB</p>
+                                Request a Quote
+                            </button>
                         </aside>
                     </div>
                 </div>

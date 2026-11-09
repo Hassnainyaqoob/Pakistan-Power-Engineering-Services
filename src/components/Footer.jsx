@@ -7,7 +7,7 @@ const Footer = () => {
     const quickLinks = [
         { name: 'Home', href: '/' },
         { name: 'About Us', href: '/about' },
-        { name: 'Company Profile (PDF)', href: '/profile' },
+        { name: 'Company Profile', href: '/profile' },
         { name: 'Our Clients & Partners', href: '/clients' },
         { name: 'Contact & Support', href: '/contact' },
     ];
@@ -47,7 +47,7 @@ const Footer = () => {
                             Powering Progress, Delivering Excellence Since 2010.
                         </p>
                         <p className="text-xs text-gray-400 leading-relaxed">
-                            Plot # 236, Street D-17, Azam Town, Mahmoodabad, Karachi - Pakistan
+                            Mehmoodabad, Karachi - Pakistan
                         </p>
                         <div className="text-xs space-y-1 text-gray-300 pt-1">
                             <p>
