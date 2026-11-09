@@ -400,6 +400,13 @@ export default function HomePage() {
                             >
                                 Request a Free Quote
                             </button>
+                            <button
+                                onClick={() => navigate('/profile')}
+                                className="bg-white/10 hover:bg-white hover:text-[#001730] text-white font-bold px-6 py-3.5 rounded-xl border border-white/30 backdrop-blur-md transition-all duration-300 flex items-center gap-2 hover:scale-105"
+                            >
+                                <span>📖</span>
+                                <span>View Company Profile</span>
+                            </button>
                             <a
                                 href="tel:+923092302512"
                                 className="text-white hover:text-[#ff8080] font-semibold text-sm flex items-center gap-2 px-3 py-2 transition-colors"
