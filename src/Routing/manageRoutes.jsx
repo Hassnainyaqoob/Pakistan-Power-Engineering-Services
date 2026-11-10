@@ -5,6 +5,7 @@ import NotFoundPage from '../pages/notFound';
 import Contact from '../pages/contact';
 import Profile from '../pages/Profile';
 import Clients from '../pages/Clients';
+import GalleryPage from '../pages/Gallery';
 import { AnimatePresence, motion } from 'framer-motion';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
@@ -44,6 +45,8 @@ const RouterConfig = () => {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/clients" element={<Clients />} />
+                    <Route path="/gallery" element={<GalleryPage />} />
+                    <Route path="/projects" element={<Navigate to="/gallery" replace />} />
 
                     {/* Service Pages */}
                     <Route path="/services" element={<Navigate to="/services/power-transformers" replace />} />

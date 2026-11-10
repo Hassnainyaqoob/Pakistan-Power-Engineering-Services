@@ -27,6 +27,10 @@ const routeSeoMap = {
         title: 'Our Clients & Approvals | Pakistan Power Engineering Services',
         description: 'Trusted by 100+ textile, steel, cement, pharmaceutical, and industrial manufacturing plants across Pakistan, with DISCO and K-Electric compliance.'
     },
+    '/gallery': {
+        title: 'On-Site Project Gallery & Field Work | Pakistan Power Engineering Services',
+        description: 'Explore 95+ verified on-site photographs of industrial power transformers, 11kV VCB switchgear panels, secondary injection relay testing, and turnkey substation installations across Pakistan.'
+    },
     '/services/power-transformers': {
         title: 'Power Transformers — Supply, Repairing, Testing & Commissioning | Pakistan Power Engineering Services',
         description: 'Oil-immersed & dry-type Power Transformers across multiple kVA and MVA ratings: supply, HV/LV coil rewinding, repairing, high-vacuum oil filtration, diagnostic testing, and commissioning.'

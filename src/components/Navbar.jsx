@@ -95,6 +95,7 @@ const Navbar = () => {
             ]
         },
         { name: 'PROFILE', href: '/profile' },
+        { name: 'GALLERY', href: '/gallery' },
         { name: 'CLIENTS', href: '/clients' }
     ];
 

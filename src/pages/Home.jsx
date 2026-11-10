@@ -49,6 +49,7 @@ import { OfferingsCard } from '../components/OfferingCard';
 import AboutSection from '../components/AboutComponent';
 import ClientLogoMarquee from '../components/clientsimageslider';
 import SubstationDiagram from '../components/SubstationDiagram';
+import SitePhotoShowcase from '../components/SitePhotoShowcase';
 
 const heroSlides = [
     { image: backgroundImage, title: 'Substation & Power Distribution Architecture' },
@@ -643,6 +644,9 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+
+            {/* ─── LIVE REAL SITE PHOTOS SHOWCASE ─── */}
+            <SitePhotoShowcase />
 
             {/* ─── INDUSTRIES WE SERVE & TRUSTED COMPONENT BRANDS ─── */}
             <div className="py-16 bg-white border-t border-gray-200">
