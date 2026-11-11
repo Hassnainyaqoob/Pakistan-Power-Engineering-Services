@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+const ReCAPTCHAComponent = ReCAPTCHA?.default || ReCAPTCHA;
+
 const Contact = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [formData, setFormData] = useState({
@@ -114,9 +116,9 @@ const Contact = () => {
             <div className="relative flex flex-col items-center justify-center pt-36 sm:pt-40 pb-12 px-4 sm:px-6 lg:px-8">
                 {/* Animated Header */}
                 <div className={`text-center mb-12 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
-                    <h2 className="text-5xl font-bold text-brandRed ">
-                        Get In Touch
-                    </h2>
+                    <h1 className="text-5xl font-bold text-brandRed ">
+                        Contact Our Engineering Team
+                    </h1>
                     <div className="mt-4 w-24 h-1 bg-gradient-to-r from-blueColor to-brandRed mx-auto rounded-full animate-pulse"></div>
                     <p className="mt-4 text-gray-600 text-lg animate-fade-in-up animation-delay-500">
                         Connect with our engineering specialists today for expert substation and panel solutions.
@@ -214,7 +216,7 @@ const Contact = () => {
                                 {siteKey ? (
                                     <div className="flex justify-center items-center overflow-hidden py-1">
                                         <div className="transform origin-center scale-[0.88] sm:scale-100">
-                                            <ReCAPTCHA
+                                            <ReCAPTCHAComponent
                                                 ref={recaptchaRef}
                                                 sitekey={siteKey}
                                                 onChange={(token) => setCaptchaToken(token)}

@@ -1,1 +1,5 @@
+# 301 Permanent Redirects (before SPA catch-all)
+/services/power-transformer /services/power-transformers 301
+
+# SPA Catch-all fallback
 /*    /index.html   200

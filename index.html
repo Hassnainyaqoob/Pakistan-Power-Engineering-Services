@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/faviconicon.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#272680" />
 
@@ -48,7 +51,6 @@
 
   <!-- ✅ Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@PakistanPower" />
   <meta name="twitter:title" content="Pakistan Power Engineering Services | Power Transformers & Switchgear Specialists" />
   <meta name="twitter:description"
     content="Power Transformers (Supply, Repairing, Testing & Commissioning across all kVA ratings), HT/MV VCB switchgear, in-house LT/PCC/MCC panels, and relay testing across Pakistan." />
@@ -60,52 +62,28 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "LocalBusiness"],
         "@id": "https://www.pakistanpowerengservices.com/#organization",
         "name": "Pakistan Power Engineering Services",
         "alternateName": "PPES",
         "url": "https://www.pakistanpowerengservices.com/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.pakistanpowerengservices.com/faviconicon.png"
+          "url": "https://www.pakistanpowerengservices.com/favicon-192x192.png"
         },
         "image": "https://www.pakistanpowerengservices.com/og-banner-v3.jpg",
         "description": "Industrial electrical engineering across Pakistan: Power Transformers in multiple kVA & MVA ratings (Supply, Repairing, Rewinding, Testing & Commissioning), in-house LT/PCC/MCC switchgear manufacturing, HT/MV VCB panels, and substation commissioning.",
-        "telephone": "+92-309-2302512",
+        "telephone": "+92 309 2302512",
         "email": "info@pakistanpowerengservices.com",
+        "foundingDate": "2010",
+        "areaServed": "Pakistan",
+        "priceRange": "PKR",
         "founder": {
           "@type": "Person",
           "name": "Ahmed Yaqoob",
-          "jobTitle": "Director",
+          "jobTitle": "Founder & Chief Executive Officer",
           "email": "ahmed.yaqoob@pakistanpowerengservices.com"
         },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Mehmoodabad",
-          "addressLocality": "Karachi",
-          "addressRegion": "Sindh",
-          "postalCode": "75460",
-          "addressCountry": "PK"
-        },
-        "sameAs": [
-          "https://www.facebook.com/p/Pakistan-Power-Engineering-Services-100063939617412/",
-          "https://linkedin.com/company/pakistan-power-engineering-services"
-        ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://www.pakistanpowerengservices.com/#localbusiness",
-        "name": "Pakistan Power Engineering Services",
-        "image": [
-          "https://www.pakistanpowerengservices.com/og-banner-v3.jpg"
-        ],
-        "url": "https://www.pakistanpowerengservices.com/",
-        "sameAs": [
-          "https://www.facebook.com/p/Pakistan-Power-Engineering-Services-100063939617412/"
-        ],
-        "telephone": "+92-309-2302512",
-        "email": "info@pakistanpowerengservices.com",
-        "priceRange": "PKR",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Mehmoodabad",
@@ -133,6 +111,10 @@
             "opens": "09:00",
             "closes": "18:00"
           }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/p/Pakistan-Power-Engineering-Services-100063939617412/",
+          "https://www.linkedin.com/company/pakistan-power-engineering-services/"
         ]
       },
       {

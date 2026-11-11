@@ -86,7 +86,7 @@ const Navbar = () => {
                 { name: 'Power Transformers (Supply, Repair & Testing)', href: '/services/power-transformers', icon: '⚡' },
                 { name: 'LT & PCC/MCC Panels Manufacturing', href: '/services/lt-panels', icon: '🏭' },
                 { name: 'HT / MV VCB & RMU Switchgear Panels', href: '/services/vcb-mv-panels', icon: '🔌' },
-                { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformer', icon: '🛢️' },
+                { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformers', icon: '🛢️' },
                 { name: 'Testing, Relays & Commissioning', href: '/services/testing-commissioning', icon: '🔧' },
                 { name: 'Power Factor Improvement (PFI/APFC)', href: '/services/power-factor-improvement', icon: '📊' },
                 { name: 'Supply of MV / LV Electrical Equipment', href: '/services/mv-equipment-supply', icon: '📦' },

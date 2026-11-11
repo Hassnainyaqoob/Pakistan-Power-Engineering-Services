@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 
+const TypewriterComponent = Typewriter?.default || Typewriter;
+
 // Hero & Service Images
 import backgroundImage from '../assets/images/home_hero_bg.jpg';
 import realMeggerSwitchgear from '../assets/images/real_site_megger_switchgear.jpg';
@@ -369,7 +371,7 @@ export default function HomePage() {
 
                         {/* Typewriter Highlight */}
                         <div className="text-xl sm:text-3xl lg:text-4xl font-bold text-[#ff8080] mt-3 sm:mt-4 min-h-[48px] flex items-center">
-                            <Typewriter
+                            <TypewriterComponent
                                 options={{
                                     strings: [
                                         'Power Transformers: Supply, Repairing, Testing & Commissioning',
@@ -501,15 +503,15 @@ export default function HomePage() {
             <div className="py-16 bg-white">
                 <div className="max-w-[1480px] mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-xs sm:text-sm text-blueColor font-bold tracking-widest uppercase mb-2">
+                        <p className="text-xs sm:text-sm text-blueColor font-bold tracking-widest uppercase mb-2">
                             ENGINEERING PORTFOLIO
-                        </h2>
-                        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+                        </p>
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
                             <span className="text-[#C00000]">Core Power & Switchgear </span>
                             <span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-2 before:bg-blueColor">
                                 <span className="relative text-white px-2">Services</span>
                             </span>
-                        </h1>
+                        </h2>
                         <p className="text-gray-600 text-sm sm:text-base mt-3">
                             Click any service below to view technical specifications, capacity ratings, and project details.
                         </p>
@@ -544,12 +546,12 @@ export default function HomePage() {
             {/* ─── COMPLETE ENGINEERING PROCESS SECTION ─── */}
             <div className="py-16 bg-gray-50 overflow-hidden">
                 <div className="text-center mb-16">
-                    <h2 className="text-xs sm:text-sm text-blueColor font-bold tracking-widest uppercase">
+                    <p className="text-xs sm:text-sm text-blueColor font-bold tracking-widest uppercase">
                         STANDARDIZED EXECUTION METHODOLOGY
-                    </h2>
-                    <h1 className="text-3xl sm:text-4xl font-extrabold text-[#C00000] mt-2">
+                    </p>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-[#C00000] mt-2">
                         Complete Project <span className="text-blueColor">Execution Process</span>
-                    </h1>
+                    </h2>
                     <p className="text-gray-600 text-sm max-w-2xl mx-auto mt-2 px-4">
                         From initial electrical load assessment to final utility inspection and complete energized handover.
                     </p>

@@ -53,7 +53,7 @@ const RouterConfig = () => {
                     <Route path="/services/lt-panels" element={<LTPanelsPage />} />
                     <Route path="/services/power-transformers" element={<ElevenKVTransformersPage />} />
                     <Route path="/services/11kv-transformers" element={<Navigate to="/services/power-transformers" replace />} />
-                    <Route path="/services/power-transformer" element={<PowerTransformerPage />} />
+                    <Route path="/services/power-transformer" element={<Navigate to="/services/power-transformers" replace />} />
                     <Route path="/services/vcb-mv-panels" element={<VCBMVPanelsPage />} />
                     <Route path="/services/instrumentation-automation" element={<InstrumentationAutomationPage />} />
                     <Route path="/services/mv-equipment-supply" element={<MVEquipmentSupplyPage />} />

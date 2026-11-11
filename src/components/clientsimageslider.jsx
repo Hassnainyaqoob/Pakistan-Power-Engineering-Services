@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+const SliderComponent = Slider?.default || Slider;
+
 const ClientLogoMarquee = ({ logos }) => {
     const CustomArrow = ({ direction, onClick }) => (
         <button
@@ -66,7 +68,7 @@ const ClientLogoMarquee = ({ logos }) => {
 
     return (
         <div className="w-full max-w-7xl mx-auto py-8 relative px-4 lg:px-10">
-            <Slider {...settings} className="client-slider">
+            <SliderComponent {...settings} className="client-slider">
                 {logos.map((logo, index) => (
                     <div key={index} className="px-3 py-3">
                         <div className="bg-white h-32 flex items-center justify-center border border-gray-200 rounded-xl hover:border-brandRed hover:shadow-[0_12px_28px_rgba(192,0,0,0.15)] hover:-translate-y-1.5 transition-all duration-300 group cursor-pointer">
@@ -80,7 +82,7 @@ const ClientLogoMarquee = ({ logos }) => {
                         </div>
                     </div>
                 ))}
-            </Slider>
+            </SliderComponent>
         </div>
     );
 };
