@@ -141,14 +141,14 @@ export default function ThermographyShowcase({ compact = false }) {
                 {/* Bottom Action Links (using <Link> so global mobile button padding CSS never shrinks them) */}
                 <div className="mt-10 flex flex-wrap justify-center items-center gap-4">
                     <Link
-                        to="/contact"
+                        to="/contact/"
                         className="bg-gradient-to-r from-[#C00000] to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-red-900/40 transition-all duration-300 hover:scale-105 text-sm sm:text-base text-center"
                     >
                         Schedule On-Site Thermography Audit
                     </Link>
                     {compact && (
                         <Link
-                            to="/services/thermography"
+                            to="/services/thermography/"
                             className="border border-orange-400/50 hover:bg-orange-500/20 text-orange-200 hover:text-white font-bold px-6 py-3.5 rounded-xl transition-all duration-300 text-sm sm:text-base text-center"
                         >
                             View Full Thermography Scope →

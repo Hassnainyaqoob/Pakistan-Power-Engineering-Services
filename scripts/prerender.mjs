@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 import { pathToFileURL } from 'url';
-import { routeSeoMap, CANONICAL_ALIASES, SITE_URL } from '../src/data/routeSeoMap.js';
+import { routeSeoMap, getCanonicalUrl } from '../src/data/routeSeoMap.js';
 
 async function prerender() {
   console.log('🚀 Starting Static Pre-rendering (SSG)...');
@@ -28,8 +28,7 @@ async function prerender() {
 
   for (const route of routes) {
     const seo = routeSeoMap[route];
-    const canonicalPath = CANONICAL_ALIASES[route] || route;
-    const canonicalUrl = `${SITE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
+    const canonicalUrl = getCanonicalUrl(route);
 
     // 1. Render React tree to HTML string
     const appHtml = render(route);

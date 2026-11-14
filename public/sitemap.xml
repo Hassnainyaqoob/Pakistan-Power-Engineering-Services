@@ -8,31 +8,31 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/about</loc>
+    <loc>https://www.pakistanpowerengservices.com/about/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/profile</loc>
+    <loc>https://www.pakistanpowerengservices.com/profile/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/gallery</loc>
+    <loc>https://www.pakistanpowerengservices.com/gallery/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/clients</loc>
+    <loc>https://www.pakistanpowerengservices.com/clients/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/contact</loc>
+    <loc>https://www.pakistanpowerengservices.com/contact/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -40,55 +40,55 @@
 
   <!-- Core Engineering Service & Product Pages -->
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/power-transformers</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/power-transformers/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/lt-panels</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/lt-panels/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/vcb-mv-panels</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/vcb-mv-panels/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/testing-commissioning</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/testing-commissioning/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/thermography</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/thermography/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/mv-equipment-supply</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/mv-equipment-supply/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/power-factor-improvement</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/power-factor-improvement/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/turnkey-electrical</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/turnkey-electrical/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pakistanpowerengservices.com/services/instrumentation-automation</loc>
+    <loc>https://www.pakistanpowerengservices.com/services/instrumentation-automation/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>

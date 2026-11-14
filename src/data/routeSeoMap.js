@@ -74,5 +74,17 @@ export const CANONICAL_ALIASES = {
     '/services/power-transformer': '/services/power-transformers'
 };
 
+export const normalizeRoutePath = (rawPath = '/') => {
+    if (!rawPath || rawPath === '/') return '/';
+    return rawPath.replace(/\/+$/, '') || '/';
+};
+
+export const getCanonicalUrl = (rawPath = '/') => {
+    const normalized = normalizeRoutePath(rawPath);
+    const canonicalPath = CANONICAL_ALIASES[normalized] || normalized;
+    const trailingPath = canonicalPath === '/' ? '/' : `${canonicalPath}/`;
+    return `${SITE_URL}${trailingPath}`;
+};
+
 export const PRERENDER_ROUTES = Object.keys(routeSeoMap);
 

@@ -3,6 +3,7 @@ import Companylogo from '../assets/logo/CompannyLogo.png';
 import WhatsAppButton from './WhatsappBtn';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { normalizeRoutePath } from '../data/routeSeoMap';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
 
     // Update activeLink based on current URL
     useEffect(() => {
-        const path = location.pathname;
+        const path = normalizeRoutePath(location.pathname);
         if (path === '/contact') {
             setActiveLink('CONTACT');
             return;

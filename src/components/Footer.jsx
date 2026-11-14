@@ -6,24 +6,24 @@ import Companylogo from '../assets/logo/CompannyLogo.png';
 const Footer = () => {
     const quickLinks = [
         { name: 'Home', href: '/' },
-        { name: 'About Us', href: '/about' },
-        { name: 'Company Profile', href: '/profile' },
-        { name: 'Site Project Gallery', href: '/gallery' },
-        { name: 'Our Clients & Partners', href: '/clients' },
-        { name: 'Contact & Support', href: '/contact' },
+        { name: 'About Us', href: '/about/' },
+        { name: 'Company Profile', href: '/profile/' },
+        { name: 'Site Project Gallery', href: '/gallery/' },
+        { name: 'Our Clients & Partners', href: '/clients/' },
+        { name: 'Contact & Support', href: '/contact/' },
     ];
 
     const serviceLinks = [
-        { name: 'Power Transformers (Supply, Repair & Testing)', href: '/services/power-transformers' },
-        { name: 'LT & PCC/MCC Panels Manufacturing', href: '/services/lt-panels' },
-        { name: 'HT / MV VCB & RMU Switchgear Panels', href: '/services/vcb-mv-panels' },
-        { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformers' },
-        { name: 'Testing, Relays & Commissioning', href: '/services/testing-commissioning' },
-        { name: 'Infrared Thermography Inspection', href: '/services/thermography' },
-        { name: 'Power Factor Improvement (PFI/APFC)', href: '/services/power-factor-improvement' },
-        { name: 'Supply of MV / LV Equipment', href: '/services/mv-equipment-supply' },
-        { name: 'Complete Substation Setup', href: '/services/turnkey-electrical' },
-        { name: 'Instrumentation & Automation', href: '/services/instrumentation-automation' },
+        { name: 'Power Transformers (Supply, Repair & Testing)', href: '/services/power-transformers/' },
+        { name: 'LT & PCC/MCC Panels Manufacturing', href: '/services/lt-panels/' },
+        { name: 'HT / MV VCB & RMU Switchgear Panels', href: '/services/vcb-mv-panels/' },
+        { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformers/' },
+        { name: 'Testing, Relays & Commissioning', href: '/services/testing-commissioning/' },
+        { name: 'Infrared Thermography Inspection', href: '/services/thermography/' },
+        { name: 'Power Factor Improvement (PFI/APFC)', href: '/services/power-factor-improvement/' },
+        { name: 'Supply of MV / LV Equipment', href: '/services/mv-equipment-supply/' },
+        { name: 'Complete Substation Setup', href: '/services/turnkey-electrical/' },
+        { name: 'Instrumentation & Automation', href: '/services/instrumentation-automation/' },
     ];
 
     return (
@@ -180,11 +180,11 @@ const Footer = () => {
                 <div className="mt-12 pt-6 border-t border-gray-800 text-center text-xs text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-3">
                     <p>© 2026 Pakistan Power Engineering Services. All Rights Reserved.</p>
                     <div className="space-x-4">
-                        <Link to="/about" className="hover:text-red-400 transition-colors">About PPES</Link>
+                        <Link to="/about/" className="hover:text-red-400 transition-colors">About PPES</Link>
                         <span>•</span>
-                        <Link to="/profile" className="hover:text-red-400 transition-colors">Profile PDF</Link>
+                        <Link to="/profile/" className="hover:text-red-400 transition-colors">Profile PDF</Link>
                         <span>•</span>
-                        <Link to="/contact" className="hover:text-red-400 transition-colors">Contact Support</Link>
+                        <Link to="/contact/" className="hover:text-red-400 transition-colors">Contact Support</Link>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 // src/hooks/useDocumentTitle.js
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { SITE_URL, DEFAULT_ROBOTS, routeSeoMap, CANONICAL_ALIASES } from '../data/routeSeoMap';
+import { SITE_URL, DEFAULT_ROBOTS, routeSeoMap, CANONICAL_ALIASES, normalizeRoutePath, getCanonicalUrl } from '../data/routeSeoMap';
 
 export { SITE_URL, DEFAULT_ROBOTS, routeSeoMap, CANONICAL_ALIASES };
 
@@ -9,8 +9,7 @@ const useDocumentTitle = () => {
     const location = useLocation();
 
     useEffect(() => {
-        const rawPath = location.pathname || '/';
-        const normalizedPath = rawPath.length > 1 ? rawPath.replace(/\/+$/, '') : '/';
+        const normalizedPath = normalizeRoutePath(location.pathname);
         const canonicalPath = CANONICAL_ALIASES[normalizedPath] || normalizedPath;
         const matchedSeo = routeSeoMap[canonicalPath];
         const isKnownRoute = Boolean(matchedSeo);
@@ -19,7 +18,7 @@ const useDocumentTitle = () => {
             title: 'Page Not Found | Pakistan Power Engineering Services',
             description: 'The requested page could not be found on Pakistan Power Engineering Services.'
         };
-        const canonicalUrl = `${SITE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
+        const canonicalUrl = getCanonicalUrl(location.pathname);
 
         document.title = seoData.title;
 

@@ -133,13 +133,13 @@ export default function ProtectionAndTestsMatrix({ isHome = false }) {
                     {isHome && (
                         <div className="mt-8 pt-6 border-t border-gray-200 flex flex-wrap items-center justify-center gap-4">
                             <Link
-                                to="/services/testing-commissioning"
+                                to="/services/testing-commissioning/"
                                 className="bg-blueColor hover:bg-blue-950 text-white font-bold px-7 py-3.5 rounded-xl shadow-md transition-all duration-300 hover:scale-105 text-sm sm:text-base text-center"
                             >
                                 Explore Full Testing &amp; Relay Services →
                             </Link>
                             <Link
-                                to="/contact"
+                                to="/contact/"
                                 className="border-2 border-brandRed text-brandRed hover:bg-brandRed hover:text-white font-bold px-7 py-3.5 rounded-xl transition-all duration-300 text-sm sm:text-base text-center"
                             >
                                 Request Testing Engineer Visit
