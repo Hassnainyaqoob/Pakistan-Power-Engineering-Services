@@ -32,6 +32,7 @@ const ServicePageTemplate = ({
 }) => {
     const navigate = useNavigate();
 
+
     return (
         <div className="bg-white">
             {/* ── HERO SECTION ── */}
