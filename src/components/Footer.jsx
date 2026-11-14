@@ -130,7 +130,7 @@ const Footer = () => {
                             </h4>
                             <div className="flex space-x-3">
                                 <a
-                                    href="https://www.facebook.com/p/Pakistan-Power-Engineering-Services-100063939617412/"
+                                    href="https://www.facebook.com/pakistanpowerengservices"
                                     className="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#1877F2] flex items-center justify-center text-white transition-colors"
                                     aria-label="Pakistan Power Engineering Services on Facebook"
                                     target="_blank"
