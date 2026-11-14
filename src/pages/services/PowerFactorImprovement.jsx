@@ -1,6 +1,6 @@
 import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
-import heroImage from '../../assets/images/pfi_solutions_hero.jpg';
+import heroImage from '../../assets/images/real/hero_pfi_panels.jpg';
 
 const services = [
     { icon: '🤖', title: 'Custom Automatic PFI / APFC Panels', description: 'In-house design and manufacturing of multi-stage APFC panels with intelligent microprocessor power factor controllers, automatic cyclic step switching, and digital telemetry.' },

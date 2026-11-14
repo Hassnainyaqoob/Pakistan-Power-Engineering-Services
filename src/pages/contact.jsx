@@ -321,12 +321,6 @@ const Contact = () => {
                             <a href="mailto:info@pakistanpowerengservices.com" className="text-gray-600 hover:text-blueColor transition-colors duration-300 break-all block font-medium">
                                 info@pakistanpowerengservices.com
                             </a>
-                            <a href="mailto:ahmed.yaqoob@pakistanpowerengservices.com" className="text-brandRed hover:underline transition-colors duration-300 break-all block text-xs font-semibold">
-                                ahmed.yaqoob@pakistanpowerengservices.com <span className="text-gray-500 font-normal">(CEO Direct)</span>
-                            </a>
-                            <a href="mailto:sales@pakistanpowerengservices.com" className="text-gray-500 hover:text-blueColor transition-colors duration-300 break-all block text-xs">
-                                sales@pakistanpowerengservices.com
-                            </a>
                         </div>
                     </div>
 

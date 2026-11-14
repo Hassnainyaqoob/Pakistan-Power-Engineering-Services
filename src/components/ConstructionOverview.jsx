@@ -56,7 +56,7 @@ export default function ConstructionOverview() {
 
                         {/* Description */}
                         <p data-aos="fade-left" className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                            Founded in 2010 and led by CEO <strong>Ahmed Yaqoob</strong>, <strong>Pakistan Power Engineering Services</strong> is a specialized industrial power engineering company delivering <strong>Power Transformers across multiple kVA &amp; MVA ratings</strong> (supply, repairing, coil rewinding, high-vacuum oil filtration &amp; BDV testing), <strong>HV / MV (HT VCB, RMU) &amp; LV (PCC, MCC, APFC) switchgear panels</strong>, <strong>turnkey substations</strong>, and <strong>numerical protection relay calibration (MiCOM, ABB, Schneider, Siemens)</strong> for industrial, commercial, and utility sectors across Pakistan.
+                            Founded in 2010 and led by CEO <strong>Ahmed Yaqoob</strong>, <strong>Pakistan Power Engineering Services</strong> is a specialized industrial power engineering company delivering <strong>Power Transformers across multiple kVA &amp; MVA ratings</strong> (supply, repairing, coil rewinding, high-vacuum oil filtration &amp; BDV testing), <strong>HV / MV (HT VCB, RMU) &amp; LV (PCC, MCC, APFC) switchgear panels</strong>, <strong>turnkey substations</strong>, <strong>all types of protection relays testing, settings &amp; configurations (Schneider Electric, Siemens, ABB &amp; more)</strong>, and <strong>infrared thermography &amp; complete diagnostic testing</strong> for industrial, commercial, and utility sectors across Pakistan.
                         </p>
                     </div>
 

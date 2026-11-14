@@ -22,11 +22,11 @@ const coreServices = [
     },
     {
         step: '03',
-        title: 'Protection Relays',
-        subtitle: 'Testing, Commissioning & Supplies',
-        desc: 'MiCOM, ABB & Schneider numerical protection relays — primary & secondary injection testing, calibration, commissioning, and authorized supply of all relay types.',
+        title: 'All Type Protection Relays',
+        subtitle: 'Testing, Settings & Configurations',
+        desc: 'Complete testing, settings & configurations across Schneider Electric, Siemens, ABB & all protection relay brands — primary & secondary injection, trip curve verification, and commissioning.',
         icon: '🔬',
-        badge: 'Relays & Protection',
+        badge: 'All Protection Relays',
         link: '/services/testing-commissioning',
     },
     {
@@ -49,12 +49,12 @@ const coreServices = [
     },
     {
         step: '06',
-        title: 'Preventive Maintenance',
-        subtitle: 'Service & Testing',
-        desc: 'Scheduled preventive maintenance contracts with comprehensive service & testing — thermography, oil analysis, contact resistance, relay verification, and complete substation health checks.',
-        icon: '🛡️',
-        badge: 'Maintenance & Service',
-        link: '/services/power-transformer',
+        title: 'Infrared Thermography & Preventive Maintenance',
+        subtitle: 'Thermal Imaging & Diagnostics',
+        desc: 'Live-load Infrared Thermography for Transformers, HT Panels, LV Panels, Control Panels & Motor Control Panels — plus Oil BDV, Breaker Timing, CT/PT Ratio & Busbar IR health audits.',
+        icon: '🌡️',
+        badge: 'Thermography & AMC',
+        link: '/services/thermography',
     },
 ];
 
@@ -90,10 +90,10 @@ export const SubstationDiagram = () => {
                         </span>
                         <div>
                             <h4 className="font-bold text-white text-sm sm:text-base">
-                                Advanced Protection Relay & Field Testing Across All Stages
+                                All Type Protection Relays, Diagnostic Testing & Infrared Thermography
                             </h4>
                             <p className="text-xs sm:text-sm text-gray-300">
-                                MiCOM, ABB, Schneider numerical relays • Primary & secondary injection • Megger (IR) • Oil BDV testing • Hi-Pot
+                                Schneider Electric, Siemens, ABB & more • Primary & Secondary Injection • IR & Hi-Pot • Transformer BDV, TTR & Winding Resistance • Breaker Timing • CT/PT & Busbar IR • Thermography
                             </p>
                         </div>
                     </div>
@@ -148,26 +148,6 @@ export const SubstationDiagram = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-
-                {/* Nationwide and Capacity Footer Bar */}
-                <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">kVA / MVA</div>
-                        <div className="text-xs sm:text-sm text-gray-300 mt-1">Multiple Transformer Ratings</div>
-                    </div>
-                    <div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">6300A</div>
-                        <div className="text-xs sm:text-sm text-gray-300 mt-1">LT Panel Busbar Rating</div>
-                    </div>
-                    <div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">All Types</div>
-                        <div className="text-xs sm:text-sm text-gray-300 mt-1">MiCOM & Protection Relays</div>
-                    </div>
-                    <div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-[#ff6b6b]">Nationwide</div>
-                        <div className="text-xs sm:text-sm text-gray-300 mt-1">Complete A-to-Z Service</div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -88,6 +88,7 @@ const Navbar = () => {
                 { name: 'HT / MV VCB & RMU Switchgear Panels', href: '/services/vcb-mv-panels', icon: '🔌' },
                 { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformers', icon: '🛢️' },
                 { name: 'Testing, Relays & Commissioning', href: '/services/testing-commissioning', icon: '🔧' },
+                { name: 'Infrared Thermography Inspection', href: '/services/thermography', icon: '🌡️' },
                 { name: 'Power Factor Improvement (PFI/APFC)', href: '/services/power-factor-improvement', icon: '📊' },
                 { name: 'Supply of MV / LV Electrical Equipment', href: '/services/mv-equipment-supply', icon: '📦' },
                 { name: 'Complete Substation Setup & Solutions', href: '/services/turnkey-electrical', icon: '🏗️' },
@@ -173,13 +174,13 @@ const Navbar = () => {
                                         )}
                                     </button>
                                     {item.hasDropdown && (
-                                        <div className="absolute top-full left-0 w-72 bg-white shadow-xl border-t-2 border-[#C00000] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded-b-lg">
-                                            <div className="py-3">
+                                        <div className="absolute top-full left-0 w-80 max-h-[75vh] overflow-y-auto bg-white shadow-xl border-t-2 border-[#C00000] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded-b-lg">
+                                            <div className="py-2">
                                                 {item.dropdownItems.map((dropdownItem, index) => (
                                                     <button
                                                         key={index}
                                                         onClick={() => handleLinkClick(item.name, dropdownItem.href || '#')}
-                                                        className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-[#C00000]/10 hover:text-[#C00000] transition-colors duration-200 border-b border-gray-100 last:border-b-0 w-full text-left"
+                                                        className="flex items-center px-4 py-2.5 text-sm text-gray-700 hover:bg-[#C00000]/10 hover:text-[#C00000] transition-colors duration-200 border-b border-gray-100 last:border-b-0 w-full text-left"
                                                     >
                                                         <span className="mr-3 text-lg">{dropdownItem.icon}</span>
                                                         <span className="font-medium">{dropdownItem.name}</span>

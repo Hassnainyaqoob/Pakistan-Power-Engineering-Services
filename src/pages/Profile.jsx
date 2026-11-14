@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
-import heroImage from '../assets/images/home_hero_bg.jpg';
+import heroImage from '../assets/images/real/hero_abb_safeplus_mv.jpg';
 
 
 const pages = [

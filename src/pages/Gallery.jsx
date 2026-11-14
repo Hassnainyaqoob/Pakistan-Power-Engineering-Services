@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
-import heroImage from '../assets/images/home_hero_bg.jpg';
+import heroImage from '../assets/images/real/hero_switchgear_corridor.jpg';
 import { siteImages } from '../data/siteImages';
 
 export default function GalleryPage() {

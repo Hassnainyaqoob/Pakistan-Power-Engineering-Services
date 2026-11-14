@@ -16,6 +16,7 @@ import InstrumentationAutomationPage from '../pages/services/InstrumentationAuto
 import MVEquipmentSupplyPage from '../pages/services/MVEquipmentSupply';
 import PowerFactorImprovementPage from '../pages/services/PowerFactorImprovement';
 import TestingCommissioningPage from '../pages/services/TestingCommissioning';
+import ThermographyPage from '../pages/services/Thermography';
 import TurnkeyElectricalPage from '../pages/services/TurnkeyElectrical';
 import LTPanelsPage from '../pages/services/LTPanels';
 import ElevenKVTransformersPage from '../pages/services/ElevenKVTransformers';
@@ -59,6 +60,7 @@ const RouterConfig = () => {
                     <Route path="/services/mv-equipment-supply" element={<MVEquipmentSupplyPage />} />
                     <Route path="/services/power-factor-improvement" element={<PowerFactorImprovementPage />} />
                     <Route path="/services/testing-commissioning" element={<TestingCommissioningPage />} />
+                    <Route path="/services/thermography" element={<ThermographyPage />} />
                     <Route path="/services/turnkey-electrical" element={<TurnkeyElectricalPage />} />
 
                     <Route path="*" element={<NotFoundPage />} />

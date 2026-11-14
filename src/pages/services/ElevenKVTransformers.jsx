@@ -1,6 +1,6 @@
 import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
-import heroImage from '../../assets/images/eleven_kv_transformers_hero.jpg';
+import heroImage from '../../assets/images/real/hero_power_transformers.jpg';
 
 const services = [
     {
@@ -16,7 +16,7 @@ const services = [
     {
         icon: '🔬',
         title: 'Diagnostic Testing & Energized Commissioning',
-        description: 'End-to-end pre-commissioning and diagnostic testing: Turns Ratio (TTR), Winding Resistance, Insulation Resistance (Megger IR & PI), Vector Group, Magnetic Balance, Short-Circuit Impedance, Oil BDV testing, and energized substation handover.'
+        description: 'End-to-end pre-commissioning and diagnostic testing: Transformer Oil BDV Dielectric Strength Test, Transformer Winding Resistance, Transformer Turns Ratio (TTR) test, Transformer Insulation Resistance (Megger IR & PI), Magnetic Balance, Vector Group, Infrared Thermography, and energized substation handover.'
     },
     {
         icon: '🛢️',
@@ -74,7 +74,7 @@ const keyFeatures = [
     'Standard Dyn11 vector group & custom primary/secondary voltage ratios (HV/LV)',
     'Complete HV & LV coil rewinding with 99.9% electrolytic grade copper conductor',
     'On-site two-stage high-vacuum oil dehydration & dielectric BDV testing (> 60kV)',
-    'Precision TTR, Winding Resistance, Megger (IR/PI), Magnetic Balance & Tan Delta testing',
+    'Transformer Diagnostic Suite: Oil BDV (> 60kV), Winding Resistance, Turns Ratio (TTR), Insulation Resistance (Megger IR/PI) & Infrared Thermography',
     'On-Load (OLTC) & Off-Circuit (OCTC) tap changer servicing & Buchholz/WTI/OTI calibration',
     'Full utility inspection & commissioning compliance for K-Electric and all DISCOs (LESCO, IESCO, FESCO, MEPCO, GEPCO, PESCO, HESCO)'
 ];

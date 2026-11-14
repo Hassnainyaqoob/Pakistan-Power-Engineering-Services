@@ -1,6 +1,6 @@
 import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
-import heroImage from '../../assets/images/lt_panels_hero.jpg';
+import heroImage from '../../assets/images/real/hero_lt_switchgear_lineup.jpg';
 
 const services = [
     {
@@ -25,8 +25,8 @@ const services = [
     },
     {
         icon: '🔍',
-        title: 'Breaker Testing & Maintenance',
-        description: 'On-site maintenance, primary/secondary injection testing, contact resistance measurement, and refurbishment of Air Circuit Breakers (ACB) and MCCBs.'
+        title: 'Breaker Testing, Busbar IR & Maintenance',
+        description: 'On-site maintenance, primary/secondary injection testing, Busbar IR testing, Infrared Thermography scanning, contact resistance & timing checks on ACBs and MCCBs.'
     },
     {
         icon: '📐',

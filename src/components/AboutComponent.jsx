@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import BackImg from '../assets/images/towerImg01.jpg';
+import BackImg from '../assets/images/real/hero_switchgear_corridor.jpg';
 
 const AboutSection = () => {
   useEffect(() => {
@@ -15,7 +15,7 @@ const AboutSection = () => {
       style={{
         position: 'relative',
         minHeight: '470px',
-        backgroundImage: `linear-gradient(to left, #00000026, #6664c7ff), url(${BackImg})`,
+        backgroundImage: `linear-gradient(to left, rgba(0, 23, 48, 0.78), rgba(0, 31, 63, 0.88)), url(${BackImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -33,7 +33,7 @@ const AboutSection = () => {
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-brandRed to-red-500 mx-auto mt-4 mb-4"></div>
         <p className="mt-4 sm:mt-6 text-sm sm:text-base max-w-5xl mx-auto animate-text leading-relaxed">
-          Established in 2010, Pakistan Power Engineering Services is a trusted industrial electrical engineering partner across Pakistan — specializing in Power Transformers across multiple kVA &amp; MVA ratings (Supply, Repairing, Coil Rewinding, Oil Filtration, Testing &amp; Commissioning), in-house LT/PCC/MCC/PFI panel manufacturing, HT/MV VCB switchgear &amp; breaker trolleys, and numerical protection relay testing (MiCOM, ABB, Schneider &amp; Siemens).
+          Established in 2010, Pakistan Power Engineering Services is a trusted industrial electrical engineering partner across Pakistan — specializing in Power Transformers across multiple kVA &amp; MVA ratings (Supply, Repairing, Coil Rewinding, Oil Filtration, Testing &amp; Commissioning), in-house LT/PCC/MCC/PFI panel manufacturing, HT/MV VCB switchgear &amp; breaker trolleys, infrared thermography, and all types of protection relays testing, settings &amp; configurations (Schneider Electric, Siemens, ABB &amp; more).
         </p>
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
           {[{ num: '50+', label: 'Skilled Professionals' }, { num: '15+', label: 'Years of Experience' }, { num: '500+', label: 'Projects Completed' }, { num: '100+', label: 'Satisfied Clients' }].map((stat, i) => (

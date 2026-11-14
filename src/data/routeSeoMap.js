@@ -8,7 +8,7 @@ export const DEFAULT_ROBOTS = 'index, follow, max-image-preview:large, max-snipp
 export const routeSeoMap = {
     '/': {
         title: 'Pakistan Power Engineering Services | Power Transformers, Switchgear & Substation Specialists',
-        description: 'Leading industrial electrical engineering across Pakistan. Power Transformers (Supply, Repairing, Testing & Commissioning in multiple kVA ratings), in-house LT/PCC/MCC panels, HT/MV VCB switchgear & MiCOM relay testing.'
+        description: 'Leading industrial electrical engineering across Pakistan. Power Transformers (all kVA ratings), in-house LT/PCC/MCC panels, HT/MV VCB switchgear, all-brand protection relay testing & configuration, diagnostic testing, and infrared thermography.'
     },
     '/about': {
         title: 'About Us | Pakistan Power Engineering Services',
@@ -43,8 +43,12 @@ export const routeSeoMap = {
         description: '11kV Vacuum Circuit Breaker (VCB) panels, trolley overhauling, retrofitting, Ring Main Units (RMU), busbar repair, and protection interlock testing.'
     },
     '/services/testing-commissioning': {
-        title: 'Substation Testing, Relay Calibration & Commissioning | Pakistan Power Engineering Services',
-        description: 'Primary & secondary injection testing for MiCOM, ABB, Schneider & Siemens numerical relays, Power Transformer diagnostic testing, Megger IR, Hi-Pot, and Oil BDV testing.'
+        title: 'Testing, All Type Protection Relays, Diagnostics & Commissioning | Pakistan Power Engineering Services',
+        description: 'Testing, settings & configuration for all types of protection relays (Schneider Electric, Siemens, ABB & more), Primary/Secondary Injection, IR & Hi-Pot, Thermography, Transformer BDV/Winding/TTR/IR, Breaker Contact Timing, CT/PT & Busbar IR.'
+    },
+    '/services/thermography': {
+        title: 'Infrared Thermography Inspection (Transformers, HT/LV, Control & MCC Panels) | Pakistan Power Engineering Services',
+        description: 'Live-load Infrared Thermography preventive audits across Transformers, HT Panels, LV Panels, Control Panels, and Motor Control Panels (MCC) per NFPA 70B / NETA MTS standards across Pakistan.'
     },
     '/services/turnkey-electrical': {
         title: 'Complete Substation Setup & Turnkey Electrical Solutions | Pakistan Power Engineering Services',
@@ -56,7 +60,7 @@ export const routeSeoMap = {
     },
     '/services/mv-equipment-supply': {
         title: 'Power Transformers, Switchgear & MV/LV Equipment Supply | Pakistan Power Engineering Services',
-        description: 'Authorized supply of Power Transformers (multiple kVA ratings), VCB panels, RMUs, MiCOM protection relays, CTs, PTs, spouts, insulators, and cable termination kits.'
+        description: 'Authorized supply of Power Transformers (multiple kVA ratings), VCB panels, RMUs, all types of protection relays (Schneider Electric, Siemens, ABB & more), CTs, PTs, spouts, insulators, and cable termination kits.'
     },
     '/services/instrumentation-automation': {
         title: 'Industrial Automation, PLC & SCADA Systems | Pakistan Power Engineering Services',

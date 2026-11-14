@@ -1,12 +1,12 @@
 import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
-import heroImage from '../../assets/images/mv_equipment_supply_hero.jpg';
+import heroImage from '../../assets/images/real/hero_abb_safeplus_mv.jpg';
 
 const services = [
     { icon: '⚡', title: 'Power Transformers Supply (Multiple kVA Ratings)', description: 'Supply of brand-new and certified reconditioned Oil-Immersed (sealed & conservator) and Dry-Type Cast Resin Power & Distribution Transformers across all kVA and MVA capacities.' },
     { icon: '🔌', title: '11kV Vacuum Circuit Breakers (VCB)', description: 'Indoor metal-clad drawout and fixed VCBs (630A to 3150A, 25kA/31.5kA) from Siemens, Schneider, ABB, and LS Electric.' },
     { icon: '🛡️', title: 'Ring Main Units (RMU)', description: 'Compact SF6 gas-insulated and eco-friendly vacuum RMUs (non-extensible & extensible) for robust underground network distribution.' },
-    { icon: '🤖', title: 'MiCOM & Numerical Protection Relays', description: 'Supply and integration of MiCOM (P12x, P14x, P63x), ABB, and Schneider microprocessor protection relays for feeder, transformer, and busbar protection.' },
+    { icon: '🤖', title: 'All Type Protection Relays', description: 'Supply, testing, settings and configuration support for all types of protection relays — Schneider Electric, Siemens, ABB, GE & more for feeder, transformer, motor, and busbar protection.' },
     { icon: '📊', title: 'Current & Potential Transformers (CT / PT)', description: 'High-accuracy cast resin 11kV CTs (metering & 5P10/5P20 protection class) and PTs for utility tariff metering and control.' },
     { icon: '🔗', title: '11kV XLPE Cable Kits & Heat Shrink Terminations', description: 'Indoor and outdoor heat shrink & cold shrink 11kV termination and straight-through joint kits with certified stress control.' },
     { icon: '🏗️', title: 'High Purity Copper Busbars & Insulators', description: '99.9% electrolytic grade copper busbars, epoxy post insulators, and busbar heat-shrinkable insulation tubing up to 6300A.' },
@@ -26,7 +26,7 @@ const benefits = [
 const keyFeatures = [
     'Power Transformers (Oil & Dry Type) in Multiple kVA & MVA Ratings',
     '11kV Vacuum Circuit Breakers (VCB) & Ring Main Units (RMU)',
-    'MiCOM, Schneider, ABB & Siemens Numerical Relays',
+    'All Type Protection Relays (Schneider Electric, Siemens, ABB & More)',
     'Cast Resin 11kV CT / PT Metering & Protection Transformers',
     'Raychem / 3M Compatible 11kV Heat Shrink Termination Kits',
     'Low Voltage ACBs (up to 6300A) & Industrial MCCBs',
@@ -56,7 +56,7 @@ const BrandsSection = () => (
                 <div className="w-20 h-1 bg-brandRed mx-auto mt-4" />
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                {['Schneider Electric', 'Siemens', 'ABB', 'Terasaki', 'LS Electric', 'Mitsubishi', 'MiCOM Relays', 'PEL'].map((brand, i) => (
+                {['Schneider Electric', 'Siemens', 'ABB', 'Terasaki', 'LS Electric', 'Mitsubishi', 'All Type Protection Relays', 'PEL'].map((brand, i) => (
                     <div
                         key={i}
                         data-aos="zoom-in"
@@ -81,8 +81,8 @@ export default function MVEquipmentSupplyPage() {
             heroTitle="Power Transformers & MV/LV Equipment"
             heroTitleAccent="Authorized Supply, Installation & Testing"
             heroSubtitle="Pakistan Power Engineering Services"
-            heroDescription="Authorized supply of Oil-Immersed & Dry-Type Power Transformers across multiple kVA ratings, 11kV Vacuum Circuit Breakers (VCB), Ring Main Units (RMU), MiCOM protection relays, CTs, PTs, spouts, insulators, cable kits, and LT switchgear across Pakistan."
-            overviewText="Pakistan Power Engineering Services supplies and integrates high-reliability electrical equipment for industrial, commercial, and utility projects. Whether sourcing Power & Distribution Transformers in multiple kVA/MVA capacities, 11kV HT VCB switchgear cubicles, compact RMUs, CTs/PTs, or MiCOM, ABB & Schneider numerical protection relays, we partner with leading manufacturers (Schneider, Siemens, ABB, Terasaki, PEL) to deliver guaranteed quality, certified test reports, and on-site commissioning."
+            heroDescription="Authorized supply of Oil-Immersed & Dry-Type Power Transformers across multiple kVA ratings, 11kV Vacuum Circuit Breakers (VCB), Ring Main Units (RMU), All Type Protection Relays (Schneider Electric, Siemens, ABB & more), CTs, PTs, spouts, insulators, cable kits, and LT switchgear across Pakistan."
+            overviewText="Pakistan Power Engineering Services supplies and integrates high-reliability electrical equipment for industrial, commercial, and utility projects. Whether sourcing Power & Distribution Transformers in multiple kVA/MVA capacities, 11kV HT VCB switchgear cubicles, compact RMUs, CTs/PTs, or All Types of Protection Relays (Schneider Electric, Siemens, ABB & more), we partner with leading manufacturers to deliver guaranteed quality, certified test reports, and on-site commissioning."
             services={services}
             benefits={benefits}
             keyFeatures={keyFeatures}

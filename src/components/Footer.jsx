@@ -17,8 +17,9 @@ const Footer = () => {
         { name: 'Power Transformers (Supply, Repair & Testing)', href: '/services/power-transformers' },
         { name: 'LT & PCC/MCC Panels Manufacturing', href: '/services/lt-panels' },
         { name: 'HT / MV VCB & RMU Switchgear Panels', href: '/services/vcb-mv-panels' },
-        { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformer' },
+        { name: 'Transformer Oil Filtration & Rewinding', href: '/services/power-transformers' },
         { name: 'Testing, Relays & Commissioning', href: '/services/testing-commissioning' },
+        { name: 'Infrared Thermography Inspection', href: '/services/thermography' },
         { name: 'Power Factor Improvement (PFI/APFC)', href: '/services/power-factor-improvement' },
         { name: 'Supply of MV / LV Equipment', href: '/services/mv-equipment-supply' },
         { name: 'Complete Substation Setup', href: '/services/turnkey-electrical' },
@@ -68,26 +69,6 @@ const Footer = () => {
                                     className="hover:text-red-400 transition-colors"
                                 >
                                     info@pakistanpowerengservices.com
-                                </a>
-                            </p>
-                            <p className="break-all">
-                                <span className="text-gray-400">CEO Direct: </span>
-                                <a
-                                    href="mailto:ahmed.yaqoob@pakistanpowerengservices.com?subject=Executive%20Inquiry"
-                                    className="hover:text-red-400 transition-colors"
-                                >
-                                    ahmed.yaqoob@pakistanpowerengservices.com
-                                </a>
-                            </p>
-                            <p>
-                                <span className="text-gray-400">Web: </span>
-                                <a
-                                    href="https://www.pakistanpowerengservices.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:text-red-400 transition-colors"
-                                >
-                                    www.pakistanpowerengservices.com
                                 </a>
                             </p>
                         </div>

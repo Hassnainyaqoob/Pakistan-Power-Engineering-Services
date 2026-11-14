@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
-import heroImage from '../assets/images/home_hero_bg.jpg';
+import heroImage from '../assets/images/real/hero_lt_pcc_panels.jpg';
 
 import Cl1 from '../assets/images/Cl1.png';
 import Cl2 from '../assets/images/Cl2.png';

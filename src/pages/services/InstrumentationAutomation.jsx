@@ -1,6 +1,6 @@
 import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
-import heroImage from '../../assets/images/instrumentation_automation_hero.jpg';
+import heroImage from '../../assets/images/real/hero_automation_scada.jpg';
 
 const services = [
     { icon: '🖥️', title: 'PLC Systems', description: 'Reliable PLC solutions for process control, machine automation and industrial applications. Design, programming, installation and maintenance.' },

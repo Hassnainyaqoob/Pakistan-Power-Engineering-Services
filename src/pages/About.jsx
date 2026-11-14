@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage from '../assets/images/about_11kv_hero.jpg';
+import backgroundImage from '../assets/images/real/hero_about_substation.jpg';
 import Typewriter from 'typewriter-effect';
 import ConstructionOverview from '../components/ConstructionOverview';
 import CompanyObjectives from '../components/CompanyObjective';
@@ -38,7 +38,7 @@ export default function AboutPage() {
                                         'Power Transformers: Supply, Repairing & Testing',
                                         '11kV HT VCB & MV Switchgear Panels',
                                         'In-House LT, PCC, MCC & PFI Panels',
-                                        'Relay Calibration & Megger Testing',
+                                        'All Type Protection Relays, Diagnostics & Thermography',
                                     ],
                                     autoStart: true,
                                     loop: true,
@@ -52,7 +52,7 @@ export default function AboutPage() {
                         <div className="divider-line shadow-md mb-5"></div>
 
                         <p className="text-sm sm:text-base text-slate-200 leading-relaxed mb-6 max-w-[560px] drop-shadow">
-                            Delivering end-to-end Power Transformer supply, repairing, coil rewinding &amp; oil filtration (all kVA ratings), HT &amp; LT switchgear panels, turnkey substation installations, and protection relay commissioning across Pakistan.
+                            Delivering end-to-end Power Transformer supply, repairing, coil rewinding &amp; oil filtration (all kVA ratings), HT &amp; LT switchgear panels, turnkey substation installations, infrared thermography, and all-brand protection relay testing &amp; commissioning across Pakistan.
                         </p>
 
                         {/* Core Capability Pills */}
@@ -61,7 +61,7 @@ export default function AboutPage() {
                                 '🔋 Power Transformers (All kVA Ratings)',
                                 '⚡ 11kV HT VCB Panels',
                                 '🔌 LT / PCC / MCC Panels',
-                                '🔬 Relay & Megger Testing',
+                                '🔬 All-Relay, Hi-Pot & Thermography Testing',
                             ].map((tag) => (
                                 <span
                                     key={tag}

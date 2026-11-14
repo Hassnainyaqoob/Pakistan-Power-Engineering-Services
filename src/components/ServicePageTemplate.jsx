@@ -27,6 +27,7 @@ const ServicePageTemplate = ({
     stats = [],
     ctaTitle = 'Ready to Get Started?',
     ctaDescription = 'Contact us today for a free consultation and quote.',
+    showcaseSection = null,
     extraSection = null,
 }) => {
     const navigate = useNavigate();
@@ -128,6 +129,9 @@ const ServicePageTemplate = ({
                 </div>
             )}
 
+            {/* ── SHOWCASE SECTION (if provided — renders cleanly above Benefits) ── */}
+            {showcaseSection && showcaseSection}
+
             {/* ── KEY BENEFITS ── */}
             {benefits.length > 0 && (
                 <div className="py-20 bg-blueColor">
@@ -220,10 +224,9 @@ const ServicePageTemplate = ({
                             Send Email
                         </a>
                     </div>
-                    <div className="mt-8 flex justify-center gap-8 text-white/80 text-sm">
+                    <div className="mt-8 flex flex-wrap justify-center gap-6 sm:gap-8 text-white/80 text-sm">
                         <span>📞 +92 309 2302512</span>
                         <span>📞 +92 335 0259886</span>
-                        <span>🌐 www.pakistanpowerengservices.com</span>
                     </div>
                 </div>
             </div>

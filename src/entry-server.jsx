@@ -14,6 +14,7 @@ import ElevenKVTransformersPage from './pages/services/ElevenKVTransformers.jsx'
 import LTPanelsPage from './pages/services/LTPanels.jsx';
 import VCBPanelsPage from './pages/services/VCBMVPanels.jsx';
 import TestingCommissioningPage from './pages/services/TestingCommissioning.jsx';
+import ThermographyPage from './pages/services/Thermography.jsx';
 import TurnkeyElectricalPage from './pages/services/TurnkeyElectrical.jsx';
 import PowerFactorImprovementPage from './pages/services/PowerFactorImprovement.jsx';
 import MVEquipmentSupplyPage from './pages/services/MVEquipmentSupply.jsx';
@@ -33,6 +34,7 @@ const pages = {
   '/services/lt-panels': LTPanelsPage,
   '/services/vcb-mv-panels': VCBPanelsPage,
   '/services/testing-commissioning': TestingCommissioningPage,
+  '/services/thermography': ThermographyPage,
   '/services/turnkey-electrical': TurnkeyElectricalPage,
   '/services/power-factor-improvement': PowerFactorImprovementPage,
   '/services/mv-equipment-supply': MVEquipmentSupplyPage,

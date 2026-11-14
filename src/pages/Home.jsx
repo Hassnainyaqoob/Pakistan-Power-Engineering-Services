@@ -4,27 +4,28 @@ import Typewriter from 'typewriter-effect';
 
 const TypewriterComponent = Typewriter?.default || Typewriter;
 
-// Hero & Service Images
-import backgroundImage from '../assets/images/home_hero_bg.jpg';
-import realMeggerSwitchgear from '../assets/images/real_site_megger_switchgear.jpg';
-import realSiemensPanel from '../assets/images/real_site_siemens_panel.png';
-import realMeggerCtPt from '../assets/images/real_site_megger_ct_pt.jpg';
-import ElevenKvTransImg from '../assets/images/eleven_kv_transformers_hero.jpg';
-import LtPanelsImg from '../assets/images/lt_panels_hero.jpg';
-import VcbMvImg from '../assets/images/vcb_mv_panels_hero.jpg';
-import PowerTransImg from '../assets/images/power_transformer_hero.jpg';
-import TestingImg from '../assets/images/testing_commissioning_hero.jpg';
-import PfiImg from '../assets/images/pfi_solutions_hero.jpg';
-import TurnkeyImg from '../assets/images/turnkey_electrical_hero.jpg';
-import AutomationImg from '../assets/images/instrumentation_automation_hero.jpg';
+// Real Site Photography & Service Images
+import heroSwitchgearCorridor from '../assets/images/real/hero_switchgear_corridor.jpg';
+import heroPowerTransformers from '../assets/images/real/hero_power_transformers.jpg';
+import heroDryTypeTransformer from '../assets/images/real/hero_dry_type_transformer.jpg';
+import heroSiemensVcb from '../assets/images/real/hero_siemens_vcb.jpg';
+import heroLtSwitchgear from '../assets/images/real/hero_lt_switchgear_lineup.jpg';
+import heroAbbSafeplus from '../assets/images/real/hero_abb_safeplus_mv.jpg';
+import heroTestingMegger from '../assets/images/real/hero_testing_megger.jpg';
+import heroSverkerRelay from '../assets/images/real/hero_sverker_relay_test.jpg';
+import heroPfiPanels from '../assets/images/real/hero_pfi_panels.jpg';
+import heroTurnkeySubstation from '../assets/images/real/hero_turnkey_substation.jpg';
+import heroOilFiltration from '../assets/images/real/hero_oil_filtration.jpg';
+import heroAutomationScada from '../assets/images/real/hero_automation_scada.jpg';
+import heroThermographySubstation from '../assets/images/real/hero_thermography_substation.jpg';
 
-// Process Images
-import Step1 from '../assets/images/step1_new.jpg';
-import Step2 from '../assets/images/step2_new.jpg';
-import Step3 from '../assets/images/step3_new.jpg';
-import Step4 from '../assets/images/step4_new.jpg';
-import Step5 from '../assets/images/step5_new.jpg';
-import Step6 from '../assets/images/vcb_mv_panels_hero.jpg';
+// Real Site Execution Process Photography
+import Step1 from '../assets/images/real/step_01_survey.jpg';
+import Step2 from '../assets/images/real/step_02_design.jpg';
+import Step3 from '../assets/images/real/step_03_manufacturing.jpg';
+import Step4 from '../assets/images/real/step_04_erection.jpg';
+import Step5 from '../assets/images/real/step_05_testing.jpg';
+import Step6 from '../assets/images/real/step_06_maintenance.jpg';
 
 // Client Logos
 import Cl1 from '../assets/images/Cl1.png';
@@ -51,17 +52,20 @@ import { OfferingsCard } from '../components/OfferingCard';
 import AboutSection from '../components/AboutComponent';
 import ClientLogoMarquee from '../components/clientsimageslider';
 import SubstationDiagram from '../components/SubstationDiagram';
+import ProtectionAndTestsMatrix from '../components/ProtectionAndTestsMatrix';
+import ThermographyShowcase from '../components/ThermographyShowcase';
 import SitePhotoShowcase from '../components/SitePhotoShowcase';
 
 const heroSlides = [
-    { image: backgroundImage, title: 'Substation & Power Distribution Architecture' },
-    { image: PowerTransImg, title: 'Power Transformers (Oil & Dry Type — All kVA Ratings)' },
-    { image: VcbMvImg, title: 'HT & MV VCB Switchgear Panels' },
-    { image: LtPanelsImg, title: 'LT & PCC/MCC Panels (Up to 6300A)' },
-    { image: ElevenKvTransImg, title: 'Power Transformers: Supply, Repairing & Testing' },
-    { image: realSiemensPanel, title: 'Siemens Breaker & Switchgear Suite' },
-    { image: realMeggerSwitchgear, title: 'KYN28 HT VCB Panel & Relay Testing' },
-    { image: realMeggerCtPt, title: 'Megger MVCT CT & VT Ratio Testing' },
+    { image: heroSwitchgearCorridor, title: 'Substation & Power Distribution Architecture' },
+    { image: heroPowerTransformers, title: 'Power Transformers (Oil & Dry Type — All kVA Ratings)' },
+    { image: heroSiemensVcb, title: 'Siemens SION & NXAIR 11kV VCB Switchgear' },
+    { image: heroLtSwitchgear, title: 'LT & PCC/MCC Panels (Schneider Electric & Up to 6300A)' },
+    { image: heroDryTypeTransformer, title: 'Cast-Resin Dry-Type & Oil-Immersed Transformers' },
+    { image: heroAbbSafeplus, title: 'ABB SafePlus 11kV RMU & Switchgear Suites' },
+    { image: heroSverkerRelay, title: 'Megger SVERKER 900 All-Brand Relay Testing' },
+    { image: heroTestingMegger, title: 'Megger MVCT CT / VT Ratio & Polarity Testing' },
+    { image: heroThermographySubstation, title: 'Infrared Thermography & Diagnostic Substation Testing' },
 ];
 
 // Standardized 6-step project execution process
@@ -106,9 +110,9 @@ const executionSteps = [
         num: '05',
         icon: '🔬',
         phase: 'Testing & Commissioning',
-        title: 'Testing, Relay Calibration & Commissioning',
-        desc: 'Primary & secondary injection testing, MiCOM / ABB / Schneider numerical relay configuration, CT / PT ratio testing, Megger (IR), Hi-Pot, oil BDV testing, and energized commissioning.',
-        tags: ['Primary / Secondary Injection', 'Megger (IR)', 'Hi-Pot', 'Oil BDV'],
+        title: 'Testing, All Type Relays, Thermography & Commissioning',
+        desc: 'All-type protection relays testing, settings & configurations (Schneider Electric, Siemens, ABB & more), primary & secondary injection, IR & Hi-Pot, infrared thermography, transformer BDV / winding resistance / TTR / IR, HT breaker IR & contact time interval, CT/PT ratio & busbar IR.',
+        tags: ['All Type Relays', 'Primary / Secondary Injection', 'IR / Hi-Pot / Thermography', 'BDV / TTR / Winding / Timing'],
         image: Step5,
     },
     {
@@ -181,56 +185,56 @@ export default function HomePage() {
     // 8 Core Clickable Offerings
     const offerings = [
         {
-            image: ElevenKvTransImg,
+            image: heroPowerTransformers,
             title: 'Power Transformers',
             subtitle: 'Supply, Repairing, Testing & Commissioning',
             description: 'Oil-immersed & dry-type Power Transformers across multiple kVA and MVA ratings — supply, HV/LV coil rewinding, repairing, high-vacuum oil filtration, diagnostic testing, and commissioning.',
             link: '/services/power-transformers'
         },
         {
-            image: LtPanelsImg,
+            image: heroLtSwitchgear,
             title: 'LT & PCC/MCC Panels',
             subtitle: 'In-House Manufacturing up to 6300A',
             description: 'Custom assembly of Power Control Centers (PCC), Motor Control Centers (MCC with VFDs & Soft Starters), and main distribution switchboards.',
             link: '/services/lt-panels'
         },
         {
-            image: VcbMvImg,
+            image: heroSiemensVcb,
             title: 'VCB & MV Switchgear',
             subtitle: '11kV Panels & RMU Solutions',
             description: 'Maintenance, troubleshooting, breaker retrofits, and testing of 11kV Vacuum Circuit Breakers, Ring Main Units, and compartmentalized panels.',
             link: '/services/vcb-mv-panels'
         },
         {
-            image: TestingImg,
+            image: heroTestingMegger,
             title: 'Testing & Commissioning',
-            subtitle: 'MiCOM & Numerical Relays',
-            description: 'Relay calibration, primary/secondary current injection, insulation resistance (megger), oil BDV breakdown, and complete site energization.',
+            subtitle: 'All Type Protection Relays & Diagnostics',
+            description: 'All-brand protection relay testing & settings (Schneider, Siemens, ABB), primary/secondary injection, IR, Hi-Pot, thermography, transformer BDV/TTR/winding tests, breaker timing & busbar IR.',
             link: '/services/testing-commissioning'
         },
         {
-            image: PfiImg,
+            image: heroPfiPanels,
             title: 'Power Factor Improvement',
             subtitle: 'Automatic APFC Capacitor Banks',
             description: 'Heavy-duty PFI panels equipped with detuned harmonic filters, microprocessor PF controllers, and high-dielectric capacitor protection.',
             link: '/services/power-factor-improvement'
         },
         {
-            image: TurnkeyImg,
+            image: heroTurnkeySubstation,
             title: 'Complete Substation Setup',
             subtitle: 'A-to-Z Design, Supply & Erection',
             description: 'Complete indoor and outdoor 11kV substation projects from foundation, HT cable laying, transformer positioning to utility commissioning.',
             link: '/services/turnkey-electrical'
         },
         {
-            image: PowerTransImg,
+            image: heroOilFiltration,
             title: 'Transformer Maintenance',
             subtitle: 'Oil Filtration & Overhaul',
             description: 'Preventive lifecycle care, nitrogen purging, gasket replacement, on-site oil dielectric testing, and emergency breakdown response.',
-            link: '/services/power-transformer'
+            link: '/services/power-transformers'
         },
         {
-            image: AutomationImg,
+            image: heroAutomationScada,
             title: 'Automation & SCADA',
             subtitle: 'PLC & Industrial Monitoring',
             description: 'Substation SCADA integration, automated mains failure (AMF/ATS) systems, PLC automation, and remote energy management.',
@@ -261,8 +265,8 @@ export default function HomePage() {
         {
             num: '04',
             icon: '🔬',
-            title: 'Testing & Relay Commissioning',
-            desc: 'MiCOM & numerical protection relay testing, secondary injection, Megger, Hi-Pot, and oil BDV dielectric verification.'
+            title: 'Testing, Relays & Thermography',
+            desc: 'All Type Protection Relays testing & settings (Schneider Electric, Siemens, ABB & more), primary/secondary injection, IR, Hi-Pot, thermography, transformer BDV/TTR/winding, breaker timing & busbar IR.'
         },
         {
             num: '05',
@@ -287,7 +291,7 @@ export default function HomePage() {
     // Brands
     const brands = [
         'Schneider Electric', 'Siemens', 'ABB', 'Mitsubishi Electric',
-        'LS Electric', 'Terasaki', 'Hyundai', 'PEL', 'Transfopower', 'MiCOM Relays'
+        'LS Electric', 'Terasaki', 'Hyundai', 'PEL', 'Transfopower', 'All Type Protection Relays'
     ];
 
     const logos = [
@@ -378,7 +382,8 @@ export default function HomePage() {
                                         'Oil & Dry-Type Transformers (Multiple kVA & MVA Ratings)',
                                         'HV, MV & LV Switchgears & Panels Manufacturing',
                                         'HV, MV & LV Breaker Trolleys: Repair, Maintenance & Testing',
-                                        'Protection Relays (MiCOM, ABB & Schneider): Testing & Commissioning',
+                                        'All Type Protection Relays (Schneider, Siemens & ABB): Testing & Config',
+                                        'Infrared Thermography & Diagnostic Substation Testing',
                                         'Complete A-to-Z Substation Setup'
                                     ],
                                     autoStart: true,
@@ -392,7 +397,7 @@ export default function HomePage() {
 
                         {/* Description */}
                         <p className="mt-5 text-gray-200 text-base sm:text-lg max-w-3xl leading-relaxed">
-                            Complete engineering lifecycle solutions across Pakistan: HV, MV & LV switchgears, panels & breaker trolleys (manufacturing, testing, commissioning & repair), power transformers (oil & dry type) with high-vacuum oil filtration & BDV testing, advanced numerical protection relay calibration (MiCOM, ABB & Schneider with primary/secondary injection), Megger (IR) & Hi-Pot field testing, and complete A-to-Z substation setup.
+                            Complete engineering lifecycle solutions across Pakistan: HV, MV &amp; LV switchgears, panels &amp; breaker trolleys (manufacturing, testing, commissioning &amp; repair), power transformers (oil &amp; dry type) with high-vacuum oil filtration, BDV, winding resistance, TTR &amp; IR testing, all types of protection relays testing, settings &amp; configurations (Schneider Electric, Siemens, ABB &amp; more) with primary/secondary injection, HT breaker IR &amp; contact timing, CT/PT &amp; busbar IR, Hi-Pot testing, infrared thermography, and complete A-to-Z substation setup.
                         </p>
 
                         {/* Hero CTAs */}
@@ -449,7 +454,7 @@ export default function HomePage() {
                         <div className="w-1 h-1 rounded-full bg-gray-500" />
                         <div className="flex items-center gap-2">
                             <span className="text-[#ff6b6b]">🔬</span>
-                            <span>Protection Relay Testing & Commissioning</span>
+                            <span>All Type Protection Relays & Thermography</span>
                         </div>
                         <div className="w-1 h-1 rounded-full bg-gray-500" />
                         <div className="flex items-center gap-2">
@@ -539,6 +544,12 @@ export default function HomePage() {
 
             {/* ─── INTERACTIVE SUBSTATION ARCHITECTURE FLOW DIAGRAM ─── */}
             <SubstationDiagram />
+
+            {/* ─── ALL TYPE PROTECTION RELAYS & 14 DIAGNOSTIC TESTS ─── */}
+            <ProtectionAndTestsMatrix isHome />
+
+            {/* ─── INFRARED THERMOGRAPHY INSPECTION SHOWCASE (WITH PICTURES) ─── */}
+            <ThermographyShowcase compact />
 
             {/* ─── ABOUT COMPANY COMPONENT ─── */}
             <AboutSection />

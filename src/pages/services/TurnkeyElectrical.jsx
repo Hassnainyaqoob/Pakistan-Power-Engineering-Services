@@ -1,13 +1,13 @@
 import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
-import heroImage from '../../assets/images/turnkey_electrical_hero.jpg';
+import heroImage from '../../assets/images/real/hero_turnkey_substation.jpg';
 
 const services = [
     { icon: '⚡', title: 'Complete Substation & Power Transformer Setup', description: 'Complete design, civil pad assessment, Power Transformer rigging & positioning (all kVA/MVA ratings), HT/LT switchgear installation, and energized commissioning of 11kV substations.' },
     { icon: '🏭', title: 'In-House Panel Manufacturing & PCC/MCC', description: 'Full custom fabrication of Power Control Centers (PCC up to 6300A), Motor Control Centers (MCC), and APFC capacitor banks to IEC standards.' },
     { icon: '🔌', title: '11kV VCB Switchgear & RMU Installation', description: 'Assembly, busbar trunking coupling, interlock calibration, and wiring of Vacuum Circuit Breaker panels and Ring Main Units.' },
     { icon: '🔗', title: '11kV HT & LT Cable Laying & Termination', description: 'Trenching, cable tray installation, 11kV XLPE HT cable laying, heat-shrink terminations, and straight-through jointing with certified test reports.' },
-    { icon: '🛡️', title: 'MiCOM Relay & Secondary Protection Testing', description: 'Calibration of MiCOM, ABB, and Schneider relays, primary/secondary injection, trip test validation, and fault-clearance coordination.' },
+    { icon: '🛡️', title: 'All Type Protection Relays & Diagnostic Testing', description: 'Testing, settings and configuration for all types of protection relays (Schneider Electric, Siemens, ABB & more), primary & secondary injection, IR testing, Hi-Pot, breaker timing, CT/PT ratio & busbar IR.' },
     { icon: '🌐', title: 'Earthing Grid & Lightning Protection', description: 'Substation copper earthing mesh installation, deep chemical earth pits, earth resistance measurement (< 1 Ohm), and lightning arresters.' },
     { icon: '📋', title: 'Utility Approval & Sanctioning (K-Electric / DISCOs)', description: 'Complete liaison, single-line diagram (SLD) approval, load sanctioning documentation, and utility inspection assistance across Pakistan.' },
     { icon: '✅', title: 'Energized Commissioning & Client Handover', description: 'Joint pre-commissioning checks, step-by-step energization protocols, load balancing, operator safety training, and complete as-built documentation.' },
@@ -27,7 +27,7 @@ const keyFeatures = [
     'Turnkey 11kV Substations & Power Transformers (Multiple kVA & MVA Ratings)',
     'In-House LT, PCC (up to 6300A), MCC, and APFC Panel Manufacturing',
     '11kV Vacuum Circuit Breakers (VCB) & Ring Main Units (RMU)',
-    'MiCOM & Numerical Relay Protection Calibration',
+    'All Type Protection Relays Testing, Settings & Configurations (Schneider Electric, Siemens, ABB & more)',
     '11kV XLPE High-Tension Cable Laying & Heat-Shrink Termination',
     'Deep Earthing Grid Design & Low-Resistance Pit Construction',
     'Utility Approval Assistance with K-Electric and DISCOs (LESCO, IESCO, FESCO)',

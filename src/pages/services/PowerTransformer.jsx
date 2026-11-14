@@ -1,6 +1,6 @@
 import React from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
-import heroImage from '../../assets/images/power_transformer_hero.jpg';
+import heroImage from '../../assets/images/real/hero_dry_type_transformer.jpg';
 
 const services = [
     { icon: '⚡', title: 'Complete HV & LV Coil Rewinding', description: 'Precision workshop rewinding of high-voltage and low-voltage transformer windings across all kVA/MVA ratings using 99.9% electrolytic copper, Nomex/Kraft insulation, core restacking, and oven curing.' },
