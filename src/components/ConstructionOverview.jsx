@@ -45,10 +45,10 @@ export default function ConstructionOverview() {
 
                             {/* Title */}
                             <h2 className="text-lg text-gray-600 mb-2">Who We Are</h2>
-                            <h1 className="text-4xl font-bold mb-6">
+                            <h2 className="text-4xl font-bold mb-6">
                                 <span className="text-brandRed">Company</span>{' '}
                                 <span className="text-blueColor italic">Overview</span>
-                            </h1>
+                            </h2>
 
                             {/* Decorative Line */}
                             <div className="w-24 h-1 bg-gradient-to-r from-brandRed to-blue-900 mx-auto mb-8"></div>

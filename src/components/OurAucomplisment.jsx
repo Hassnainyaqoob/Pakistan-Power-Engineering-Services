@@ -69,10 +69,10 @@ export default function OurAccomplishments() {
                 {/* Header Section */}
                 <div className="text-center mb-16">
                     <h2 className="text-2xl text-pureBlack mb-4">Experience To Be Trusted</h2>
-                    <h1 className="text-5xl font-bold mb-6 break-words text-center w-full max-w-[90%] mx-auto">
+                    <h2 className="text-5xl font-bold mb-6 break-words text-center w-full max-w-[90%] mx-auto">
                         <span className="text-brandRed">Our </span>
                         <span className='text-blueColor'>Accomplishments</span>
-                    </h1>
+                    </h2>
                     <div className="w-32 h-1 bg-gradient-to-r from-brandRed to-blue-900 mx-auto"></div>
                 </div>
                 {/* Stats Cards */}

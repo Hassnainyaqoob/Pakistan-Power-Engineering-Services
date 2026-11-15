@@ -28,9 +28,9 @@ const AboutSection = () => {
     >
       <div className="text-center px-4 w-full max-w-6xl">
         <h2 className="text-lg sm:text-xl font-semibold animate-text tracking-widest">WHO WE ARE</h2>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brandRed mt-2 animate-text leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brandRed mt-2 animate-text leading-tight">
           About Pakistan Power Engineering <span style={{ color: "white" }}>Services</span>
-        </h1>
+        </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-brandRed to-red-500 mx-auto mt-4 mb-4"></div>
         <p className="mt-4 sm:mt-6 text-sm sm:text-base max-w-5xl mx-auto animate-text leading-relaxed">
           Established in 2010, Pakistan Power Engineering Services is a trusted industrial electrical engineering partner across Pakistan — specializing in Power Transformers across multiple kVA &amp; MVA ratings (Supply, Repairing, Coil Rewinding, Oil Filtration, Testing &amp; Commissioning), in-house LT/PCC/MCC/PFI panel manufacturing, HT/MV VCB switchgear &amp; breaker trolleys, infrared thermography, and all types of protection relays testing, settings &amp; configurations (Schneider Electric, Siemens, ABB &amp; more).

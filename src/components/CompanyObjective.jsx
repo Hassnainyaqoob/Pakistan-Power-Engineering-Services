@@ -85,7 +85,7 @@ export default function CompanyObjectives() {
                     {/* Left Side - Text Content */}
                     <div>
                         <h2 className="text-3xl text-gray-600 mb-2">The Company</h2>
-                        <h1 className="text-5xl font-bold text-blue-900 mb-8">Objective</h1>
+                        <h2 className="text-5xl font-bold text-blue-900 mb-8">Objective</h2>
                         <p className="text-gray-600 leading-relaxed text-lg mb-6">
                             We deliver reliable, efficient and cost-effective engineering solutions through innovation, quality and commitment. Our goal is to be the most trusted electrical engineering partner in Pakistan.
                         </p>
