@@ -7,8 +7,8 @@ export const DEFAULT_ROBOTS = 'index, follow, max-image-preview:large, max-snipp
 
 export const routeSeoMap = {
     '/': {
-        title: 'Pakistan Power Engineering Services | Power Transformers Karachi',
-        description: 'Pakistan Power Engineering Services (Est. 2010) in Karachi: Power Transformers, LT/PCC/MCC & 11kV VCB switchgear, relay testing & thermography across Pakistan.'
+        title: 'Pakistan Power Engineering Services | Panels & Transformers',
+        description: 'Pakistan Power Engineering Services (Est. 2010) in Karachi: HT/MV/LV switchgear & panels, Power Transformers, relay testing & thermography across Pakistan.'
     },
     '/about': {
         title: 'About Us | Pakistan Power Engineering Services Karachi',
@@ -27,43 +27,43 @@ export const routeSeoMap = {
         description: 'Trusted by 100+ textile, steel, cement, pharma & industrial plants in Karachi and across Pakistan, with K-Electric & DISCO compliance.'
     },
     '/gallery': {
-        title: 'Project Gallery | Pakistan Power Engineering Services Karachi',
+        title: 'Project Gallery | Pakistan Power Engineering Services',
         description: 'Explore 95+ on-site project photos of Power Transformers, 11kV VCB switchgear panels, relay testing & substation work in Karachi and across Pakistan.'
     },
     '/services/power-transformers': {
-        title: 'Power Transformers Karachi | Pakistan Power Engineering Services',
+        title: 'Power Transformers Supply & Repair | PPES Karachi',
         description: 'Oil-immersed & dry-type Power Transformers in Karachi & Pakistan: supply, repairing, coil rewinding, vacuum oil filtration, BDV/TTR testing & commissioning.'
     },
     '/services/lt-panels': {
-        title: 'LT, PCC & MCC Panels Karachi | Pakistan Power Engineering',
+        title: 'LT, PCC & MCC Panel Manufacturing | PPES Karachi',
         description: 'In-house manufacturing of custom LT, PCC, MCC & ATS/AMF panels up to 6300A in Karachi by Pakistan Power Engineering Services with CNC fabrication.'
     },
     '/services/vcb-mv-panels': {
-        title: '11kV HT VCB & RMU Switchgear | Pakistan Power Engineering',
+        title: 'HT/MV VCB Switchgear Maintenance | PPES Karachi',
         description: '11kV VCB switchgear panels, breaker trolley overhauling, retrofitting, RMU maintenance & interlock testing in Karachi by Pakistan Power Engineering Services.'
     },
     '/services/testing-commissioning': {
-        title: 'Protection Relay Testing Karachi | Pakistan Power Engineering',
+        title: 'Protection Relay & Hi-Pot Testing | PPES Karachi',
         description: 'Primary & secondary injection protection relay testing (Schneider, Siemens, ABB), Hi-Pot, transformer BDV/TTR/IR & breaker timing tests in Karachi & Pakistan.'
     },
     '/services/thermography': {
-        title: 'Infrared Thermography Karachi | Pakistan Power Engineering',
+        title: 'Infrared Thermography Inspection | PPES Karachi',
         description: 'Live-load Infrared Thermography audits for Transformers, HT/LV, Control & MCC panels in Karachi & Pakistan per NFPA 70B / NETA MTS standards.'
     },
     '/services/turnkey-electrical': {
-        title: 'Substation & Turnkey Electrical | Pakistan Power Engineering',
+        title: 'Substation & Turnkey Electrical | PPES Karachi',
         description: 'Complete substation setup, transformer installation, HT/LT switchgear erection, XLPE cable jointing & utility energization in Karachi and across Pakistan.'
     },
     '/services/power-factor-improvement': {
-        title: 'PFI & APFC Panels Karachi | Pakistan Power Engineering',
+        title: 'PFI & APFC Capacitor Bank Panels | PPES Karachi',
         description: 'Automatic PFI / APFC capacitor bank panels with detuned harmonic filter reactors in Karachi & Pakistan to maintain 0.99 PF and stop utility surcharges.'
     },
     '/services/mv-equipment-supply': {
-        title: 'MV/LV Switchgear & Relay Supply | Pakistan Power Engineering',
+        title: 'MV/LV Switchgear & Relay Supply | PPES Karachi',
         description: 'Supply of Power Transformers, 11kV VCB panels, RMUs, protection relays (Schneider, Siemens, ABB), CTs, PTs & cable termination kits in Karachi & Pakistan.'
     },
     '/services/instrumentation-automation': {
-        title: 'PLC & SCADA Automation Karachi | Pakistan Power Engineering',
+        title: 'Industrial PLC & SCADA Automation | PPES Karachi',
         description: 'Industrial PLC programming, substation SCADA integration, AMF/ATS automation & energy monitoring in Karachi by Pakistan Power Engineering Services.'
     }
 };
