@@ -7,7 +7,7 @@ export const DEFAULT_ROBOTS = 'index, follow, max-image-preview:large, max-snipp
 
 export const routeSeoMap = {
     '/': {
-        title: 'Pakistan Power Engineering Services | Panels & Transformers',
+        title: 'Pakistan Power Engineering Services | Panels & Transformers Karachi',
         description: 'Pakistan Power Engineering Services (Est. 2010) in Karachi: HT/MV/LV switchgear & panels, Power Transformers, relay testing & thermography across Pakistan.'
     },
     '/about': {
