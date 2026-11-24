@@ -80,6 +80,16 @@ const Contact = () => {
                 },
                 publicKey
             );
+            if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                window.gtag('event', 'contact_form_submit', {
+                    inquiry_subject: formData.subject || 'General Inquiry',
+                    page_path: window.location.pathname,
+                });
+                window.gtag('event', 'close_convert_lead', {
+                    lead_type: 'contact_form',
+                    inquiry_subject: formData.subject || 'General Inquiry',
+                });
+            }
             setPopupMessage('Thank you! Your message has been sent successfully. Our engineering team will contact you shortly.');
             setIsError(false);
             setFormData({

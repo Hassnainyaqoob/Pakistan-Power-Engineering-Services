@@ -2,6 +2,40 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) - GA4 & Lead Tracking -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P9L8N5RH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RZD0V4WX2S');
+
+    document.addEventListener('click', function (e) {
+      if (typeof window.gtag !== 'function') return;
+      var path = window.location.pathname;
+      var link = e.target && e.target.closest ? e.target.closest('a, button') : null;
+      if (!link) return;
+      var href = (link.getAttribute('href') || '').trim();
+      var text = (link.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 80);
+
+      if (href.indexOf('tel:') === 0) {
+        var phone = href.replace('tel:', '');
+        window.gtag('event', 'phone_call_click', { phone_number: phone, page_path: path });
+        window.gtag('event', 'qualify_lead', { lead_type: 'phone_call', phone_number: phone, page_path: path });
+      } else if (href.indexOf('wa.me') !== -1) {
+        window.gtag('event', 'whatsapp_chat_click', { source: 'page_button', page_path: path });
+        window.gtag('event', 'qualify_lead', { lead_type: 'whatsapp', page_path: path });
+      } else if (href.indexOf('mailto:') === 0) {
+        var email = href.replace('mailto:', '').split('?')[0];
+        window.gtag('event', 'email_click', { email_address: email, page_path: path });
+      } else if (href === '#profile-viewer') {
+        window.gtag('event', 'profile_brochure_view', { page_path: path });
+      } else if (/quote/i.test(text)) {
+        window.gtag('event', 'quote_cta_click', { button_text: text, page_path: path });
+      }
+    }, true);
+  </script>
+
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />

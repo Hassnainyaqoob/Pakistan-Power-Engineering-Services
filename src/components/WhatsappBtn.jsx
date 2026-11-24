@@ -55,6 +55,16 @@ export const WhatsAppButton = () => {
   };
 
   const handleOpenChat = () => {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'whatsapp_chat_click', {
+        source: 'floating_widget',
+        page_path: window.location.pathname,
+      });
+      window.gtag('event', 'qualify_lead', {
+        lead_type: 'whatsapp_widget',
+        page_path: window.location.pathname,
+      });
+    }
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
